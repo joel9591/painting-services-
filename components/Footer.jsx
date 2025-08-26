@@ -158,7 +158,7 @@ export default function Footer() {
             Plumbing or electrical emergency? We're here to help anytime!
           </p>
           <a
-            href="tel:+1234567890"
+            href="tel:+91 9591476089"
             className="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center space-x-2"
           >
             <Phone size={20} />

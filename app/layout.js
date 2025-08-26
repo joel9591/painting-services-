@@ -70,7 +70,7 @@ export default function RootLayout({ children }) {
               "@type": "LocalBusiness",
               "name": "Professional Home Services",
               "image": "https://prohomeservices.com/logo.jpg",
-              "telephone": "+1-234-567-8900",
+              "telephone": "+91 9591476089",
               "email": "info@prohomeservices.com",
               "address": {
                 "@type": "PostalAddress",

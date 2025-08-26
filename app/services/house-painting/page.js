@@ -123,7 +123,7 @@ export default function HousePainting() {
                   Get Free Estimate
                 </Link>
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+91 9591476089"
                   className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200 text-center"
                 >
                   Call (234) 567-8900
@@ -338,7 +338,7 @@ export default function HousePainting() {
                   Get Free Estimate
                 </Link>
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+91 9591476089"
                   className="w-full bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-4 rounded-lg font-semibold transition-colors duration-200 block text-center"
                 >
                   Call Now: (234) 567-8900

@@ -1,71 +1,71 @@
-'use client';
-import { useState, useRef } from 'react';
-import { Send, Phone, Mail, MapPin, Clock } from 'lucide-react';
-import emailjs from '@emailjs/browser';
+"use client";
+import { useState, useRef } from "react";
+import { Send, Phone, Mail, MapPin, Clock } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 export default function ContactForm() {
   const form = useRef();
   const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    service: '',
-    message: ''
+    name: "",
+    phone: "",
+    email: "",
+    service: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
   const services = [
-    'House Painting',
-    'Deep Cleaning',
-    'Plumbing',
-    'Electrical Work',
-    'Furniture Work',
-    'False Ceiling',
-    'Other'
+    "House Painting",
+    "Deep Cleaning",
+    "Plumbing",
+    "Electrical Work",
+    "Furniture Work",
+    "False Ceiling",
+    "Other",
   ];
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       // Send email using EmailJS
       await emailjs.sendForm(
-        'service_id', // Replace with your EmailJS service ID
-        'template_id', // Replace with your EmailJS template ID
+        "service_id", // Replace with your EmailJS service ID
+        "template_id", // Replace with your EmailJS template ID
         form.current,
-        'public_key' // Replace with your EmailJS public key
+        "public_key" // Replace with your EmailJS public key
       );
-      
+
       // Add recipient email as a hidden field
       const templateParams = {
-        to_email: 'joelstalin76@gmail.com',
+        to_email: "joelstalin76@gmail.com",
         from_name: formData.name,
         from_email: formData.email,
         phone: formData.phone,
         service: formData.service,
-        message: formData.message
+        message: formData.message,
       };
-      
-      setSubmitStatus('success');
+
+      setSubmitStatus("success");
       setFormData({
-        name: '',
-        phone: '',
-        email: '',
-        service: '',
-        message: ''
+        name: "",
+        phone: "",
+        email: "",
+        service: "",
+        message: "",
       });
     } catch (error) {
-      console.error('Error sending email:', error);
-      setSubmitStatus('error');
+      console.error("Error sending email:", error);
+      setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
     }
@@ -76,26 +76,26 @@ export default function ContactForm() {
       icon: <Phone size={24} />,
       title: "Call Us",
       info: "(234) 567-8900",
-      link: "tel:+1234567890"
+      link: "tel:+91 9591476089",
     },
     {
       icon: <Mail size={24} />,
       title: "Email Us",
       info: "info@prohomeservices.com",
-      link: "mailto:info@prohomeservices.com"
+      link: "mailto:info@prohomeservices.com",
     },
     {
       icon: <MapPin size={24} />,
       title: "Visit Us",
       info: "123 Main Street, Your City, State 12345",
-      link: "https://maps.google.com"
+      link: "https://maps.google.com",
     },
     {
       icon: <Clock size={24} />,
       title: "Working Hours",
       info: "Mon-Fri: 8AM-6PM, Sat: 9AM-4PM",
-      link: null
-    }
+      link: null,
+    },
   ];
 
   return (
@@ -106,15 +106,18 @@ export default function ContactForm() {
             Get Your Free Quote Today
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to transform your home? Contact us for a free estimate and consultation.
+            Ready to transform your home? Contact us for a free estimate and
+            consultation.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Get In Touch</h3>
-            
+            <h3 className="text-2xl font-bold text-gray-900 mb-8">
+              Get In Touch
+            </h3>
+
             <div className="space-y-6 mb-8">
               {contactInfo.map((item, index) => (
                 <div key={index} className="flex items-start space-x-4">
@@ -122,7 +125,9 @@ export default function ContactForm() {
                     {item.icon}
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">{item.title}</h4>
+                    <h4 className="font-semibold text-gray-900 mb-1">
+                      {item.title}
+                    </h4>
                     {item.link ? (
                       <a
                         href={item.link}
@@ -140,12 +145,15 @@ export default function ContactForm() {
 
             {/* Emergency Contact */}
             <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-lg">
-              <h4 className="font-semibold text-red-800 mb-2">Emergency Services</h4>
+              <h4 className="font-semibold text-red-800 mb-2">
+                Emergency Services
+              </h4>
               <p className="text-red-700 mb-3">
-                Need urgent assistance? We offer 24/7 emergency services for plumbing and electrical issues.
+                Need urgent assistance? We offer 24/7 emergency services for
+                plumbing and electrical issues.
               </p>
               <a
-                href="tel:+1234567890"
+                href="tel:+91 9591476089"
                 className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 inline-block"
               >
                 Call Emergency Line
@@ -156,11 +164,16 @@ export default function ContactForm() {
           {/* Contact Form */}
           <div>
             <div className="bg-white rounded-xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Request a Quote</h3>
-              
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                Request a Quote
+              </h3>
+
               <form ref={form} onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Full Name *
                   </label>
                   <input
@@ -177,7 +190,10 @@ export default function ContactForm() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Phone Number *
                     </label>
                     <input
@@ -193,7 +209,10 @@ export default function ContactForm() {
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Email Address *
                     </label>
                     <input
@@ -210,7 +229,10 @@ export default function ContactForm() {
                 </div>
 
                 <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="service"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Service Required *
                   </label>
                   <select
@@ -223,13 +245,18 @@ export default function ContactForm() {
                   >
                     <option value="">Select a service...</option>
                     {services.map((service) => (
-                      <option key={service} value={service}>{service}</option>
+                      <option key={service} value={service}>
+                        {service}
+                      </option>
                     ))}
                   </select>
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Project Details
                   </label>
                   <textarea
@@ -247,9 +274,9 @@ export default function ContactForm() {
                   type="submit"
                   disabled={isSubmitting}
                   className={`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all duration-300 flex items-center justify-center space-x-2 ${
-                    isSubmitting 
-                      ? 'bg-gray-400 cursor-not-allowed' 
-                      : 'bg-blue-600 hover:bg-blue-700 hover:shadow-lg'
+                    isSubmitting
+                      ? "bg-gray-400 cursor-not-allowed"
+                      : "bg-blue-600 hover:bg-blue-700 hover:shadow-lg"
                   }`}
                 >
                   {isSubmitting ? (
@@ -265,15 +292,17 @@ export default function ContactForm() {
                   )}
                 </button>
 
-                {submitStatus === 'success' && (
+                {submitStatus === "success" && (
                   <div className="bg-green-50 border border-green-200 rounded-lg p-4 text-green-700">
-                    Thank you! Your quote request has been submitted. We'll contact you within 24 hours.
+                    Thank you! Your quote request has been submitted. We'll
+                    contact you within 24 hours.
                   </div>
                 )}
 
-                {submitStatus === 'error' && (
+                {submitStatus === "error" && (
                   <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-700">
-                    Sorry, there was an error submitting your request. Please try again or call us directly.
+                    Sorry, there was an error submitting your request. Please
+                    try again or call us directly.
                   </div>
                 )}
               </form>

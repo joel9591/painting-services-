@@ -77,7 +77,7 @@ export default function Navigation() {
             {/* Desktop CTA Buttons */}
             <div className="hidden md:flex items-center space-x-4">
               <a
-                href="tel:+1234567890"
+                href="tel:+91 9591476089"
                 className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center space-x-2"
               >
                 <Phone size={16} />
@@ -119,7 +119,7 @@ export default function Navigation() {
               ))}
               <div className="flex flex-col space-y-2 px-3 pt-4">
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+91 9591476089"
                   className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center space-x-2"
                 >
                   <Phone size={16} />
@@ -159,7 +159,7 @@ export default function Navigation() {
 
       {/* Mobile Click-to-Call Button */}
       <a
-        href="tel:+1234567890"
+        href="tel:+91 9591476089"
         className="md:hidden fixed bottom-6 left-6 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-40"
         aria-label="Call Now"
       >

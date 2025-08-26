@@ -277,7 +277,7 @@ export default function Services() {
               Get Free Quote
             </Link>
             <a
-              href="tel:+1234567890"
+              href="tel:+91 9591476089"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
             >
               Call (234) 567-8900
