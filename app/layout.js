@@ -1,49 +1,53 @@
-import { Inter } from 'next/font/google';
-import './globals.css';
-import { ThemeProvider } from '@/components/theme-provider';
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: {
-    default: 'Bharath Painters | Painting, Plumbing, Cleaning & More',
-    template: '%s | Bharath Painters'
+    default: "Bharath Painters | Painting, Plumbing, Cleaning & More",
+    template: "%s | Bharath Painters",
   },
-  description: 'Professional home services including house painting, deep cleaning, plumbing, electrical work, furniture work, and false ceiling installation. Quality workmanship guaranteed.',
-  keywords: 'home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services',
-  authors: [{ name: 'Bharath Painters' }],
-  creator: 'Bharath Painters',
-  publisher: 'Bharath Painters',
+  description:
+    "Professional home services including house painting, deep cleaning, plumbing, electrical work, furniture work, and false ceiling installation. Quality workmanship guaranteed.",
+  keywords:
+    "home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services",
+  authors: [{ name: "Bharath Painters" }],
+  creator: "Bharath Painters",
+  publisher: "Bharath Painters",
   formatDetection: {
     email: true,
     address: true,
     telephone: true,
   },
-  metadataBase: new URL('https://prohomeservices.com'),
+  metadataBase: new URL("https://prohomeservices.com"),
   alternates: {
-    canonical: '/',
+    canonical: "/",
   },
   openGraph: {
-    title: 'Bharath Painters | Quality Home Improvement Solutions',
-    description: 'Transform your home with our professional services including painting, plumbing, cleaning, and more. Quality guaranteed.',
-    url: 'https://bharathpainters.com',
-    siteName: 'Bharath Painters',
-    locale: 'en_US',
-    type: 'website',
+    title: "Bharath Painters | Quality Home Improvement Solutions",
+    description:
+      "Transform your home with our professional services including painting, plumbing, cleaning, and more. Quality guaranteed.",
+    url: "https://bharathpainters.com",
+    siteName: "Bharath Painters",
+    locale: "en_US",
+    type: "website",
     images: [
       {
-        url: 'https://prohomeservices.com/og-image.jpg',
+        url: "./logo.jpg",
         width: 1200,
         height: 630,
-        alt: 'Bharath Painters - Professional Home Improvement',
-      }
+        alt: "Bharath Painters - Professional Home Improvement",
+      },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Bharath Painters | Quality Home Improvement',
-    description: 'Transform your home with our professional services including painting, plumbing, cleaning, and more.',
-    images: ['https://bharathpainters.com/twitter-image.jpg'],
+    card: "summary_large_image",
+    title: "Bharath Painters | Quality Home Improvement",
+    description:
+      "Transform your home with our professional services including painting, plumbing, cleaning, and more.",
+    images: ["https://bharathpainters.com/twitter-image.jpg"],
   },
   robots: {
     index: true,
@@ -51,9 +55,9 @@ export const metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 };
@@ -62,57 +66,58 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/logo.jpg" type="image/jpeg" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "name": "Professional Home Services",
-              "image": "https://prohomeservices.com/logo.jpg",
-              "telephone": "+91 9591476089",
-              "email": "info@prohomeservices.com",
-              "address": {
+              name: "Professional Home Services",
+              image: "./logo.jpg",
+              telephone: "+91 9591476089",
+              email: "info@prohomeservices.com",
+              address: {
                 "@type": "PostalAddress",
-                "streetAddress": "123 Main Street",
-                "addressLocality": "Your City",
-                "addressRegion": "Your State",
-                "postalCode": "12345",
-                "addressCountry": "US"
+                streetAddress: "123 Main Street",
+                addressLocality: "Your City",
+                addressRegion: "Your State",
+                postalCode: "12345",
+                addressCountry: "US",
               },
-              "geo": {
+              geo: {
                 "@type": "GeoCoordinates",
-                "latitude": 40.7128,
-                "longitude": -74.0060
+                latitude: 40.7128,
+                longitude: -74.006,
               },
-              "url": "https://prohomeservices.com",
-              "sameAs": [
+              url: "https://prohomeservices.com",
+              sameAs: [
                 "https://www.facebook.com/prohomeservices",
-                "https://www.instagram.com/prohomeservices"
+                "https://www.instagram.com/prohomeservices",
               ],
-              "openingHoursSpecification": [
+              openingHoursSpecification: [
                 {
                   "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": [
+                  dayOfWeek: [
                     "Monday",
                     "Tuesday",
                     "Wednesday",
                     "Thursday",
-                    "Friday"
+                    "Friday",
                   ],
-                  "opens": "08:00",
-                  "closes": "18:00"
+                  opens: "08:00",
+                  closes: "18:00",
                 },
                 {
                   "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": "Saturday",
-                  "opens": "09:00",
-                  "closes": "16:00"
-                }
+                  dayOfWeek: "Saturday",
+                  opens: "09:00",
+                  closes: "16:00",
+                },
               ],
-              "priceRange": "$$",
-              "servesCuisine": "Home Services"
-            })
+              priceRange: "$$",
+              servesCuisine: "Home Services",
+            }),
           }}
         />
       </head>
