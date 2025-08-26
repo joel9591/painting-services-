@@ -113,7 +113,7 @@ export default function Services() {
                   href={service.href}
                   className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors duration-200"
                 >
-                  Learn More
+                  View Service Details
                   <ArrowRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform duration-200" />
                 </Link>
               </div>

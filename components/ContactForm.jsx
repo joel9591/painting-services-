@@ -1,8 +1,10 @@
 'use client';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Send, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 export default function ContactForm() {
+  const form = useRef();
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -35,9 +37,23 @@ export default function ContactForm() {
     setIsSubmitting(true);
     
     try {
-      // Here you would typically send the form data to your backend
-      // For now, we'll simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Send email using EmailJS
+      await emailjs.sendForm(
+        'service_id', // Replace with your EmailJS service ID
+        'template_id', // Replace with your EmailJS template ID
+        form.current,
+        'public_key' // Replace with your EmailJS public key
+      );
+      
+      // Add recipient email as a hidden field
+      const templateParams = {
+        to_email: 'joelstalin76@gmail.com',
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        service: formData.service,
+        message: formData.message
+      };
       
       setSubmitStatus('success');
       setFormData({
@@ -48,6 +64,7 @@ export default function ContactForm() {
         message: ''
       });
     } catch (error) {
+      console.error('Error sending email:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -141,7 +158,7 @@ export default function ContactForm() {
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Request a Quote</h3>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form ref={form} onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     Full Name *

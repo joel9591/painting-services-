@@ -1,47 +1,49 @@
-import './globals.css';
 import { Inter } from 'next/font/google';
+import './globals.css';
+import { ThemeProvider } from '@/components/theme-provider';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: {
-    default: 'Professional Home Services | Painting, Plumbing, Cleaning & More',
-    template: '%s | Professional Home Services'
+    default: 'Bharath Painters | Painting, Plumbing, Cleaning & More',
+    template: '%s | Bharath Painters'
   },
   description: 'Professional home services including house painting, deep cleaning, plumbing, electrical work, furniture work, and false ceiling installation. Quality workmanship guaranteed.',
   keywords: 'home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services',
-  authors: [{ name: 'Professional Home Services' }],
-  creator: 'Professional Home Services',
-  publisher: 'Professional Home Services',
+  authors: [{ name: 'Bharath Painters' }],
+  creator: 'Bharath Painters',
+  publisher: 'Bharath Painters',
   formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
+    email: true,
+    address: true,
+    telephone: true,
   },
-  metadataBase: new URL('https://yourdomain.com'),
+  metadataBase: new URL('https://prohomeservices.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Professional Home Services | Quality Home Improvement Solutions',
+    title: 'Bharath Painters | Quality Home Improvement Solutions',
     description: 'Transform your home with our professional services including painting, plumbing, cleaning, and more. Quality guaranteed.',
-    url: 'https://yourdomain.com',
-    siteName: 'Professional Home Services',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-      },
-    ],
+    url: 'https://bharathpainters.com',
+    siteName: 'Bharath Painters',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: 'https://prohomeservices.com/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Bharath Painters - Professional Home Improvement',
+      }
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Professional Home Services | Quality Home Improvement Solutions',
+    title: 'Bharath Painters | Quality Home Improvement',
     description: 'Transform your home with our professional services including painting, plumbing, cleaning, and more.',
-    images: ['/og-image.jpg'],
+    images: ['https://bharathpainters.com/twitter-image.jpg'],
   },
   robots: {
     index: true,
@@ -67,9 +69,9 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "Professional Home Services",
-              "image": "https://yourdomain.com/logo.jpg",
+              "image": "https://prohomeservices.com/logo.jpg",
               "telephone": "+1-234-567-8900",
-              "email": "info@yourdomain.com",
+              "email": "info@prohomeservices.com",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "123 Main Street",
@@ -83,10 +85,10 @@ export default function RootLayout({ children }) {
                 "latitude": 40.7128,
                 "longitude": -74.0060
               },
-              "url": "https://yourdomain.com",
+              "url": "https://prohomeservices.com",
               "sameAs": [
-                "https://www.facebook.com/yourbusiness",
-                "https://www.instagram.com/yourbusiness"
+                "https://www.facebook.com/prohomeservices",
+                "https://www.instagram.com/prohomeservices"
               ],
               "openingHoursSpecification": [
                 {
@@ -109,21 +111,20 @@ export default function RootLayout({ children }) {
                 }
               ],
               "priceRange": "$$",
-              "servesCuisine": [],
-              "serviceType": [
-                "House Painting",
-                "Deep Cleaning",
-                "Plumbing",
-                "Electrical Work",
-                "Furniture Work",
-                "False Ceiling Installation"
-              ]
+              "servesCuisine": "Home Services"
             })
           }}
         />
       </head>
       <body className={inter.className}>
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

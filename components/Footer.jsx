@@ -1,31 +1,31 @@
-import Link from 'next/link';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Facebook, 
-  Instagram, 
+import Link from "next/link";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Instagram,
   Twitter,
-  Clock
-} from 'lucide-react';
+  Clock,
+} from "lucide-react";
 
 export default function Footer() {
   const services = [
-    { name: 'House Painting', href: '/services/house-painting' },
-    { name: 'Deep Cleaning', href: '/services/deep-cleaning' },
-    { name: 'Plumbing', href: '/services/plumbing' },
-    { name: 'Electrical Work', href: '/services/electrical-work' },
-    { name: 'Furniture Work', href: '/services/furniture-work' },
-    { name: 'False Ceiling', href: '/services/false-ceiling' }
+    { name: "House Painting", href: "/services/house-painting" },
+    { name: "Deep Cleaning", href: "/services/deep-cleaning" },
+    { name: "Plumbing", href: "/services/plumbing" },
+    { name: "Electrical Work", href: "/services/electrical-work" },
+    { name: "Furniture Work", href: "/services/furniture-work" },
+    { name: "False Ceiling", href: "/services/false-ceiling" },
   ];
 
   const quickLinks = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Gallery', href: '/gallery' },
-    { name: 'Testimonials', href: '/testimonials' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Get Quote', href: '/contact' }
+    { name: "About Us", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "Testimonials", href: "/testimonials" },
+    { name: "Contact", href: "/contact" },
+    { name: "Get Quote", href: "/contact" },
   ];
 
   return (
@@ -35,11 +35,11 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <h3 className="text-2xl font-bold text-blue-400 mb-4">
-              ProHome Services
+              Bharath Painters
             </h3>
             <p className="text-gray-300 mb-6">
-              Your trusted partner for all home improvement needs. We deliver quality, 
-              reliability, and exceptional service with every project.
+              Your trusted partner for all home improvement needs. We deliver
+              quality, reliability, and exceptional service with every project.
             </p>
             <div className="flex space-x-4">
               <a
@@ -105,33 +105,38 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
-                <MapPin className="text-blue-400 flex-shrink-0 mt-1" size={20} />
+                <MapPin
+                  className="text-blue-400 flex-shrink-0 mt-1"
+                  size={20}
+                />
                 <div>
-                  <p className="text-gray-300">123 Main Street</p>
-                  <p className="text-gray-300">Your City, State 12345</p>
+                  <p className="text-gray-300">123 Main Street, Suite 200</p>
+                  <p className="text-gray-300">
+                    New town, yelahanka 560064 Karnataka
+                  </p>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-3">
                 <Phone className="text-blue-400 flex-shrink-0" size={20} />
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+919591576089"
                   className="text-gray-300 hover:text-white transition-colors duration-200"
                 >
-                  (234) 567-8900
+                  +91 9591576089
                 </a>
               </div>
-              
+
               <div className="flex items-center space-x-3">
                 <Mail className="text-blue-400 flex-shrink-0" size={20} />
                 <a
                   href="mailto:info@prohomeservices.com"
                   className="text-gray-300 hover:text-white transition-colors duration-200"
                 >
-                  info@prohomeservices.com
+                  info@bharathpainters.com
                 </a>
               </div>
-              
+
               <div className="flex items-start space-x-3">
                 <Clock className="text-blue-400 flex-shrink-0 mt-1" size={20} />
                 <div>
@@ -146,8 +151,12 @@ export default function Footer() {
 
         {/* Emergency Banner */}
         <div className="mt-12 bg-red-600 rounded-lg p-6 text-center">
-          <h4 className="text-xl font-bold mb-2">24/7 Emergency Services Available</h4>
-          <p className="mb-4">Plumbing or electrical emergency? We're here to help anytime!</p>
+          <h4 className="text-xl font-bold mb-2">
+            24/7 Emergency Services Available
+          </h4>
+          <p className="mb-4">
+            Plumbing or electrical emergency? We're here to help anytime!
+          </p>
           <a
             href="tel:+1234567890"
             className="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center space-x-2"

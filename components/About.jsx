@@ -1,21 +1,45 @@
 'use client';
+import { useEffect, useState } from 'react';
 import { CheckCircle, Award, Users, Clock } from 'lucide-react';
+
+// 🔹 CountUp Hook
+function useCountUp(target, duration = 2000) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let start = 0;
+    const increment = target / (duration / 16); // ~60fps
+    const step = () => {
+      start += increment;
+      if (start < target) {
+        setCount(Math.floor(start));
+        requestAnimationFrame(step);
+      } else {
+        setCount(target);
+      }
+    };
+    requestAnimationFrame(step);
+  }, [target, duration]);
+
+  return count;
+}
 
 export default function About() {
   const stats = [
-    { icon: <Users size={32} />, number: "500+", label: "Happy Customers" },
-    { icon: <Award size={32} />, number: "10+", label: "Years Experience" },
-    { icon: <CheckCircle size={32} />, number: "1000+", label: "Projects Completed" },
-    { icon: <Clock size={32} />, number: "24/7", label: "Customer Support" }
+    { icon: <Users size={32} />, number: 500, label: "Happy Customers", suffix: "+" },
+    { icon: <Award size={32} />, number: 10, label: "Years Experience", suffix: "+" },
+    { icon: <CheckCircle size={32} />, number: 1000, label: "Projects Completed", suffix: "+" },
+    { icon: <Clock size={32} />, number: 24, label: "Customer Support", suffix: "/7" }
   ];
 
   return (
     <section id="about" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* About Text */}
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-              About ProHome Services
+              About Bharath Painters
             </h2>
             <p className="text-lg text-gray-600 mb-6">
               With over 10 years of experience in the home services industry, we've built our reputation on 
@@ -44,6 +68,7 @@ export default function About() {
             </div>
           </div>
 
+          {/* Image */}
           <div className="relative">
             <img
               src="https://images.pexels.com/photos/5691600/pexels-photo-5691600.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2"
@@ -57,22 +82,25 @@ export default function About() {
           </div>
         </div>
 
-        {/* Stats Section */}
+        {/* Stats Section with Animation */}
         <div className="mt-20">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-blue-600 mb-4 flex justify-center">
-                  {stat.icon}
+            {stats.map((stat, index) => {
+              const count = useCountUp(stat.number, 2000);
+              return (
+                <div key={index} className="text-center">
+                  <div className="text-blue-600 mb-4 flex justify-center">
+                    {stat.icon}
+                  </div>
+                  <div className="text-3xl font-bold text-gray-900 mb-2">
+                    {count}{stat.suffix}
+                  </div>
+                  <div className="text-gray-600">
+                    {stat.label}
+                  </div>
                 </div>
-                <div className="text-3xl font-bold text-gray-900 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-600">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>

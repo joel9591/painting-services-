@@ -1,121 +1,123 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { CheckCircle, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
   
-  const slides = [
-    {
-      title: "Professional House Painting",
-      subtitle: "Transform Your Home with Expert Painting Services",
-      description: "From interior to exterior painting, we deliver flawless results that last.",
-      image: "https://images.pexels.com/photos/1669799/pexels-photo-1669799.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-    },
-    {
-      title: "Deep Cleaning Services",
-      subtitle: "Spotless Homes, Healthy Living",
-      description: "Comprehensive cleaning solutions for every corner of your home.",
-      image: "https://images.pexels.com/photos/4239091/pexels-photo-4239091.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-    },
-    {
-      title: "Expert Plumbing Solutions",
-      subtitle: "Reliable Plumbing You Can Trust",
-      description: "Fast, professional plumbing repairs and installations.",
-      image: "https://images.pexels.com/photos/8293660/pexels-photo-8293660.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-    }
-  ];
-
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(timer);
+    setIsVisible(true);
   }, []);
 
-  const features = [
-    "Licensed & Insured Professionals",
-    "Free Estimates & Consultations",
-    "100% Satisfaction Guarantee",
-    "Emergency Services Available"
-  ];
-
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Slider */}
-      <div className="absolute inset-0">
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentSlide ? 'opacity-100' : 'opacity-0'
-            }`}
-          >
-            <img
-              src={slide.image}
-              alt={slide.title}
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-black/50"></div>
+    <section className="relative bg-gradient-to-r from-blue-900 to-blue-700 text-white overflow-hidden">
+      <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/1669799/pexels-photo-1669799.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1')] bg-cover bg-center opacity-20"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className={`space-y-8 transition-all duration-1000 transform ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight ">
+              Professional Home Services You Can Trust
+            </h1>
+            <p className="text-xl md:text-2xl text-blue-100">
+              From painting to plumbing, electrical work to deep cleaning, we provide comprehensive home services with quality guaranteed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/services"
+                className="bg-white text-blue-700 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center group"
+              >
+                <span>Our Services</span>
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" size={20} />
+              </Link>
+              <Link
+                href="/contact"
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-700 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 text-center"
+              >
+                Get a Free Quote
+              </Link>
+            </div>
           </div>
-        ))}
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
-        <div className="text-center text-white">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in">
-            {slides[currentSlide].title}
-          </h1>
-          <p className="text-xl sm:text-2xl mb-4 text-gray-200">
-            {slides[currentSlide].subtitle}
-          </p>
-          <p className="text-lg mb-8 text-gray-300 max-w-3xl mx-auto">
-            {slides[currentSlide].description}
-          </p>
-
-          {/* Features */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8 max-w-4xl mx-auto">
-            {features.map((feature, index) => (
-              <div key={index} className="flex items-center justify-center sm:justify-start space-x-2 bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                <CheckCircle className="text-green-400 flex-shrink-0" size={20} />
-                <span className="text-sm font-medium">{feature}</span>
-              </div>
-            ))}
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="/contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center space-x-2 w-full sm:w-auto justify-center"
-            >
-              <span>Get Free Quote</span>
-              <ArrowRight size={20} />
-            </Link>
-            <a
-              href="tel:+1234567890"
-              className="bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 w-full sm:w-auto text-center"
-            >
-              Call (234) 567-8900
-            </a>
+          
+          <div className={`bg-white/10 backdrop-blur-sm rounded-xl p-2 shadow-2xl transition-all duration-1000 delay-300 transform ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
+            <div className="bg-white/95 rounded-xl p-4 text-gray-900">
+              <h2 className="text-2xl font-bold text-blue-700 mb-4">Request a Service</h2>
+              <form className="space-y-4">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                    Your Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="John Doe"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="john@example.com"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="phonenumber" className="block text-sm font-medium text-gray-700 mb-1">
+                    Phone Number
+                  </label>
+                  <input
+                    type="number"
+                    id="number"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="9865845876"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">
+                    Service Needed
+                  </label>
+                  <select
+                    id="service"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  >
+                    <option value="">Select a Service</option>
+                    <option value="House Painting">House Painting</option>
+                    <option value="Deep Cleaning">Deep Cleaning</option>
+                    <option value="Plumbing">Plumbing</option>
+                    <option value="Electrical Work">Electrical Work</option>
+                    <option value="Furniture Work">Furniture Work</option>
+                    <option value="False Ceiling">False Ceiling</option>
+                  </select>
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                    Brief Description
+                  </label>
+                  <textarea
+                    id="message"
+                    rows="3"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Tell us about your project..."
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                >
+                  Submit Request
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-
-      {/* Slide Indicators */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide ? 'bg-white' : 'bg-white/50'
-            }`}
-          />
-        ))}
-      </div>
+      
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-blue-900 to-transparent"></div>
     </section>
   );
 }

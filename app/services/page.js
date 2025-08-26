@@ -38,7 +38,7 @@ export default function Services() {
       ],
       href: "/services/house-painting",
       image: "https://images.pexels.com/photos/1669799/pexels-photo-1669799.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
-      startingPrice: "$299"
+      startingPrice: "₹299"
     },
     {
       icon: <Sparkles className="text-purple-600" size={48} />,
@@ -54,7 +54,7 @@ export default function Services() {
       ],
       href: "/services/deep-cleaning",
       image: "https://images.pexels.com/photos/4239091/pexels-photo-4239091.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
-      startingPrice: "$149"
+      startingPrice: "₹149"
     },
     {
       icon: <Wrench className="text-green-600" size={48} />,
@@ -70,7 +70,7 @@ export default function Services() {
       ],
       href: "/services/plumbing",
       image: "https://images.pexels.com/photos/8293660/pexels-photo-8293660.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
-      startingPrice: "$89"
+      startingPrice: "₹89"
     },
     {
       icon: <Zap className="text-yellow-600" size={48} />,
@@ -86,7 +86,7 @@ export default function Services() {
       ],
       href: "/services/electrical-work",
       image: "https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
-      startingPrice: "$99"
+      startingPrice: "₹99"
     },
     {
       icon: <Sofa className="text-orange-600" size={48} />,
@@ -102,7 +102,7 @@ export default function Services() {
       ],
       href: "/services/furniture-work",
       image: "https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
-      startingPrice: "$79"
+      startingPrice: "₹79"
     },
     {
       icon: <Home className="text-teal-600" size={48} />,
@@ -118,7 +118,7 @@ export default function Services() {
       ],
       href: "/services/false-ceiling",
       image: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
-      startingPrice: "$199"
+      startingPrice: "₹199"
     }
   ];
 
