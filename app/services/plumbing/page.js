@@ -79,7 +79,7 @@ export default function Plumbing() {
                   href="/contact"
                   className="bg-white text-green-700 hover:bg-green-50 px-8 py-3 rounded-lg font-semibold transition-colors duration-300 text-center"
                 >
-                  Get a Free Quote
+                  Get a Free Quotation
                 </Link>
                 <Link
                   href="#services"

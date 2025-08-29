@@ -1,8 +1,9 @@
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import { CheckCircle } from 'lucide-react';
 
 export const metadata = {
-  title: 'Our Work Gallery | Professional Home Services',
+  title: 'Our Work Gallery | Bharath Painters Services',
   description: 'Browse our gallery of completed projects including painting, plumbing, electrical work, and more. See the quality of our professional home services.',
   keywords: 'home services gallery, painting projects, home improvement gallery, before and after, project showcase',
   openGraph: {
@@ -67,53 +68,97 @@ export default function Gallery() {
   return (
     <main>
       <Navigation />
-      
-      <section className="pt-32 pb-20 bg-gray-50">
+
+      {/* Hero Section (same style as About) */}
+      <section className="pt-24 pb-16 bg-gradient-to-br from-purple-500 to-blue-300 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+            Our Work Gallery
+          </h1>
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            Explore our completed projects across painting, plumbing, electrical work, and more. 
+            Every picture reflects our dedication to quality and craftsmanship.
+          </p>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+          {galleryItems.map((category, index) => (
+            <div 
+              key={index} 
+              className="bg-white rounded-xl shadow-lg overflow-hidden"
+            >
+              <div className="p-6 border-b">
+                <h2 className="text-2xl font-bold text-gray-900">
+                  {category.category}
+                </h2>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-6">
+                {category.images.map((image, imgIndex) => (
+                  <div 
+                    key={imgIndex} 
+                    className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+                  >
+                    <img 
+                      src={image} 
+                      alt={`${category.category} project ${imgIndex + 1}`}
+                      className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Why Choose Us (reuse from About for consistency) */}
+      <section className="py-20 bg-gradient-to-br from-purple-500 to-blue-300 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Our Work Gallery
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Browse through our portfolio of completed projects and see the quality of our workmanship.
+            <h2 className="text-3xl font-bold mb-4">Why Showcase Our Work?</h2>
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              We believe our projects speak louder than words. 
+              Here's why customers trust us.
             </p>
           </div>
-          
-          <div className="space-y-16">
-            {galleryItems.map((category, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
-                <div className="p-6 border-b">
-                  <h2 className="text-2xl font-bold text-gray-900">{category.category}</h2>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-6">
-                  {category.images.map((image, imgIndex) => (
-                    <div key={imgIndex} className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-                      <img 
-                        src={image} 
-                        alt={`${category.category} project ${imgIndex + 1}`}
-                        className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                  ))}
-                </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              "Proven track record with hundreds of projects",
+              "Diverse expertise across multiple home services",
+              "Attention to detail in every step",
+              "Trusted by families and businesses alike",
+              "Modern tools and eco-friendly practices",
+              "Commitment to exceeding expectations"
+            ].map((item, index) => (
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="text-green-400 flex-shrink-0 mt-1" size={20} />
+                <span>{item}</span>
               </div>
             ))}
           </div>
-          
-          <div className="text-center mt-16">
-            <p className="text-lg text-gray-700 mb-6">
-              Ready to transform your space? Contact us for a free consultation and quote.
-            </p>
-            <a 
-              href="/contact" 
-              className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
-            >
-              Get a Free Quote
-            </a>
-          </div>
         </div>
       </section>
-      
+
+      {/* CTA Section */}
+      <section className="py-20 bg-white text-center">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-lg text-gray-700 mb-6">
+            Loved our work? Let's bring the same level of quality to your home. 
+            Contact us today for a free consultation and quotation.
+          </p>
+          <a 
+            href="/contact" 
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
+          >
+            Get a Free Quotation
+          </a>
+        </div>
+      </section>
+
       <Footer />
     </main>
   );

@@ -3,11 +3,11 @@ import Footer from '@/components/Footer';
 import { CheckCircle, Award, Users, Clock, Shield, Heart } from 'lucide-react';
 
 export const metadata = {
-  title: 'About Us | ProHome Services - Professional Home Improvement Experts',
-  description: 'Learn about ProHome Services - over 10 years of experience providing professional house painting, plumbing, electrical work, cleaning, and home improvement services.',
-  keywords: 'about prohome services, professional home improvement, licensed contractors, experienced home services team',
+  title: 'About Us | Bharath Painters Services - Professional Home Improvement Experts',
+  description: 'Learn about Bharath Painters Services - over 10 years of experience providing professional house painting, plumbing, electrical work, cleaning, and home improvement services.',
+  keywords: 'about Bharath Painters services, professional home improvement, licensed contractors, experienced home services team',
   openGraph: {
-    title: 'About ProHome Services - Your Trusted Home Improvement Partner',
+    title: 'About Bharath Painters Services - Your Trusted Home Improvement Partner',
     description: 'Discover our commitment to quality, professional service, and customer satisfaction. Serving homeowners for over 10 years.',
   },
 };
@@ -84,10 +84,10 @@ export default function About() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+      <section className="pt-24 pb-16 bg-gradient-to-br from-purple-500 to-blue-300 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-            About ProHome Services
+            About Bharath Painters Services
           </h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
             Your trusted partner for professional home improvement services since 2014. 
@@ -121,7 +121,7 @@ export default function About() {
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
               <p className="text-lg text-gray-600 mb-6">
-                Founded in 2014, ProHome Services started as a small family business with a simple mission: 
+                Founded in 2014, Bharath Painters Services started as a small family business with a simple mission: 
                 to provide homeowners with reliable, professional, and affordable home improvement services. 
                 What began as a one-person operation has grown into a trusted team of skilled professionals.
               </p>
@@ -232,7 +232,7 @@ export default function About() {
       <section className="py-20 bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Why Choose ProHome Services?</h2>
+            <h2 className="text-3xl font-bold mb-4">Why Choose Bharath Painters Services?</h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
               Here's what sets us apart from other home service providers.
             </p>

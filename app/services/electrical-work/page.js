@@ -79,7 +79,7 @@ export default function ElectricalWork() {
                   href="/contact"
                   className="bg-white text-yellow-700 hover:bg-yellow-50 px-8 py-3 rounded-lg font-semibold transition-colors duration-300 text-center"
                 >
-                  Get a Free Quote
+                  Get a Free Quotation
                 </Link>
                 <Link
                   href="#services"
@@ -115,7 +115,7 @@ export default function ElectricalWork() {
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="text-green-400 mr-2 flex-shrink-0 mt-1" size={18} />
-                    <span>Transparent pricing with detailed quotes</span>
+                    <span>Transparent pricing with detailed Quotation</span>
                   </li>
                 </ul>
               </div>

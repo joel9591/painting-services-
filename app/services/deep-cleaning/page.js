@@ -79,7 +79,7 @@ export default function DeepCleaning() {
                   href="/contact"
                   className="bg-white text-blue-700 hover:bg-blue-50 px-8 py-3 rounded-lg font-semibold transition-colors duration-300 text-center"
                 >
-                  Get a Free Quote
+                  Get a Free Quotation
                 </Link>
                 <Link
                   href="#services"
@@ -236,7 +236,7 @@ export default function DeepCleaning() {
               href="/contact"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-300 inline-flex items-center space-x-2"
             >
-              <span>Get a Free Quote Today</span>
+              <span>Get a Free Quotation Today</span>
               <Shield size={20} />
             </Link>
           </div>

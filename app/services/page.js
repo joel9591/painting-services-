@@ -127,7 +127,7 @@ export default function Services() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+      <section className="pt-24 pb-16 bg-gradient-to-br  from-purple-500 to-blue-300 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">
             Our Professional Services
@@ -198,7 +198,7 @@ export default function Services() {
                       href="/contact"
                       className="flex-1 bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 text-center"
                     >
-                      Get Quote
+                      Get Quotation
                     </Link>
                   </div>
                 </div>
@@ -274,7 +274,7 @@ export default function Services() {
               href="/contact"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
             >
-              Get Free Quote
+              Get Free Quotation
             </Link>
             <a
               href="tel:+91 9591476089"

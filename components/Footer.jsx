@@ -25,7 +25,7 @@ export default function Footer() {
     { name: "Gallery", href: "/gallery" },
     { name: "Testimonials", href: "/testimonials" },
     { name: "Contact", href: "/contact" },
-    { name: "Get Quote", href: "/contact" },
+    { name: "Get Quotation", href: "/contact" },
   ];
 
   return (
@@ -91,7 +91,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-200"
+                    className="text-gray-300 underline hover:text-blue-700 transition-colors duration-200 hover:underline"
                   >
                     {link.name}
                   </Link>
@@ -130,7 +130,7 @@ export default function Footer() {
               <div className="flex items-center space-x-3">
                 <Mail className="text-blue-400 flex-shrink-0" size={20} />
                 <a
-                  href="mailto:info@prohomeservices.com"
+                  href="mailto:info@bharathservices.com"
                   className="text-gray-300 hover:text-white transition-colors duration-200"
                 >
                   info@bharathpainters.com
@@ -170,10 +170,10 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2025 ProHome Services. All rights reserved.
+              © 2025 Bharath Painters Services. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link
+              {/* <Link
                 href="/privacy-policy"
                 className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
               >
@@ -184,7 +184,7 @@ export default function Footer() {
                 className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
               >
                 Terms of Service
-              </Link>
+              </Link> */}
               <Link
                 href="/sitemap.xml"
                 className="text-gray-400 hover:text-white text-sm transition-colors duration-200"

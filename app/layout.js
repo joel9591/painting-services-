@@ -21,7 +21,7 @@ export const metadata = {
     address: true,
     telephone: true,
   },
-  metadataBase: new URL("https://prohomeservices.com"),
+  metadataBase: new URL("https://bharathpainters.com"),
   alternates: {
     canonical: "/",
   },
@@ -76,7 +76,7 @@ export default function RootLayout({ children }) {
               name: "Professional Home Services",
               image: "./logo.jpg",
               telephone: "+91 9591476089",
-              email: "info@prohomeservices.com",
+              email: "info@bharathpainters.com",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "123 Main Street",
@@ -90,10 +90,10 @@ export default function RootLayout({ children }) {
                 latitude: 40.7128,
                 longitude: -74.006,
               },
-              url: "https://prohomeservices.com",
+              url: "https://bharathpainters.com",
               sameAs: [
-                "https://www.facebook.com/prohomeservices",
-                "https://www.instagram.com/prohomeservices",
+                "https://www.facebook.com/bharathpainters",
+                "https://www.instagram.com/bharathpainters",
               ],
               openingHoursSpecification: [
                 {

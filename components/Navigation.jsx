@@ -2,22 +2,19 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X, Phone, MessageCircle } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const pathname = usePathname();
 
   const navigation = [
     { name: "Home", href: "/" },
@@ -33,73 +30,69 @@ export default function Navigation() {
       <nav
         className={`fixed w-full z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-white shadow-lg py-2"
-            : "bg-white/95 backdrop-blur-sm py-4"
+            ? "bg-white shadow-md py-2"
+            : "bg-white/95 backdrop-blur-sm py-3"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center">
-            <div className="flex-shrink-0 flex items-center">
-              <Link href="/" className="flex items-center">
-                <Image
-                  src="/logo.jpg"
-                  alt="Bharath Painters Logo"
-                  width={40}
-                  height={40}
-                  className="mr-2 rounded"
-                />
-                <span className="text-2xl font-bold text-blue-600">
-                  Bharath Painters
-                </span>
-              </Link>
-            </div>
+        <div className="w-full flex items-center px-2 sm:px-6 lg:px-8">
+          {/* Logo Section */}
+            <Link href="/" className="flex items-start">
+              <Image
+                src="/logo.jpg"
+                alt="Bharath Painters Logo"
+                width={42}
+                height={42}
+                className="rounded"
+              />
+              <span className="ml-2 mt-2 text-xl sm:text-2xl font-extrabold text-blue-600">
+                Bharath Painters
+              </span>
+            </Link>
+          
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-8">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className={`px-3 py-2 text-sm font-medium transition-colors duration-200
-                      ${
-                        pathname === item.href
-                          ? "text-yellow-500 font-bold" // ✅ Active tab yellow
-                          : "text-gray-700 hover:text-blue-600"
-                      }`}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            {/* Desktop CTA Buttons */}
-            <div className="hidden md:flex items-center space-x-4">
-              <a
-                href="tel:+91 9591476089"
-                className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center space-x-2"
-              >
-                <Phone size={16} />
-                <span>Call Now</span>
-              </a>
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex ml-10 space-x-8">
+            {navigation.map((item) => (
               <Link
-                href="/contact"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200"
+                key={item.name}
+                href={item.href}
+                className={`px-3 py-2 text-lg font-semibold rounded-md transition-colors duration-200
+                  ${
+                    pathname === item.href
+                      ? "text-yellow-500"
+                      : "text-gray-700 hover:text-blue-600"
+                  }`}
               >
-                Get Quote
+                {item.name}
               </Link>
-            </div>
+            ))}
+          </div>
 
-            {/* Mobile menu button */}
-            <div className="md:hidden">
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="text-gray-700 hover:text-blue-600 p-2"
-              >
-                {isOpen ? <X size={24} /> : <Menu size={24} />}
-              </button>
-            </div>
+          {/* Desktop CTA Buttons (pushed to right) */}
+          <div className="hidden md:flex items-center space-x-3 ml-auto">
+            <a
+              href="tel:+91 9591476089"
+              className="flex items-center justify-center bg-green-500 hover:bg-green-600 text-white w-28 h-10 rounded-lg font-semibold transition-colors duration-200"
+            >
+              <Phone size={18} className="mr-1" />
+              Call Now
+            </a>
+            <Link
+              href="/contact"
+              className="flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white w-28 h-10 rounded-lg font-semibold transition-colors duration-200"
+            >
+              Get Quotation
+            </Link>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden ml-auto">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-700 hover:text-blue-600 p-2"
+            >
+              {isOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
           </div>
         </div>
 
@@ -111,8 +104,13 @@ export default function Navigation() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium"
                   onClick={() => setIsOpen(false)}
+                  className={`block px-3 py-2 text-base font-semibold rounded-md transition-colors duration-200
+                    ${
+                      pathname === item.href
+                        ? "bg-gray-200 text-yellow-500"
+                        : "text-gray-700 hover:text-blue-600"
+                    }`}
                 >
                   {item.name}
                 </Link>
@@ -120,17 +118,17 @@ export default function Navigation() {
               <div className="flex flex-col space-y-2 px-3 pt-4">
                 <a
                   href="tel:+91 9591476089"
-                  className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center space-x-2"
+                  className="flex items-center justify-center bg-green-500 hover:bg-green-600 text-white w-full h-12 rounded-lg font-semibold transition-colors duration-200"
                 >
-                  <Phone size={16} />
-                  <span>Call Now</span>
+                  <Phone size={18} className="mr-1" />
+                  Call Now
                 </a>
                 <Link
                   href="/contact"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 text-center"
                   onClick={() => setIsOpen(false)}
+                  className="flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-6 w-full h-12 rounded-lg font-semibold transition-colors duration-200 mx-auto"
                 >
-                  Get Quote
+                  Get Quotation
                 </Link>
               </div>
             </div>
@@ -157,7 +155,7 @@ export default function Navigation() {
         </svg>
       </a>
 
-      {/* Mobile Click-to-Call Button */}
+      {/* Mobile Floating Call Button */}
       <a
         href="tel:+91 9591476089"
         className="md:hidden fixed bottom-6 left-6 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-40"

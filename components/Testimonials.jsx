@@ -64,47 +64,49 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="py-20 bg-blue-600">
+    <section id="testimonials" className="py-16 sm:py-20 bg-blue-600">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+        <div className="text-center mb-10 sm:mb-16 ">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-2">
             What Our Customers Say
           </h2>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-blue-100 max-w-3xl mx-auto">
             Don't just take our word for it. Here's what our satisfied customers have to say about our services.
           </p>
         </div>
 
-        <div className="relative max-w-4xl mx-auto">
+        <div className="relative max-w-7xl mx-auto">
           {/* Main Testimonial */}
-          <div className="bg-white rounded-xl shadow-2xl p-8 lg:p-12 relative">
-            <Quote className="absolute top-6 left-6 text-blue-600 opacity-20" size={48} />
-            
-            <div className="flex flex-col lg:flex-row items-center lg:items-start space-y-6 lg:space-y-0 lg:space-x-8">
+          <div className="bg-white rounded-xl shadow-2xl p-6 sm:p-8 lg:p-12 relative">
+            <Quote className="absolute top-4 sm:top-6 left-4 sm:left-6 text-blue-600 opacity-20" size={36} />
+
+            <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
+              {/* Image smaller on mobile */}
               <div className="flex-shrink-0">
                 <img
                   src={testimonials[currentTestimonial].image}
                   alt={testimonials[currentTestimonial].name}
-                  className="w-20 h-20 rounded-full object-cover border-4 border-blue-100"
+                  className="w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 rounded-full object-cover border-2 sm:border-4 border-blue-100"
                 />
               </div>
-              
-              <div className="flex-1 text-center lg:text-left">
-                <div className="flex justify-center lg:justify-start mb-4">
+
+              <div className="flex-1 text-center sm:text-left">
+                <div className="flex justify-center sm:justify-start mb-2 sm:mb-4">
                   {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
-                    <Star key={i} className="text-yellow-400 fill-current" size={20} />
+                    <Star key={i} className="text-yellow-400 fill-current" size={16} />
                   ))}
                 </div>
-                
-                <blockquote className="text-lg lg:text-xl text-gray-700 mb-6 italic">
+
+                {/* Font size smaller on mobile */}
+                <blockquote className="text-base sm:text-lg lg:text-xl text-gray-700 mb-4 sm:mb-6 italic leading-relaxed">
                   "{testimonials[currentTestimonial].text}"
                 </blockquote>
-                
+
                 <div>
-                  <div className="text-lg font-semibold text-gray-900">
+                  <div className="text-base sm:text-lg font-semibold text-gray-900">
                     {testimonials[currentTestimonial].name}
                   </div>
-                  <div className="text-blue-600 font-medium">
+                  <div className="text-blue-600 font-medium text-sm sm:text-base">
                     {testimonials[currentTestimonial].service} • {testimonials[currentTestimonial].location}
                   </div>
                 </div>
@@ -113,43 +115,45 @@ export default function Testimonials() {
           </div>
 
           {/* Navigation Buttons */}
-          <div className="flex justify-center items-center space-x-4 mt-8">
+          <div className="flex justify-center items-center space-x-3 sm:space-x-4 mt-6 sm:mt-8">
             <button
               onClick={prevTestimonial}
-              className="bg-white text-blue-600 p-3 rounded-full shadow-lg hover:bg-blue-50 transition-colors duration-200"
+              className="bg-white text-blue-600 p-2 sm:p-3 rounded-full shadow-md hover:bg-blue-50 transition-colors duration-200"
             >
-              <ChevronLeft size={24} />
+              <ChevronLeft size={20} className="sm:size-24" />
             </button>
-            
+
             <div className="flex space-x-2">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentTestimonial(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                  className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-200 ${
                     index === currentTestimonial ? 'bg-white' : 'bg-white/50'
                   }`}
                 />
               ))}
             </div>
-            
+
             <button
               onClick={nextTestimonial}
-              className="bg-white text-blue-600 p-3 rounded-full shadow-lg hover:bg-blue-50 transition-colors duration-200"
+              className="bg-white text-blue-600 p-2 sm:p-3 rounded-full shadow-md hover:bg-blue-50 transition-colors duration-200"
             >
-              <ChevronRight size={24} />
+              <ChevronRight size={20} />
             </button>
           </div>
         </div>
 
-        {/* Customer Logos/Trust Indicators */}
-        <div className="mt-16 text-center">
-          <p className="text-blue-100 mb-8">Trusted by homeowners across the city</p>
-          <div className="flex flex-wrap justify-center items-center space-x-8 lg:space-x-16 opacity-60">
-            <div className="text-white font-bold text-lg">★ Google Reviews</div>
-            <div className="text-white font-bold text-lg">★ Better Business Bureau</div>
-            <div className="text-white font-bold text-lg">★ HomeAdvisor</div>
-            <div className="text-white font-bold text-lg">★ Angie's List</div>
+        {/* Trust Indicators */}
+        <div className="mt-10 sm:mt-16 text-center">
+          <p className="text-sm sm:text-base lg:text-lg text-blue-100 mb-6 sm:mb-8">
+            Trusted by homeowners across the city
+          </p>
+          <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 lg:gap-16 opacity-70 text-xs sm:text-sm lg:text-lg">
+            <div className="text-white font-bold">★ Google Reviews</div>
+            <div className="text-white font-bold">★ Better Business Bureau</div>
+            <div className="text-white font-bold">★ HomeAdvisor</div>
+            <div className="text-white font-bold">★ Angie's List</div>
           </div>
         </div>
       </div>

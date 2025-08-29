@@ -81,8 +81,8 @@ export default function ContactForm() {
     {
       icon: <Mail size={24} />,
       title: "Email Us",
-      info: "info@prohomeservices.com",
-      link: "mailto:info@prohomeservices.com",
+      info: "info@bharathservices.com",
+      link: "mailto:info@bharathservices.com",
     },
     {
       icon: <MapPin size={24} />,
@@ -103,7 +103,7 @@ export default function ContactForm() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Get Your Free Quote Today
+            Get Your Free Quotation Today
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Ready to transform your home? Contact us for a free estimate and
@@ -165,7 +165,7 @@ export default function ContactForm() {
           <div>
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Request a Quote
+                Request a Quotation
               </h3>
 
               <form ref={form} onSubmit={handleSubmit} className="space-y-6">
@@ -174,7 +174,7 @@ export default function ContactForm() {
                     htmlFor="name"
                     className="block text-sm font-medium text-gray-700 mb-2"
                   >
-                    Full Name *
+                    Full Name<span className="text-red-600 font-bold ">*</span>
                   </label>
                   <input
                     type="text"
@@ -183,7 +183,7 @@ export default function ContactForm() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-colors duration-200"
+                    className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-0 focus:border-gray-300 focus:shadow-md focus:shadow-gray-200 text-sm duration-600"
                     placeholder="Enter your full name"
                   />
                 </div>
@@ -194,7 +194,7 @@ export default function ContactForm() {
                       htmlFor="phone"
                       className="block text-sm font-medium text-gray-700 mb-2"
                     >
-                      Phone Number *
+                      Phone Number<span className="text-red-600 font-bold ">*</span>
                     </label>
                     <input
                       type="tel"
@@ -203,7 +203,7 @@ export default function ContactForm() {
                       required
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-colors duration-200"
+                      className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-0 focus:border-gray-300 focus:shadow-md focus:shadow-gray-200 text-sm duration-600"
                       placeholder="(234) 567-8900"
                     />
                   </div>
@@ -213,7 +213,7 @@ export default function ContactForm() {
                       htmlFor="email"
                       className="block text-sm font-medium text-gray-700 mb-2"
                     >
-                      Email Address *
+                      Email Address<span className="text-red-600 font-bold ">*</span>
                     </label>
                     <input
                       type="email"
@@ -222,7 +222,7 @@ export default function ContactForm() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-colors duration-200"
+                      className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-0 focus:border-gray-300 focus:shadow-md focus:shadow-gray-200 text-sm duration-600"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -233,15 +233,14 @@ export default function ContactForm() {
                     htmlFor="service"
                     className="block text-sm font-medium text-gray-700 mb-2"
                   >
-                    Service Required *
+                    Service Required
                   </label>
                   <select
                     id="service"
                     name="service"
-                    required
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-colors duration-200"
+                    className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-0 focus:border-gray-300 focus:shadow-md focus:shadow-gray-200 text-sm duration-600"
                   >
                     <option value="">Select a service...</option>
                     {services.map((service) => (
@@ -265,8 +264,8 @@ export default function ContactForm() {
                     rows="4"
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-colors duration-200"
-                    placeholder="Please describe your project or service needs..."
+                    className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-0 focus:border-gray-300 focus:shadow-md focus:shadow-gray-200 text-sm duration-600"
+                    
                   ></textarea>
                 </div>
 
@@ -287,7 +286,7 @@ export default function ContactForm() {
                   ) : (
                     <>
                       <Send size={20} />
-                      <span>Get Free Quote</span>
+                      <span>Get Free Quotation</span>
                     </>
                   )}
                 </button>
