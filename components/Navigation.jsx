@@ -34,23 +34,22 @@ export default function Navigation() {
             : "bg-white/95 backdrop-blur-sm py-3"
         }`}
       >
-        <div className="w-full flex items-center px-2 sm:px-6 lg:px-8">
-          {/* Logo Section */}
-            <Link href="/" className="flex items-start">
-              <Image
-                src="/logo.jpg"
-                alt="Bharath Painters Logo"
-                width={42}
-                height={42}
-                className="rounded"
-              />
-              <span className="ml-2 mt-2 text-xl sm:text-2xl font-extrabold text-blue-600">
-                Bharath Painters
-              </span>
-            </Link>
-          
+        <div className="w-full flex items-center px-0 sm:px-2 lg:px-4">
+          {/* Logo Section (flush left) */}
+          <Link href="/" className="flex items-start">
+            <Image
+              src="/logo.jpg"
+              alt="Bharath Painters Logo"
+              width={42}
+              height={42}
+              className="rounded"
+            />
+            <span className="ml-2 mt-2 text-xl sm:text-2xl font-extrabold text-blue-600">
+              Bharath Painters
+            </span>
+          </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation (center) */}
           <div className="hidden md:flex ml-10 space-x-8">
             {navigation.map((item) => (
               <Link
@@ -68,18 +67,18 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* Desktop CTA Buttons (pushed to right) */}
+          {/* Desktop CTA Buttons (flush right) */}
           <div className="hidden md:flex items-center space-x-3 ml-auto">
             <a
               href="tel:+91 9591476089"
-              className="flex items-center justify-center bg-green-500 hover:bg-green-600 text-white w-28 h-10 rounded-lg font-semibold transition-colors duration-200"
+              className="flex items-center justify-center bg-green-500 hover:bg-green-600 text-white h-10 px-4 rounded-lg font-semibold transition-colors duration-200"
             >
               <Phone size={18} className="mr-1" />
               Call Now
             </a>
             <Link
               href="/contact"
-              className="flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white w-28 h-10 rounded-lg font-semibold transition-colors duration-200"
+              className="flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white h-10 px-6 rounded-lg font-semibold transition-colors duration-200"
             >
               Get Quotation
             </Link>
@@ -99,13 +98,13 @@ export default function Navigation() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden bg-white border-t border-gray-200">
-            <div className="px-2 pt-2 pb-3 space-y-1">
+            <div className="px-0 pt-2 pb-3 space-y-1">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className={`block px-3 py-2 text-base font-semibold rounded-md transition-colors duration-200
+                  className={`block px-2 py-2 text-base font-semibold rounded-md transition-colors duration-200
                     ${
                       pathname === item.href
                         ? "bg-gray-200 text-yellow-500"
@@ -126,7 +125,7 @@ export default function Navigation() {
                 <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-6 w-full h-12 rounded-lg font-semibold transition-colors duration-200 mx-auto"
+                  className="flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-8 w-full h-12 rounded-lg font-semibold transition-colors duration-200 mx-auto "
                 >
                   Get Quotation
                 </Link>

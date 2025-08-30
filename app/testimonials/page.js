@@ -95,7 +95,7 @@ export default function Testimonials() {
     <main>
       <Navigation />
 
-      <section className="pt-24 pb-16 bg-gradient-to-br from-purple-500 to-blue-300 text-white">
+      <section className="pt-24 pb-16 bg-gradient-to-br from-purple-500 to-blue-400 text-white">
         <div className="text-center ">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">
             Client Testimonials

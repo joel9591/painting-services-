@@ -19,7 +19,7 @@ export default function Contact() {
   return (
     <main>
       <Navigation />
-      <section className="pt-24 pb-16 bg-gradient-to-br from-purple-500 to-blue-300 text-white">
+      <section className="pt-24 pb-16 bg-gradient-to-br from-purple-500 to-blue-400 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">Contact Us</h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
@@ -226,7 +226,7 @@ export default function Contact() {
               We provide our professional home services throughout the following
               areas:
             </p>
-            <ul className="grid grid-cols-4 gap-4 text-gray-700 list-disc list-inside ">
+            <ul className="grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-2 md:gap-3 lg:gap-4 text-gray-700 list-disc list-inside text-sm lg:text-md md:text-base">
               <li>Downtown</li>
               <li>Uptown</li>
               <li>West Side</li>

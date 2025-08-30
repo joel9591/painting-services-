@@ -127,7 +127,7 @@ export default function Services() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br  from-purple-500 to-blue-300 text-white">
+      <section className="pt-24 pb-16 bg-gradient-to-br  from-purple-500 to-blue-400 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">
             Our Professional Services
