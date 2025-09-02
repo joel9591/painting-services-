@@ -12,7 +12,7 @@ export const metadata = {
   description:
     "Professional home services including house painting, deep cleaning, plumbing, electrical work, furniture work, and false ceiling installation. Quality workmanship guaranteed.",
   keywords:
-    "home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services",
+    "home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services, renovation, house renovate, house renovation, bharath, painters, paintings, bharath painters",
   authors: [{ name: "Bharath Painters" }],
   creator: "Bharath Painters",
   publisher: "Bharath Painters",
@@ -75,7 +75,7 @@ export default function RootLayout({ children }) {
               "@type": "LocalBusiness",
               name: "Professional Home Services",
               image: "./logo.jpg",
-              telephone: "+91 9591476089",
+              telephone: "+91 7978114096",
               email: "info@bharathpainters.com",
               address: {
                 "@type": "PostalAddress",
@@ -115,7 +115,7 @@ export default function RootLayout({ children }) {
                   closes: "16:00",
                 },
               ],
-              priceRange: "$$",
+              priceRange: "₹",
               servesCuisine: "Home Services",
             }),
           }}

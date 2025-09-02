@@ -15,7 +15,7 @@ import {
 export const metadata = {
   title: 'Professional Home Services | Painting, Plumbing, Cleaning & More',
   description: 'Comprehensive home services including house painting, deep cleaning, plumbing, electrical work, furniture repair, and false ceiling installation. Licensed professionals, quality guaranteed.',
-  keywords: 'home services, house painting services, plumbing services, electrical work, deep cleaning services, furniture repair, false ceiling installation, home improvement',
+  keywords: 'home services, house painting services, plumbing services, electrical work, deep cleaning services, furniture repair, false ceiling installation, home improvement, home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services, renovation, house renovate, house renovation, bharath, painters, paintings, bharath painters',
   openGraph: {
     title: 'Professional Home Services - Quality Home Improvement Solutions',
     description: 'Expert home services including painting, plumbing, electrical, cleaning, and more. Licensed professionals with quality guarantee.',
@@ -277,7 +277,7 @@ export default function Services() {
               Get Free Quotation
             </Link>
             <a
-              href="tel:+91 9591476089"
+              href="tel:+91 7978114096"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
             >
               Call (234) 567-8900

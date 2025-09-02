@@ -6,7 +6,7 @@ import { CheckCircle, Paintbrush, Shield, Clock, Star } from 'lucide-react';
 export const metadata = {
   title: 'Professional House Painting Services | Interior & Exterior Painting',
   description: 'Expert house painting services including interior and exterior painting, color consultation, wall preparation, and specialty finishes. Licensed painters with quality guarantee.',
-  keywords: 'house painting services, interior painting, exterior painting, residential painters, professional painting contractors, color consultation, wall painting',
+  keywords: 'house painting services, interior painting, exterior painting, residential painters, professional painting contractors, color consultation, wall painting, home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services, renovation, house renovate, house renovation, bharath, painters, paintings, bharath painters',
   openGraph: {
     title: 'Professional House Painting Services - Transform Your Home',
     description: 'Transform your home with our expert painting services. Interior, exterior, and specialty finishes with quality guarantee.',
@@ -123,10 +123,10 @@ export default function HousePainting() {
                   Get Free Estimate
                 </Link>
                 <a
-                  href="tel:+91 9591476089"
+                  href="tel:+91 7978114096"
                   className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200 text-center"
                 >
-                  Call (234) 567-8900
+                  Call +91 7978114096
                 </a>
               </div>
             </div>
@@ -338,10 +338,10 @@ export default function HousePainting() {
                   Get Free Estimate
                 </Link>
                 <a
-                  href="tel:+91 9591476089"
+                  href="tel:+91 7978114096"
                   className="w-full bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-4 rounded-lg font-semibold transition-colors duration-200 block text-center"
                 >
-                  Call Now: (234) 567-8900
+                  Call Now: +91 7978114096
                 </a>
               </div>
             </div>

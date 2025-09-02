@@ -7,7 +7,7 @@ export const metadata = {
   description:
     "Read what our clients say about our professional home services including painting, plumbing, electrical work, and more.",
   keywords:
-    "home services testimonials, client reviews, customer feedback, service ratings, home improvement reviews",
+    "home services testimonials, client reviews, customer feedback, service ratings, home improvement reviews, home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services, renovation, house renovate, house renovation, bharath, painters, paintings, bharath painters",
   openGraph: {
     title: "Client Testimonials - Professional Home Services",
     description:

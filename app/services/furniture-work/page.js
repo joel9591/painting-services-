@@ -6,7 +6,7 @@ import { CheckCircle, Sofa, Shield, Clock, Star } from 'lucide-react';
 export const metadata = {
   title: 'Professional Furniture Services | Bharath Painters',
   description: 'Expert furniture repair, restoration, assembly, and upholstery services by skilled craftsmen.',
-  keywords: 'furniture repair, furniture restoration, custom assembly, upholstery work, furniture services, custom furniture',
+  keywords: 'furniture repair, furniture restoration, custom assembly, upholstery work, furniture services, custom furniture, home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services, renovation, house renovate, house renovation, bharath, painters, paintings, bharath painters',
   openGraph: {
     title: 'Professional Furniture Services - Bharath Painters',
     description: 'Quality furniture repair, restoration, and assembly services. Expert craftsmanship with attention to detail.',

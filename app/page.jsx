@@ -11,11 +11,11 @@ export const metadata = {
   description:
     "Professional home services including house painting, deep cleaning, plumbing, electrical work, furniture work, and false ceiling installation. Quality workmanship guaranteed.",
   keywords:
-    "home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services",
+    "home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services, renovation, house renovate, house renovation, bharath, painters, paintings, bharath painters",
   openGraph: {
     title: "Professional Home Services | Quality Home Improvement Solutions",
     description:
-      "Transform your home with our professional services including painting, plumbing, cleaning, and more. Quality guaranteed.",
+      "Transform your home with our professional services including painting, plumbing, Electrical, furniture work, cleaning, and more. Quality guaranteed.",
   },
   icons: {
     icon: "/logo.jpg",

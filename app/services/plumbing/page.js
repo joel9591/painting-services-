@@ -6,7 +6,7 @@ import { CheckCircle, Wrench, Shield, Clock, Star } from 'lucide-react';
 export const metadata = {
   title: 'Professional Plumbing Services | Bharath Painters',
   description: 'Expert plumbing services including leak repairs, pipe installation, fixture replacement, and emergency services by licensed professionals.',
-  keywords: 'plumbing services, leak repairs, pipe installation, fixture replacement, emergency plumbing, licensed plumbers',
+  keywords: 'plumbing services, leak repairs, pipe installation, fixture replacement, emergency plumbing, licensed plumbers, home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services, renovation, house renovate, house renovation, bharath, painters, paintings, bharath painters',
   openGraph: {
     title: 'Professional Plumbing Services - Bharath Painters',
     description: 'Reliable plumbing solutions for your home. Expert repairs, installations, and maintenance with quality guarantee.',

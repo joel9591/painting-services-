@@ -70,7 +70,7 @@ export default function Navigation() {
           {/* Desktop CTA Buttons (flush right) */}
           <div className="hidden md:flex items-center space-x-3 ml-auto">
             <a
-              href="tel:+91 9591476089"
+              href="tel:+91 7978114096"
               className="flex items-center justify-center bg-green-500 hover:bg-green-600 text-white h-10 px-4 rounded-lg font-semibold transition-colors duration-200"
             >
               <Phone size={18} className="mr-1" />
@@ -116,7 +116,7 @@ export default function Navigation() {
               ))}
               <div className="flex flex-col space-y-2 px-3 pt-4">
                 <a
-                  href="tel:+91 9591476089"
+                  href="tel:+91 7978114096"
                   className="flex items-center justify-center bg-green-500 hover:bg-green-600 text-white w-full h-12 rounded-lg font-semibold transition-colors duration-200"
                 >
                   <Phone size={18} className="mr-1" />
@@ -137,7 +137,7 @@ export default function Navigation() {
 
       {/* Floating WhatsApp Button */}
       <a
-        href="https://wa.me/9591476089?text=Hello! I'm interested in your painting services."
+        href="https://wa.me/7978114096?text=Hello! I'm interested in your painting services."
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-40"
@@ -156,7 +156,7 @@ export default function Navigation() {
 
       {/* Mobile Floating Call Button */}
       <a
-        href="tel:+91 9591476089"
+        href="tel:+91 7978114096"
         className="md:hidden fixed bottom-6 left-6 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-40"
         aria-label="Call Now"
       >

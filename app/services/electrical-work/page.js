@@ -6,7 +6,7 @@ import { CheckCircle, Zap, Shield, Clock, Star } from 'lucide-react';
 export const metadata = {
   title: 'Professional Electrical Services | Bharath Painters',
   description: 'Expert electrical services including wiring, repairs, installations, and safety inspections by licensed electricians.',
-  keywords: 'electrical services, wiring, electrical repairs, outlet installation, lighting solutions, safety inspections, licensed electricians',
+  keywords: 'electrical services, wiring, electrical repairs, outlet installation, lighting solutions, safety inspections, licensed electricians, home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services, renovation, house renovate, house renovation, bharath, painters, paintings, bharath painters',
   openGraph: {
     title: 'Professional Electrical Services - Bharath Painters',
     description: 'Safe and reliable electrical solutions for your home. Expert installations, repairs, and maintenance with quality guarantee.',

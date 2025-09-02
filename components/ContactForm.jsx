@@ -1,6 +1,6 @@
 "use client";
 import { useState, useRef } from "react";
-import { Send, Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Send, CheckCircle, Phone, Mail, MapPin, Clock } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
 export default function ContactForm() {
@@ -9,7 +9,7 @@ export default function ContactForm() {
     name: "",
     phone: "",
     email: "",
-    service: "",
+    services: [],
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -25,6 +25,7 @@ export default function ContactForm() {
     "Other",
   ];
 
+  // handle input change
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -32,35 +33,44 @@ export default function ContactForm() {
     });
   };
 
+  // handle multiple service selection with checkboxes
+  const toggleService = (service) => {
+    setFormData((prev) => {
+      const isSelected = prev.services.includes(service);
+      return {
+        ...prev,
+        services: isSelected
+          ? prev.services.filter((s) => s !== service)
+          : [...prev.services, service],
+      };
+    });
+  };
+
+  // handle form submit with EmailJS
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
-      // Send email using EmailJS
-      await emailjs.sendForm(
-        "service_id", // Replace with your EmailJS service ID
-        "template_id", // Replace with your EmailJS template ID
-        form.current,
-        "public_key" // Replace with your EmailJS public key
+      await emailjs.send(
+        "YOUR_SERVICE_ID", // Replace with your EmailJS Service ID
+        "YOUR_TEMPLATE_ID", // Replace with your EmailJS Template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          services: formData.services.join(", "),
+          message: formData.message,
+        },
+        "YOUR_PUBLIC_KEY" // Replace with your EmailJS Public Key
       );
-
-      // Add recipient email as a hidden field
-      const templateParams = {
-        to_email: "joelstalin76@gmail.com",
-        from_name: formData.name,
-        from_email: formData.email,
-        phone: formData.phone,
-        service: formData.service,
-        message: formData.message,
-      };
 
       setSubmitStatus("success");
       setFormData({
         name: "",
         phone: "",
         email: "",
-        service: "",
+        services: [],
         message: "",
       });
     } catch (error) {
@@ -75,8 +85,8 @@ export default function ContactForm() {
     {
       icon: <Phone size={24} />,
       title: "Call Us",
-      info: "(234) 567-8900",
-      link: "tel:+91 9591476089",
+      info: "+91 7978114096",
+      link: "tel:+917978114096",
     },
     {
       icon: <Mail size={24} />,
@@ -94,13 +104,13 @@ export default function ContactForm() {
       icon: <Clock size={24} />,
       title: "Working Hours",
       info: "Mon-Fri: 8AM-6PM, Sat: 9AM-4PM",
-      link: null,
     },
   ];
 
   return (
     <section id="contact" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
             Get Your Free Quotation Today
@@ -117,7 +127,6 @@ export default function ContactForm() {
             <h3 className="text-2xl font-bold text-gray-900 mb-8">
               Get In Touch
             </h3>
-
             <div className="space-y-6 mb-8">
               {contactInfo.map((item, index) => (
                 <div key={index} className="flex items-start space-x-4">
@@ -153,7 +162,7 @@ export default function ContactForm() {
                 plumbing and electrical issues.
               </p>
               <a
-                href="tel:+91 9591476089"
+                href="tel:+917978114096"
                 className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 inline-block"
               >
                 Call Emergency Line
@@ -169,12 +178,13 @@ export default function ContactForm() {
               </h3>
 
               <form ref={form} onSubmit={handleSubmit} className="space-y-6">
+                {/* Name */}
                 <div>
                   <label
                     htmlFor="name"
                     className="block text-sm font-medium text-gray-700 mb-2"
                   >
-                    Full Name<span className="text-red-600 font-bold ">*</span>
+                    Full Name<span className="text-red-600 font-bold">*</span>
                   </label>
                   <input
                     type="text"
@@ -183,18 +193,20 @@ export default function ContactForm() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-0 focus:border-gray-300 focus:shadow-md focus:shadow-gray-200 text-sm duration-600"
+                    className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-gray-300 focus:shadow-md text-sm"
                     placeholder="Enter your full name"
                   />
                 </div>
 
+                {/* Phone & Email */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label
                       htmlFor="phone"
                       className="block text-sm font-medium text-gray-700 mb-2"
                     >
-                      Phone Number<span className="text-red-600 font-bold ">*</span>
+                      Phone Number
+                      <span className="text-red-600 font-bold">*</span>
                     </label>
                     <input
                       type="tel"
@@ -203,7 +215,7 @@ export default function ContactForm() {
                       required
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-0 focus:border-gray-300 focus:shadow-md focus:shadow-gray-200 text-sm duration-600"
+                      className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-gray-300 focus:shadow-md text-sm"
                       placeholder="(234) 567-8900"
                     />
                   </div>
@@ -213,7 +225,8 @@ export default function ContactForm() {
                       htmlFor="email"
                       className="block text-sm font-medium text-gray-700 mb-2"
                     >
-                      Email Address<span className="text-red-600 font-bold ">*</span>
+                      Email Address
+                      <span className="text-red-600 font-bold">*</span>
                     </label>
                     <input
                       type="email"
@@ -222,35 +235,47 @@ export default function ContactForm() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-0 focus:border-gray-300 focus:shadow-md focus:shadow-gray-200 text-sm duration-600"
+                      className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-gray-300 focus:shadow-md text-sm"
                       placeholder="your@email.com"
                     />
                   </div>
                 </div>
 
+                {/* Services with checkboxes */}
                 <div>
-                  <label
-                    htmlFor="service"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Service Required
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Services Required
                   </label>
-                  <select
-                    id="service"
-                    name="service"
-                    value={formData.service}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-0 focus:border-gray-300 focus:shadow-md focus:shadow-gray-200 text-sm duration-600"
-                  >
-                    <option value="">Select a service...</option>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {services.map((service) => (
-                      <option key={service} value={service}>
-                        {service}
-                      </option>
+                      <label
+                        key={service}
+                        className="flex items-center space-x-2 cursor-pointer border rounded-lg px-4 py-2 hover:bg-gray-50 transition"
+                      >
+                        <input
+                          type="checkbox"
+                          checked={formData.services.includes(service)}
+                          onChange={() => toggleService(service)}
+                          className="hidden"
+                        />
+                        <div
+                          className={`w-5 h-5 flex items-center justify-center border rounded ${
+                            formData.services.includes(service)
+                              ? "bg-green-500 border-green-500"
+                              : "border-gray-300"
+                          }`}
+                        >
+                          {formData.services.includes(service) && (
+                            <CheckCircle className="w-4 h-4 text-white" />
+                          )}
+                        </div>
+                        <span className="text-gray-700 text-sm">{service}</span>
+                      </label>
                     ))}
-                  </select>
+                  </div>
                 </div>
 
+                {/* Message */}
                 <div>
                   <label
                     htmlFor="message"
@@ -264,11 +289,12 @@ export default function ContactForm() {
                     rows="4"
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-0 focus:border-gray-300 focus:shadow-md focus:shadow-gray-200 text-sm duration-600"
-                    
+                    className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-gray-300 focus:shadow-md text-sm"
+                    placeholder="Describe your project..."
                   ></textarea>
                 </div>
 
+                {/* Submit Button */}
                 <button
                   type="submit"
                   disabled={isSubmitting}
@@ -291,16 +317,16 @@ export default function ContactForm() {
                   )}
                 </button>
 
+                {/* Alerts */}
                 {submitStatus === "success" && (
                   <div className="bg-green-50 border border-green-200 rounded-lg p-4 text-green-700">
-                    Thank you! Your quote request has been submitted. We'll
+                    ✅ Thank you! Your quote request has been submitted. We'll
                     contact you within 24 hours.
                   </div>
                 )}
-
                 {submitStatus === "error" && (
                   <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-700">
-                    Sorry, there was an error submitting your request. Please
+                    ❌ Sorry, there was an error submitting your request. Please
                     try again or call us directly.
                   </div>
                 )}

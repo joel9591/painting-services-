@@ -5,7 +5,7 @@ import { CheckCircle } from 'lucide-react';
 export const metadata = {
   title: 'Our Work Gallery | Bharath Painters Services',
   description: 'Browse our gallery of completed projects including painting, plumbing, electrical work, and more. See the quality of our professional home services.',
-  keywords: 'home services gallery, painting projects, home improvement gallery, before and after, project showcase',
+  keywords: 'home services gallery, painting projects, home improvement gallery, before and after, project showcase, home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services, renovation, house renovate, house renovation, bharath, painters, paintings, bharath painters',
   openGraph: {
     title: 'Gallery of Our Professional Home Services Projects',
     description: 'View our portfolio of completed home improvement projects showcasing our quality workmanship.',

@@ -6,7 +6,7 @@ import { CheckCircle, Layers, Shield, Clock, Star } from 'lucide-react';
 export const metadata = {
   title: 'Professional False Ceiling Services | Bharath Painters',
   description: 'Expert false ceiling installation, design, and repair services for residential and commercial spaces.',
-  keywords: 'false ceiling, POP ceiling, gypsum ceiling, ceiling design, ceiling installation, ceiling repair',
+  keywords: 'false ceiling, POP ceiling, gypsum ceiling, ceiling design, ceiling installation, ceiling repair, home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services, renovation, house renovate, house renovation, bharath, painters, paintings, bharath painters',
   openGraph: {
     title: 'Professional False Ceiling Services - Bharath Painters',
     description: 'Transform your space with our expert false ceiling installation, design, and repair services.',

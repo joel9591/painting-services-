@@ -6,7 +6,7 @@ import { CheckCircle, Sparkles, Shield, Clock, Star } from 'lucide-react';
 export const metadata = {
   title: 'Professional Deep Cleaning Services | Bharath Painters',
   description: 'Expert deep cleaning services including post-construction cleanup, move-in/move-out cleaning, regular maintenance, and specialized cleaning solutions.',
-  keywords: 'deep cleaning services, house cleaning, post-construction cleanup, move-in cleaning, move-out cleaning, professional cleaning services',
+  keywords: 'deep cleaning services, house cleaning, post-construction cleanup, move-in cleaning, move-out cleaning, professional cleaning services, home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services, renovation, house renovate, house renovation, bharath, painters, paintings, bharath painters',
   openGraph: {
     title: 'Professional Deep Cleaning Services - Bharath Painters',
     description: 'Transform your space with our expert deep cleaning services. Comprehensive cleaning solutions with quality guarantee.',

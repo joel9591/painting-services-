@@ -120,10 +120,10 @@ export default function Footer() {
               <div className="flex items-center space-x-3">
                 <Phone className="text-blue-400 flex-shrink-0" size={20} />
                 <a
-                  href="tel:+919591576089"
+                  href="tel:+917978114096"
                   className="text-gray-300 hover:text-white transition-colors duration-200"
                 >
-                  +91 9591576089
+                  +91 7978114096
                 </a>
               </div>
 
@@ -158,7 +158,7 @@ export default function Footer() {
             Plumbing or electrical emergency? We're here to help anytime!
           </p>
           <a
-            href="tel:+91 9591476089"
+            href="tel:+91 7978114096"
             className="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center space-x-2"
           >
             <Phone size={20} />
