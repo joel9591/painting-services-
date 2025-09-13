@@ -60,9 +60,6 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold text-gray-900">Email</h3>
                       <p className="text-gray-700">info@bharathpainters.com</p>
-                      <p className="text-gray-700">
-                        support@bharathpainters.com
-                      </p>
                     </div>
                   </div>
 
@@ -87,11 +84,9 @@ export default function ContactPage() {
                         Business Hours
                       </h3>
                       <p className="text-gray-700">
-                        Monday - Friday: 8:00 AM - 6:00 PM
+                        Monday - Saturday: 8:00 AM - 6:00 PM
                         <br />
-                        Saturday: 9:00 AM - 4:00 PM
-                        <br />
-                        Sunday: Closed
+                        Sunday: 10:00 AM - 4:00 PM
                       </p>
                     </div>
                   </div>
@@ -108,7 +103,7 @@ export default function ContactPage() {
               Service Areas
             </h2>
             <p className="text-gray-700 mb-4 text-center">
-              We provide our professional home services throughout the following
+              We provide our professional home services frequently throughout the following
               areas:
             </p>
             <ul className="grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-2 md:gap-3 lg:gap-4 text-gray-700 list-disc list-inside text-sm lg:text-md md:text-base">

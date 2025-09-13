@@ -34,8 +34,8 @@ export default function Navigation() {
             : "bg-white/95 backdrop-blur-sm py-3"
         }`}
       >
-        <div className="w-full flex items-center px-0 sm:px-2 lg:px-4">
-          {/* Logo Section (flush left) */}
+        <div className="w-full flex items-center px-2 sm:px-4 lg:px-6">
+          {/* Logo Section */}
           <Link href="/" className="flex items-start">
             <Image
               src="/logo.jpg"
@@ -43,19 +43,20 @@ export default function Navigation() {
               width={42}
               height={42}
               className="rounded"
+              style={{ height: "auto" }}
             />
-            <span className="ml-2 mt-2 text-xl sm:text-2xl font-extrabold text-blue-600">
+            <span className="ml-2 mt-2 text-lg sm:text-xl lg:text-2xl font-extrabold text-blue-600">
               Bharath Painters
             </span>
           </Link>
 
-          {/* Desktop Navigation (center) */}
-          <div className="hidden md:flex ml-10 space-x-8">
+          {/* Desktop Navigation (only lg+) */}
+          <div className="hidden lg:flex ml-10 space-x-6 xl:space-x-8">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`px-3 py-2 text-lg font-semibold rounded-md transition-colors duration-200
+                className={`px-2 py-2 text-base lg:text-lg font-semibold rounded-md transition-colors duration-200
                   ${
                     pathname === item.href
                       ? "text-yellow-500"
@@ -67,8 +68,8 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* Desktop CTA Buttons (flush right) */}
-          <div className="hidden md:flex items-center space-x-3 ml-auto">
+          {/* CTA Buttons (only lg+) */}
+          <div className="hidden lg:flex items-center space-x-3 ml-auto">
             <a
               href="tel:+91 7978114096"
               className="flex items-center justify-center bg-green-500 hover:bg-green-600 text-white h-10 px-4 rounded-lg font-semibold transition-colors duration-200"
@@ -84,8 +85,8 @@ export default function Navigation() {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden ml-auto">
+          {/* Mobile/Tablet Menu Button (md & below) */}
+          <div className="lg:hidden ml-auto">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700 hover:text-blue-600 p-2"
@@ -95,10 +96,10 @@ export default function Navigation() {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile/Tablet Navigation */}
         {isOpen && (
-          <div className="md:hidden bg-white border-t border-gray-200">
-            <div className="px-0 pt-2 pb-3 space-y-1">
+          <div className="lg:hidden bg-white border-t border-gray-200">
+            <div className="px-2 pt-2 pb-3 space-y-1">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
@@ -125,7 +126,7 @@ export default function Navigation() {
                 <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-8 w-full h-12 rounded-lg font-semibold transition-colors duration-200 mx-auto "
+                  className="flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-8 w-full h-12 rounded-lg font-semibold transition-colors duration-200 mx-auto"
                 >
                   Get Quotation
                 </Link>
@@ -137,12 +138,13 @@ export default function Navigation() {
 
       {/* Floating WhatsApp Button */}
       <a
-        href="https://wa.me/7978114096?text=Hello! I'm interested in your painting services."
+        href="https://wa.me/918884563601?text=Hello!%20I'm%20interested%20in%20your%20services.%20May%20I%20know%20more%20about%20your%20work?"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-40"
         aria-label="Chat on WhatsApp"
       >
+        {/* WhatsApp Icon */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -157,7 +159,7 @@ export default function Navigation() {
       {/* Mobile Floating Call Button */}
       <a
         href="tel:+91 7978114096"
-        className="md:hidden fixed bottom-6 left-6 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-40"
+        className="lg:hidden fixed bottom-6 left-6 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-40"
         aria-label="Call Now"
       >
         <Phone size={24} />

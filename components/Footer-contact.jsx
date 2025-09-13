@@ -40,9 +40,9 @@ export default function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const serviceID = "YOUR_SERVICE_ID";
-    const templateID = "YOUR_TEMPLATE_ID";
-    const publicKey = "YOUR_PUBLIC_KEY";
+    const EmailJS_service_ID = process.env.NEXT_PUBLIC_EmailJS_service_ID;
+    const EmailJS_template_ID = process.env.NEXT_PUBLIC_EmailJS_template_ID;
+    const EmailJS_public_key = process.env.NEXT_PUBLIC_EmailJS_public_key;
 
     const templateParams = {
       name: formData.name,
@@ -52,7 +52,7 @@ export default function ContactForm() {
       message: formData.message,
     };
 
-    emailjs.send(serviceID, templateID, templateParams, publicKey).then(
+    emailjs.send(EmailJS_service_ID, EmailJS_template_ID, templateParams, EmailJS_public_key).then(
       () => {
         alert("Message sent successfully!");
         setFormData({

@@ -130,7 +130,7 @@ export default function Footer() {
               <div className="flex items-center space-x-3">
                 <Mail className="text-blue-400 flex-shrink-0" size={20} />
                 <a
-                  href="mailto:info@bharathservices.com"
+                  href="mailto:info@bharathpainters.com"
                   className="text-gray-300 hover:text-white transition-colors duration-200"
                 >
                   info@bharathpainters.com
@@ -140,8 +140,8 @@ export default function Footer() {
               <div className="flex items-start space-x-3">
                 <Clock className="text-blue-400 flex-shrink-0 mt-1" size={20} />
                 <div>
-                  <p className="text-gray-300">Mon-Fri: 8AM-6PM</p>
-                  <p className="text-gray-300">Sat: 9AM-4PM</p>
+                  <p className="text-gray-300">Mon-Sat: 8AM-6PM</p>
+                  <p className="text-gray-300">Sun: 10AM-4PM</p>
                   <p className="text-gray-300">Emergency: 24/7</p>
                 </div>
               </div>
@@ -168,31 +168,9 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-gray-800">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
+          <p className="text-gray-400 text-sm flex justify-center">
               © 2025 Bharath Painters Services. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              {/* <Link
-                href="/privacy-policy"
-                className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href="/terms-of-service"
-                className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
-              >
-                Terms of Service
-              </Link> */}
-              <Link
-                href="/sitemap.xml"
-                className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
-              >
-                Sitemap
-              </Link>
-            </div>
-          </div>
         </div>
       </div>
     </footer>

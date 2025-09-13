@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import autoprefixer from "autoprefixer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,7 +36,8 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "./logo.jpg",
+        // url: "./logo.jpg",
+        url: "https://bharathpainters.com/logo.jpg",
         width: 1200,
         height: 630,
         alt: "Bharath Painters - Professional Home Improvement",
@@ -66,6 +68,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/logo.jpg" type="image/jpeg" />
         <script
           type="application/ld+json"
@@ -74,7 +77,8 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               name: "Professional Home Services",
-              image: "./logo.jpg",
+              // image: "./logo.jpg",
+              image: "https://bharathpainters.com/logo.jpg",
               telephone: "+91 7978114096",
               email: "info@bharathpainters.com",
               address: {
@@ -104,14 +108,15 @@ export default function RootLayout({ children }) {
                     "Wednesday",
                     "Thursday",
                     "Friday",
+                    "Saturday",
                   ],
                   opens: "08:00",
                   closes: "18:00",
                 },
                 {
                   "@type": "OpeningHoursSpecification",
-                  dayOfWeek: "Saturday",
-                  opens: "09:00",
+                  dayOfWeek: "Sunday",
+                  opens: "10:00",
                   closes: "16:00",
                 },
               ],

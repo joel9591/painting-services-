@@ -66,10 +66,10 @@ export default function Hero() {
 
     try {
       await emailjs.sendForm(
-        "service_id", // Replace with your EmailJS service ID
-        "template_id", // Replace with your EmailJS template ID
+        process.env.NEXT_PUBLIC_EmailJS_service_ID, // Replace with your EmailJS Service ID
+        process.env.NEXT_PUBLIC_EmailJS_template_ID, // Replace with your EmailJS template ID
         formRef.current,
-        "public_key" // Replace with your EmailJS public key
+        process.env.NEXT_PUBLIC_EmailJS_public_key // Replace with your EmailJS public key
       );
 
       setSubmitStatus("success");
@@ -153,12 +153,12 @@ export default function Hero() {
               <h2 className="text-lg font-bold text-blue-700 mb-2">
                 Request a Service
               </h2>
-              <form
-                ref={formRef}
-                onSubmit={handleSubmit}
-                className="space-y-2"
-              >
-                <input type="hidden" name="services" value={formData.services.join(", ")} />
+              <form ref={formRef} onSubmit={handleSubmit} className="space-y-2">
+                <input
+                  type="hidden"
+                  name="services"
+                  value={formData.services.join(", ")}
+                />
 
                 {/* Name */}
                 <div>

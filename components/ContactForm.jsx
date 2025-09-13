@@ -53,8 +53,8 @@ export default function ContactForm() {
 
     try {
       await emailjs.send(
-        "YOUR_SERVICE_ID", // Replace with your EmailJS Service ID
-        "YOUR_TEMPLATE_ID", // Replace with your EmailJS Template ID
+        process.env.NEXT_PUBLIC_EmailJS_service_ID, // Replace with your EmailJS Service ID
+        process.env.NEXT_PUBLIC_EmailJS_template_ID, // Replace with your EmailJS Template ID
         {
           from_name: formData.name,
           from_email: formData.email,
@@ -62,7 +62,7 @@ export default function ContactForm() {
           services: formData.services.join(", "),
           message: formData.message,
         },
-        "YOUR_PUBLIC_KEY" // Replace with your EmailJS Public Key
+        process.env.NEXT_PUBLIC_EmailJS_public_key // Replace with your EmailJS Public Key
       );
 
       setSubmitStatus("success");
@@ -91,8 +91,8 @@ export default function ContactForm() {
     {
       icon: <Mail size={24} />,
       title: "Email Us",
-      info: "info@bharathservices.com",
-      link: "mailto:info@bharathservices.com",
+      info: "info@bharathpainters.com",
+      link: "mailto:info@bharathpainters.com",
     },
     {
       icon: <MapPin size={24} />,
@@ -103,7 +103,7 @@ export default function ContactForm() {
     {
       icon: <Clock size={24} />,
       title: "Working Hours",
-      info: "Mon-Fri: 8AM-6PM, Sat: 9AM-4PM",
+      info: "Mon-Sat: 8AM-6PM, Sun: 10AM-4PM",
     },
   ];
 
@@ -216,7 +216,7 @@ export default function ContactForm() {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-gray-300 focus:shadow-md text-sm"
-                      placeholder="(234) 567-8900"
+                      placeholder="9123456789"
                     />
                   </div>
 
@@ -290,7 +290,6 @@ export default function ContactForm() {
                     value={formData.message}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-gray-300 focus:shadow-md text-sm"
-                    placeholder="Describe your project..."
                   ></textarea>
                 </div>
 
