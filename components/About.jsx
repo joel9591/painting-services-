@@ -187,7 +187,7 @@ export default function About() {
   }, []);
 
   return (
-    <section id="about" className="py-8 sm:py-10 lg:py-16 bg-white">
+    <section id="about" className="py-2 sm:py-8 lg:py-10 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* About Text */}

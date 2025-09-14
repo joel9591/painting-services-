@@ -104,8 +104,8 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-28">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center py-4">
           {/* Left Text */}
           <div
             className={`space-y-5 transition-all duration-1000 transform ${
@@ -114,7 +114,7 @@ export default function Hero() {
                 : "-translate-x-10 opacity-0"
             }`}
           >
-            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-snug">
+            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-snug text-center  lg:text-left ">
               Professional Home Services You Can Trust
             </h1>
             <p className="text-base md:text-lg text-blue-100 leading-relaxed">
