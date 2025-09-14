@@ -64,9 +64,9 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="py-16 sm:py-20 bg-blue-600">
+    <section id="testimonials" className="py-6 sm:py-10 lg:py-8 bg-blue-600">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10 sm:mb-16 ">
+        <div className="text-center mb-6 sm:mb-12 ">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-2">
             What Our Customers Say
           </h2>
@@ -145,8 +145,8 @@ export default function Testimonials() {
         </div>
 
         {/* Trust Indicators */}
-        <div className="mt-10 sm:mt-16 text-center">
-          <p className="text-sm sm:text-base lg:text-lg text-blue-100 mb-6 sm:mb-8">
+        <div className="mt-4 sm:mt-16 text-center lg:mt-6">
+          <p className="text-sm sm:text-base lg:text-lg text-blue-100 mb-4 sm:mb-8">
             Trusted by homeowners across the city
           </p>
           <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 lg:gap-16 opacity-70 text-xs sm:text-sm lg:text-lg">

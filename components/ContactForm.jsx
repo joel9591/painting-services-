@@ -108,11 +108,11 @@ export default function ContactForm() {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="py-8 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-10">
+          <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-4">
             Get Your Free Quotation Today
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -124,7 +124,7 @@ export default function ContactForm() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">
               Get In Touch
             </h3>
             <div className="space-y-6 mb-8">

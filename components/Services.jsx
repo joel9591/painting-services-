@@ -1,5 +1,6 @@
-// 'use client';
-// import Link from 'next/link';
+// "use client";
+// import Link from "next/link";
+// import { useState, useEffect } from "react";
 // import {
 //   Paintbrush,
 //   Sparkles,
@@ -7,133 +8,224 @@
 //   Zap,
 //   Sofa,
 //   Home,
-//   ArrowRight
-// } from 'lucide-react';
+//   ArrowRight,
+// } from "lucide-react";
+
+// function ServiceCard({ service }) {
+//   const [currentImage, setCurrentImage] = useState(0);
+
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setCurrentImage((prev) => (prev + 1) % service.images.length);
+//     }, 3000);
+//     return () => clearInterval(interval);
+//   }, [service.images.length]);
+
+//   return (
+//     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
+//       {/* Image carousel */}
+//       <div className="relative h-36 overflow-hidden">
+//         {service.images.map((img, index) => (
+//           <img
+//             key={index}
+//             src={img}
+//             alt={service.title}
+//             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+//               index === currentImage ? "opacity-100" : "opacity-0"
+//             }`}
+//           />
+//         ))}
+//         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+//         <div className="absolute bottom-3 left-3">{service.icon}</div>
+//       </div>
+
+//       {/* Service content */}
+//       <div className="p-4">
+//         <h3 className="text-lg font-bold text-gray-900 mb-2">{service.title}</h3>
+//         <p className="text-sm text-gray-600 mb-3">{service.description}</p>
+
+//         <ul className="space-y-1 mb-4">
+//           {service.features.map((feature, idx) => (
+//             <li key={idx} className="text-xs text-gray-500 flex items-center">
+//               <div className="w-1.5 h-1.5 bg-black rounded-full mr-2"></div>
+//               {feature}
+//             </li>
+//           ))}
+//         </ul>
+
+//         <Link
+//           href={service.href}
+//           className="inline-flex items-center text-blue-600 hover:text-blue-700 text-sm font-semibold transition-colors duration-200"
+//         >
+//           View Details
+//           <ArrowRight
+//             size={14}
+//             className="ml-1 group-hover:translate-x-1 transition-transform duration-200"
+//           />
+//         </Link>
+//       </div>
+//     </div>
+//   );
+// }
 
 // export default function Services() {
-//   const services = [
+// const services = [
 //     {
 //       icon: <Paintbrush className="text-blue-600" size={48} />,
 //       title: "House Painting",
-//       description: "Interior and exterior painting with premium quality paints and professional finishes.",
-//       features: ["Interior Painting", "Exterior Painting", "Color Consultation", "Wall Preparation"],
+//       description:
+//         "Interior and exterior painting with premium quality paints and professional finishes.",
+//       features: [
+//         "Interior Painting",
+//         "Exterior Painting",
+//         "Color Consultation",
+//         "Wall Preparation",
+//       ],
 //       href: "/services/house-painting",
-//       image: "https://images.pexels.com/photos/1669799/pexels-photo-1669799.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2"
+//       images: [
+//         "https://images.pexels.com/photos/5691693/pexels-photo-5691693.jpeg",
+//         "https://images.pexels.com/photos/7217966/pexels-photo-7217966.jpeg",
+//         "https://images.pexels.com/photos/1917849/pexels-photo-1917849.jpeg",
+//         "https://images.pexels.com/photos/5641407/pexels-photo-5641407.jpeg",
+//         "https://images.pexels.com/photos/6474482/pexels-photo-6474482.jpeg",
+//       ],
 //     },
 //     {
 //       icon: <Sparkles className="text-purple-600" size={48} />,
 //       title: "Deep Cleaning",
-//       description: "Comprehensive deep cleaning services for homes, offices, and commercial spaces.",
-//       features: ["Deep House Cleaning", "Post-Construction Cleanup", "Move-in/Move-out", "Regular Maintenance"],
+//       description:
+//         "Comprehensive deep cleaning services for homes, offices, and commercial spaces.",
+//       features: [
+//         "Deep House Cleaning",
+//         "Post-Construction Cleanup",
+//         "Move-in/Move-out",
+//         "Regular Maintenance",
+//       ],
 //       href: "/services/deep-cleaning",
-//       image: "https://images.pexels.com/photos/4239091/pexels-photo-4239091.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2"
+//       images: [
+//         "https://images.pexels.com/photos/4239130/pexels-photo-4239130.jpeg",
+//         "https://images.pexels.com/photos/6195951/pexels-photo-6195951.jpeg",
+//         "https://images.pexels.com/photos/4401538/pexels-photo-4401538.jpeg",
+//         "https://images.pexels.com/photos/4239146/pexels-photo-4239146.jpeg",
+//         "https://images.pexels.com/photos/9324302/pexels-photo-9324302.jpeg",
+//       ],
 //     },
 //     {
 //       icon: <Wrench className="text-green-600" size={48} />,
 //       title: "Plumbing",
-//       description: "Expert plumbing repairs, installations, and maintenance for residential properties.",
-//       features: ["Leak Repairs", "Pipe Installation", "Fixture Replacement", "Emergency Service"],
+//       description:
+//         "Reliable plumbing services including leak repairs, installations, and maintenance.",
+//       features: [
+//         "Pipe Repairs",
+//         "Leak Detection",
+//         "Bathroom & Kitchen Fittings",
+//         "Water Heater Installation",
+//       ],
 //       href: "/services/plumbing",
-//       image: "https://images.pexels.com/photos/8293660/pexels-photo-8293660.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2"
+//       images: [
+//         "https://images.pexels.com/photos/1910472/pexels-photo-1910472.jpeg",
+//         "https://images.pexels.com/photos/3288104/pexels-photo-3288104.png",
+//         "https://images.pexels.com/photos/29226620/pexels-photo-29226620.jpeg",
+//         "https://images.pexels.com/photos/6263144/pexels-photo-6263144.jpeg",
+//         "https://images.pexels.com/photos/3944859/pexels-photo-3944859.jpeg",
+//       ],
 //     },
 //     {
 //       icon: <Zap className="text-yellow-600" size={48} />,
 //       title: "Electrical Work",
-//       description: "Licensed electrical services including wiring, repairs, and safety inspections.",
-//       features: ["Wiring & Rewiring", "Outlet Installation", "Lighting Solutions", "Safety Inspections"],
+//       description:
+//         "Professional electrical services ensuring safety and efficiency for all installations.",
+//       features: [
+//         "Wiring & Rewiring",
+//         "Lighting Installation",
+//         "Power Backup Solutions",
+//         "Appliance Setup",
+//       ],
 //       href: "/services/electrical-work",
-//       image: "https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2"
+//       images: [
+//         "https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg",
+//         "https://images.pexels.com/photos/7641361/pexels-photo-7641361.jpeg",
+//         "https://images.pexels.com/photos/7285975/pexels-photo-7285975.jpeg",
+//         "https://images.pexels.com/photos/9242278/pexels-photo-9242278.jpeg",
+//         "https://images.pexels.com/photos/5090652/pexels-photo-5090652.jpeg",
+//       ],
 //     },
 //     {
-//       icon: <Sofa className="text-orange-600" size={48} />,
+//       icon: <Sofa className="text-red-600" size={48} />,
 //       title: "Furniture Work",
-//       description: "Custom furniture repair, restoration, and assembly services by skilled craftsmen.",
-//       features: ["Furniture Repair", "Custom Assembly", "Restoration", "Upholstery Work"],
+//       description:
+//         "Expert carpentry services for furniture, fittings, and custom wooden work.",
+//       features: [
+//         "Furniture Assembly",
+//         "Wood Repairs",
+//         "Custom Furniture",
+//         "Door & Window Fixes",
+//       ],
 //       href: "/services/furniture-work",
-//       image: "https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2"
+//       images: [
+//         "https://images.pexels.com/photos/313776/pexels-photo-313776.jpeg",
+//         "https://images.pexels.com/photos/374861/pexels-photo-374861.jpeg",
+//         "https://images.pexels.com/photos/3814513/pexels-photo-3814513.jpeg",
+//         "https://images.pexels.com/photos/8829869/pexels-photo-8829869.jpeg",
+//         "https://images.pexels.com/photos/8820171/pexels-photo-8820171.jpeg ",
+//       ],
 //     },
 //     {
 //       icon: <Home className="text-teal-600" size={48} />,
 //       title: "False Ceiling",
-//       description: "Modern false ceiling installation with various designs and lighting options.",
-//       features: ["Gypsum Board Ceiling", "POP Ceiling", "Wooden Ceiling", "LED Integration"],
+//       description:
+//         "Modern false ceiling installation with various designs and lighting options.",
+//       features: [
+//         "Gypsum Board Ceiling",
+//         "POP Ceiling",
+//         "Wooden Ceiling",
+//         "LED Integration",
+//       ],
 //       href: "/services/false-ceiling",
-//       image: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2"
-//     }
+//       images: [
+//         "https://images.pexels.com/photos/259962/pexels-photo-259962.jpeg",
+//         "https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg",
+//         "https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg",
+//         "https://images.pexels.com/photos/2343465/pexels-photo-2343465.jpeg",
+//         "https://images.pexels.com/photos/6908502/pexels-photo-6908502.jpeg",
+//       ],
+//     },
 //   ];
 
 //   return (
-//     <section id="services" className="py-20 bg-gray-50">
-//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//         <div className="text-center mb-16">
-//           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-//             Our Professional Services
+//     <section id="services" className="py-12 bg-gray-50">
+//       <div className="max-w-6xl mx-auto px-4">
+//         <div className="text-center mb-8">
+//           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+//             Our Services
 //           </h2>
-//           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-//             From painting to plumbing, we provide comprehensive home services with unmatched quality and reliability.
+//           <p className="text-base text-gray-600 max-w-2xl mx-auto">
+//             From painting to plumbing, we provide reliable home services.
 //           </p>
 //         </div>
 
-//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+//         {/* Grid */}
+//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 //           {services.map((service, index) => (
-//             <div
-//               key={index}
-//               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
-//             >
-//               <div className="relative h-48 overflow-hidden">
-//                 <img
-//                   src={service.image}
-//                   alt={service.title}
-//                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-//                 />
-//                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-//                 <div className="absolute bottom-4 left-4">
-//                   {service.icon}
-//                 </div>
-//               </div>
-
-//               <div className="p-6">
-//                 <h3 className="text-xl font-bold text-gray-900 mb-3">
-//                   {service.title}
-//                 </h3>
-//                 <p className="text-gray-600 mb-4">
-//                   {service.description}
-//                 </p>
-
-//                 <ul className="space-y-2 mb-6">
-//                   {service.features.map((feature, idx) => (
-//                     <li key={idx} className="text-sm text-gray-500 flex items-center">
-//                       <div className="w-1.5 h-1.5 bg-black rounded-full mr-2"></div>
-//                       {feature}
-//                     </li>
-//                   ))}
-//                 </ul>
-
-//                 <Link
-//                   href={service.href}
-//                   className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors duration-200"
-//                 >
-//                   View Service Details
-//                   <ArrowRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform duration-200" />
-//                 </Link>
-//               </div>
-//             </div>
+//             <ServiceCard key={index} service={service} />
 //           ))}
 //         </div>
 
-//         <div className="text-center mt-12">
+//         <div className="text-center mt-8">
 //           <Link
 //             href="/services"
-//             className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-300 inline-flex items-center space-x-2"
+//             className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md text-sm font-semibold transition-colors inline-flex items-center space-x-2"
 //           >
 //             <span>View All Services</span>
-//             <ArrowRight size={20} />
+//             <ArrowRight size={16} />
 //           </Link>
 //         </div>
 //       </div>
 //     </section>
 //   );
 // }
+
+
 
 "use client";
 import Link from "next/link";
@@ -151,7 +243,6 @@ import {
 function ServiceCard({ service }) {
   const [currentImage, setCurrentImage] = useState(0);
 
-  // Auto-slide every 3s
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % service.images.length);
@@ -160,33 +251,38 @@ function ServiceCard({ service }) {
   }, [service.images.length]);
 
   return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
+    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group p-4 lg:p-6">
       {/* Image carousel */}
-      <div className="relative h-48 overflow-hidden">
+      <div className="relative h-36 lg:h-48 overflow-hidden rounded-sm">
         {service.images.map((img, index) => (
           <img
             key={index}
             src={img}
             alt={service.title}
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity rounded-sm duration-1000 ${
               index === currentImage ? "opacity-100" : "opacity-0"
             }`}
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-        <div className="absolute bottom-4 left-4">{service.icon}</div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+        <div className="absolute bottom-3 left-3">{service.icon}</div>
       </div>
 
       {/* Service content */}
-      <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-900 mb-3">
+      <div>
+        <h3 className="text-lg lg:text-xl font-bold text-gray-900 mb-2">
           {service.title}
         </h3>
-        <p className="text-gray-600 mb-4">{service.description}</p>
+        <p className="text-sm lg:text-base text-gray-600 mb-3">
+          {service.description}
+        </p>
 
-        <ul className="space-y-2 mb-6">
+        <ul className="space-y-1 mb-4">
           {service.features.map((feature, idx) => (
-            <li key={idx} className="text-sm text-gray-500 flex items-center">
+            <li
+              key={idx}
+              className="text-xs lg:text-sm text-gray-500 flex items-center"
+            >
               <div className="w-1.5 h-1.5 bg-black rounded-full mr-2"></div>
               {feature}
             </li>
@@ -195,11 +291,11 @@ function ServiceCard({ service }) {
 
         <Link
           href={service.href}
-          className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors duration-200"
+          className="inline-flex items-center text-blue-600 hover:text-blue-700 text-sm lg:text-base font-semibold transition-colors duration-200"
         >
-          View Service Details
+          View Details
           <ArrowRight
-            size={16}
+            size={14}
             className="ml-1 group-hover:translate-x-1 transition-transform duration-200"
           />
         </Link>
@@ -307,7 +403,7 @@ export default function Services() {
         "https://images.pexels.com/photos/374861/pexels-photo-374861.jpeg",
         "https://images.pexels.com/photos/3814513/pexels-photo-3814513.jpeg",
         "https://images.pexels.com/photos/8829869/pexels-photo-8829869.jpeg",
-        "https://images.pexels.com/photos/8820171/pexels-photo-8820171.jpeg ",
+        "https://images.pexels.com/photos/8820171/pexels-photo-8820171.jpeg",
       ],
     },
     {
@@ -333,32 +429,31 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Our Professional Services
+    <section id="services" className="py-10 lg:py-14 bg-gray-50">
+      <div className="max-w-8xl mx-auto px-4 lg:px-8">
+        <div className="text-center mb-8 lg:mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
+            Our Services
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From painting to plumbing, we provide comprehensive home services
-            with unmatched quality and reliability.
+          <p className="text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">
+            From painting to plumbing, we provide reliable home services.
           </p>
         </div>
 
-        {/* Grid of services */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {services.map((service, index) => (
             <ServiceCard key={index} service={service} />
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-8">
           <Link
             href="/services"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-300 inline-flex items-center space-x-2"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-md text-sm lg:text-base font-semibold transition-colors inline-flex items-center space-x-2"
           >
             <span>View All Services</span>
-            <ArrowRight size={20} />
+            <ArrowRight size={16} />
           </Link>
         </div>
       </div>

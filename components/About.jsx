@@ -1,68 +1,233 @@
-'use client';
-import { useEffect, useState } from 'react';
-import { CheckCircle, Award, Users, Clock } from 'lucide-react';
+// 'use client';
+// import { useEffect, useState } from 'react';
+// import { CheckCircle, Award, Users, Clock } from 'lucide-react';
 
-// 🔹 CountUp Hook
-function useCountUp(target, duration = 2000) {
+// // 🔹 CountUp Hook
+// function useCountUp(target, duration = 2000) {
+//   const [count, setCount] = useState(0);
+
+//   useEffect(() => {
+//     let start = 0;
+//     const increment = target / (duration / 16); // ~60fps
+//     const step = () => {
+//       start += increment;
+//       if (start < target) {
+//         setCount(Math.floor(start));
+//         requestAnimationFrame(step);
+//       } else {
+//         setCount(target);
+//       }
+//     };
+//     requestAnimationFrame(step);
+//   }, [target, duration]);
+
+//   return count;
+// }
+
+// export default function About() {
+//   const stats = [
+//     { icon: <Users size={32} />, number: 500, label: "Happy Customers", suffix: "+" },
+//     { icon: <Award size={32} />, number: 10, label: "Years Experience", suffix: "+" },
+//     { icon: <CheckCircle size={32} />, number: 1000, label: "Projects Completed", suffix: "+" },
+//     { icon: <Clock size={32} />, number: 24, label: "Customer Support", suffix: "/7" }
+//   ];
+
+//   return (
+//     <section id="about" className="py-2 bg-white lg:py-12 ">
+//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+//         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+//           {/* About Text */}
+//           <div>
+//             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+//               About Bharath Painters
+//             </h2>
+//             <p className="text-lg text-gray-600 mb-6">
+//               With over 10 years of experience in the home services industry, we've built our reputation on
+//               delivering exceptional quality and customer satisfaction. Our team of licensed professionals
+//               is committed to transforming your home with reliable, efficient, and affordable services.
+//             </p>
+//             <p className="text-lg text-gray-600 mb-8">
+//               From small repairs to complete home renovations, we handle every project with the same level
+//               of care and attention to detail. We use only the finest materials and latest techniques to
+//               ensure lasting results that exceed your expectations.
+//             </p>
+
+//             <div className="space-y-4">
+//               {[
+//                 "Licensed & Insured Professionals",
+//                 "Free Estimates & Consultations",
+//                 "100% Satisfaction Guarantee",
+//                 "Eco-Friendly Materials Available",
+//                 "Emergency Services Available"
+//               ].map((item, index) => (
+//                 <div key={index} className="flex items-center space-x-3">
+//                   <CheckCircle className="text-green-500 flex-shrink-0" size={20} />
+//                   <span className="text-gray-700">{item}</span>
+//                 </div>
+//               ))}
+//             </div>
+//           </div>
+
+//           {/* Image */}
+//           <div className="relative">
+//             <img
+//               src="https://images.pexels.com/photos/5691600/pexels-photo-5691600.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2"
+//               alt="Professional team at work"
+//               className="rounded-lg shadow-xl"
+//             />
+//             <div className="absolute -bottom-6 -left-6 bg-blue-600 text-white p-6 rounded-lg shadow-lg">
+//               <p className="text-2xl font-bold">10+ Years</p>
+//               <p className="text-sm">of Excellence</p>
+//             </div>
+//           </div>
+//         </div>
+
+//         {/* Stats Section with Animation */}
+//         <div className="mt-20">
+//           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+//             {stats.map((stat, index) => {
+//               const count = useCountUp(stat.number, 2000);
+//               return (
+//                 <div key={index} className="text-center">
+//                   <div className="text-blue-600 mb-4 flex justify-center">
+//                     {stat.icon}
+//                   </div>
+//                   <div className="text-3xl font-bold text-gray-900 mb-2">
+//                     {count}{stat.suffix}
+//                   </div>
+//                   <div className="text-gray-600">
+//                     {stat.label}
+//                   </div>
+//                 </div>
+//               );
+//             })}
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+"use client";
+import { useEffect, useState, useRef } from "react";
+import { CheckCircle, Award, Users, Clock } from "lucide-react";
+
+// 🔹 CountUp Hook (runs when "start" becomes true)
+function useCountUp(target, duration = 2000, start = false) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    let start = 0;
+    if (!start) return; // only start when "start" is true
+
+    let startValue = 0;
     const increment = target / (duration / 16); // ~60fps
     const step = () => {
-      start += increment;
-      if (start < target) {
-        setCount(Math.floor(start));
+      startValue += increment;
+      if (startValue < target) {
+        setCount(Math.floor(startValue));
         requestAnimationFrame(step);
       } else {
         setCount(target);
       }
     };
     requestAnimationFrame(step);
-  }, [target, duration]);
+  }, [target, duration, start]);
 
   return count;
 }
 
 export default function About() {
+  const [startCount, setStartCount] = useState(false);
+  const statsRef = useRef(null);
+
   const stats = [
-    { icon: <Users size={32} />, number: 500, label: "Happy Customers", suffix: "+" },
-    { icon: <Award size={32} />, number: 10, label: "Years Experience", suffix: "+" },
-    { icon: <CheckCircle size={32} />, number: 1000, label: "Projects Completed", suffix: "+" },
-    { icon: <Clock size={32} />, number: 24, label: "Customer Support", suffix: "/7" }
+    {
+      icon: <Users size={28} />,
+      number: 500,
+      label: "Happy Customers",
+      suffix: "+",
+    },
+    {
+      icon: <Award size={28} />,
+      number: 10,
+      label: "Years Experience",
+      suffix: "+",
+    },
+    {
+      icon: <CheckCircle size={28} />,
+      number: 1000,
+      label: "Projects Completed",
+      suffix: "+",
+    },
+    {
+      icon: <Clock size={28} />,
+      number: 24,
+      label: "Customer Support",
+      suffix: "/7",
+    },
   ];
 
+  // 🔹 Intersection Observer to detect when stats are visible
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setStartCount(true);
+          observer.disconnect(); // run only once
+        }
+      },
+      { threshold: 0.3 } // 30% of section visible
+    );
+
+    if (statsRef.current) {
+      observer.observe(statsRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section id="about" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section id="about" className="py-8 sm:py-10 lg:py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* About Text */}
           <div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 lg:mb-6">
               About Bharath Painters
             </h2>
-            <p className="text-lg text-gray-600 mb-6">
-              With over 10 years of experience in the home services industry, we've built our reputation on 
-              delivering exceptional quality and customer satisfaction. Our team of licensed professionals 
-              is committed to transforming your home with reliable, efficient, and affordable services.
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-4 lg:mb-6">
+              With over 10 years of experience in the home services industry,
+              we've built our reputation on delivering exceptional quality and
+              customer satisfaction. Our team of licensed professionals is
+              committed to transforming your home with reliable, efficient, and
+              affordable services.
             </p>
-            <p className="text-lg text-gray-600 mb-8">
-              From small repairs to complete home renovations, we handle every project with the same level 
-              of care and attention to detail. We use only the finest materials and latest techniques to 
-              ensure lasting results that exceed your expectations.
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-6 lg:mb-8">
+              From small repairs to complete home renovations, we handle every
+              project with the same level of care and attention to detail. We
+              use only the finest materials and latest techniques to ensure
+              lasting results that exceed your expectations.
             </p>
-            
-            <div className="space-y-4">
+
+            <div className="space-y-3 lg:space-y-4">
               {[
                 "Licensed & Insured Professionals",
                 "Free Estimates & Consultations",
                 "100% Satisfaction Guarantee",
                 "Eco-Friendly Materials Available",
-                "Emergency Services Available"
+                "Emergency Services Available",
               ].map((item, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="text-green-500 flex-shrink-0" size={20} />
-                  <span className="text-gray-700">{item}</span>
+                <div
+                  key={index}
+                  className="flex items-center space-x-2 lg:space-x-3"
+                >
+                  <CheckCircle
+                    className="text-green-500 flex-shrink-0"
+                    size={18}
+                  />
+                  <span className="text-gray-700 text-sm sm:text-base lg:text-lg">
+                    {item}
+                  </span>
                 </div>
               ))}
             </div>
@@ -73,29 +238,32 @@ export default function About() {
             <img
               src="https://images.pexels.com/photos/5691600/pexels-photo-5691600.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2"
               alt="Professional team at work"
-              className="rounded-lg shadow-xl"
+              className="rounded-lg shadow-lg lg:shadow-xl max-h-full object-cover"
             />
-            <div className="absolute -bottom-6 -left-6 bg-blue-600 text-white p-6 rounded-lg shadow-lg">
-              <p className="text-2xl font-bold">10+ Years</p>
-              <p className="text-sm">of Excellence</p>
+            <div className="absolute -bottom-4 sm:-bottom-6 -left-4 sm:-left-6 bg-blue-600 text-white px-4 py-3 sm:px-6 sm:py-4 rounded-lg shadow-md lg:shadow-lg">
+              <p className="text-lg sm:text-xl lg:text-2xl font-bold">
+                10+ Years
+              </p>
+              <p className="text-xs sm:text-sm">of Excellence</p>
             </div>
           </div>
         </div>
 
         {/* Stats Section with Animation */}
-        <div className="mt-20">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div ref={statsRef} className="mt-12 lg:mt-20">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10">
             {stats.map((stat, index) => {
-              const count = useCountUp(stat.number, 2000);
+              const count = useCountUp(stat.number, 2000, startCount);
               return (
                 <div key={index} className="text-center">
-                  <div className="text-blue-600 mb-4 flex justify-center">
+                  <div className="text-blue-600 mb-3 flex justify-center">
                     {stat.icon}
                   </div>
-                  <div className="text-3xl font-bold text-gray-900 mb-2">
-                    {count}{stat.suffix}
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-1 lg:mb-2">
+                    {count}
+                    {stat.suffix}
                   </div>
-                  <div className="text-gray-600">
+                  <div className="text-xs sm:text-sm lg:text-base text-gray-600">
                     {stat.label}
                   </div>
                 </div>
