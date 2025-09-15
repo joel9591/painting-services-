@@ -215,7 +215,7 @@ export default function Navigation() {
               className="rounded"
               style={{ height: "auto" }}
             />
-            <span className="ml-2 mt-2 text-sm sm:text-base md:text-lg lg:text-2xl font-extrabold text-blue-600 whitespace-nowrap">
+            <span className="ml-2 mt-4 lg:mt-2 text-xl sm:text-base md:text-lg lg:text-2xl font-extrabold text-blue-600 whitespace-nowrap">
               Bharath Painters
             </span>
           </Link>

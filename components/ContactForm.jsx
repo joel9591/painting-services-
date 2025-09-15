@@ -452,7 +452,7 @@ export default function ContactForm() {
   ];
 
   return (
-    <section id="contact" className="py-6 sm:py-10 lg:py-14 bg-gray-50">
+    <section id="contact" className="py-4 sm:py-6 lg:py-7 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12">
@@ -465,19 +465,19 @@ export default function ContactForm() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-20">
           {/* Contact Information */}
           <div>
-            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">
+            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-1 sm:mb-1">
               Get In Touch
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-6 mb-8 max-w-full sm:w-full sm:shadow-none shadow-lg py-5 px-1 rounded-sm">
               {contactInfo.map((item, index) => (
                 <div
                   key={index}
                   className="flex items-center space-x-3 sm:space-x-4"
                 >
-                  <div className="text-blue-600 bg-blue-100 p-2 sm:p-3 rounded-lg flex items-center justify-center">
+                  <div className="text-blue-600 bg-blue-100 p-1 sm:p-3 rounded-lg flex items-center justify-center">
                     {item.icon}
                   </div>
                   <div>
@@ -487,12 +487,12 @@ export default function ContactForm() {
                     {item.link ? (
                       <a
                         href={item.link}
-                        className="text-gray-600 hover:text-blue-600 text-sm sm:text-base transition-colors duration-200"
+                        className="text-gray-600 hover:text-blue-600 text-xs sm:text-base transition-colors duration-200 break-words"
                       >
                         {item.info}
                       </a>
                     ) : (
-                      <p className="text-gray-600 text-sm sm:text-base">
+                      <p className="text-gray-600 text-xs sm:text-base ">
                         {item.info}
                       </p>
                     )}
