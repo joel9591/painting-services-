@@ -192,7 +192,7 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* About Text */}
           <div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 lg:mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 lg:mb-6 text-center md:text-left lg:text-left">
               About Bharath Painters
             </h2>
             <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-4 lg:mb-6">
