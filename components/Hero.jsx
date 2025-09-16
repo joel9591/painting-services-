@@ -1499,7 +1499,7 @@ export default function Hero() {
   return (
     <section className="relative w-full bg-gray-100">
       {/* Carousel */}
-      <div className="relative h-[50vh] sm:h-[70vh] lg:h-screen overflow-hidden m-2 rounded-sm ">
+      <div className="relative h-[50vh] sm:h-[70vh] lg:h-screen overflow-hidden rounded-sm mx-1.5">
         <Image
           src={slides[currentSlide].src}
           alt={slides[currentSlide].alt}
