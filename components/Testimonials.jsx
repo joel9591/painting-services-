@@ -64,7 +64,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="py-6 sm:py-10 lg:py-8 bg-blue-600">
+    <section id="testimonials" className="py-4 sm:py-6 lg:py-6 bg-blue-600">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-6 sm:mb-12 ">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-2">
@@ -75,10 +75,10 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="relative max-w-7xl mx-auto">
+        <div className="relative max-w-7xl mx-auto sm:-mt-6 lg:-mt-6">
           {/* Main Testimonial */}
-          <div className="bg-white rounded-xl shadow-2xl p-6 sm:p-8 lg:p-12 relative">
-            <Quote className="absolute top-4 sm:top-6 left-4 sm:left-6 text-blue-600 opacity-20" size={36} />
+          <div className="bg-white rounded-xl shadow-2xl p-3 sm:p-5 lg:p-6 relative">
+            <Quote className="absolute top-2 sm:top-1 left-3 sm:left-1 text-blue-600 opacity-20" size={36} />
 
             <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
               {/* Image smaller on mobile */}
@@ -115,7 +115,7 @@ export default function Testimonials() {
           </div>
 
           {/* Navigation Buttons */}
-          <div className="flex justify-center items-center space-x-3 sm:space-x-4 mt-6 sm:mt-8">
+          <div className="flex justify-center items-center space-x-3 sm:space-x-4 mt-3 sm:mt-5">
             <button
               onClick={prevTestimonial}
               className="bg-white text-blue-600 p-2 sm:p-3 rounded-full shadow-md hover:bg-blue-50 transition-colors duration-200"
@@ -145,8 +145,8 @@ export default function Testimonials() {
         </div>
 
         {/* Trust Indicators */}
-        <div className="mt-4 sm:mt-16 text-center lg:mt-6">
-          <p className="text-sm sm:text-base lg:text-lg text-blue-100 mb-4 sm:mb-8">
+        <div className="mt-2 sm:mt-8 text-center lg:mt-5">
+          <p className="text-sm sm:text-base lg:text-lg text-blue-100 mb-2 sm:mb-5">
             Trusted by homeowners across the city
           </p>
           <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 lg:gap-16 opacity-70 text-xs sm:text-sm lg:text-lg">

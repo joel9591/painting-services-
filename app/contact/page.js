@@ -33,8 +33,8 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-4 bg-gray-50">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 m-8">
+      <section className="py-2 bg-gray-50">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 m-4 lg:m-6 sm:px-12">
           {/* Client Contact Form */}
           <ContactForm />
 
