@@ -1499,7 +1499,7 @@ export default function Hero() {
   return (
     <section className="relative w-full bg-gray-100">
       {/* Carousel */}
-      <div className="relative h-[220px] sm:h-[320px] lg:h-screen overflow-hidden">
+      <div className="relative h-[50vh] sm:h-[70vh] lg:h-screen overflow-hidden m-2 rounded-sm ">
         <Image
           src={slides[currentSlide].src}
           alt={slides[currentSlide].alt}
@@ -1514,7 +1514,7 @@ export default function Hero() {
             isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
           }`}
         >
-          <h1 className="text-xl sm:text-2xl font-bold text-center lg:hidden">
+          <h1 className="text-xl sm:text-2xl font-bold lg:hidden pt-28">
             Professional Home Services
           </h1>
 
@@ -1562,7 +1562,7 @@ export default function Hero() {
       </div>
 
       {/* Steps + Form */}
-      <div className="max-w-6xl mx-auto px-4 py-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20">
+      <div className="max-w-6xl mx-auto px-4 py-4 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20">
         {/* Steps */}
         <div>
           <div className="grid grid-cols-3 gap-4 lg:hidden">
@@ -1619,7 +1619,7 @@ export default function Hero() {
         </div>
 
         {/* Form */}
-        <div>
+        <div className="-mt-4">
           <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-blue-700 mb-2 pl-2">
             Request a Service
           </h2>
