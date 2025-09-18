@@ -322,7 +322,7 @@ export default function Navigation() {
         href="https://wa.me/918884563601?text=Hello!%20I'm%20interested%20in%20your%20services.%20May%20I%20know%20more%20about%20your%20work?"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-40"
+        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-xl transition-all duration-300 hover:scale-110 z-40"
         aria-label="Chat on WhatsApp"
       >
         <svg
@@ -339,7 +339,7 @@ export default function Navigation() {
       {/* Mobile Floating Call Button */}
       <a
         href="tel:+91 7978114096"
-        className="md:hidden fixed bottom-6 left-6 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-40"
+        className="md:hidden fixed bottom-6 left-6 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-xl transition-all duration-300 hover:scale-110 z-40"
         aria-label="Call Now"
       >
         <Phone size={24} />
