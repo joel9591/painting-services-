@@ -29,7 +29,7 @@ export default function HousePainting() {
     },
     {
       title: "Exterior Painting",
-      description: "Boost your home"s curb appeal with weather-resistant exterior painting.",
+      description: "Boost your home's curb appeal with weather-resistant exterior painting.",
       features: [
         "Siding & trim painting",
         "Deck & fence staining",
