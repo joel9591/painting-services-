@@ -98,12 +98,12 @@ export default function About() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-purple-500 to-blue-400 text-white">
+      <section className="pt-24 pb-12 bg-gradient-to-br from-purple-500 to-blue-400 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+          <h1 className="text-2xl sm:text-4xl font-bold mb-3">
             About Bharath Painters Services
           </h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="text-md sm:text-lg text-blue-100 max-w-3xl mx-auto">
             Your trusted partner for professional home improvement services
             since 2014. We're committed to transforming your home with quality,
             reliability, and exceptional service.
@@ -112,7 +112,7 @@ export default function About() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white">
+      <section className="py-8 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -128,28 +128,28 @@ export default function About() {
       </section>
 
       {/* Our Story */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-4 sm:py-7 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Our Story
               </h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-md sm:text-lg text-gray-600 mb-6 text-justify">
                 Founded in 2014, Bharath Painters Services started as a small
                 family business with a simple mission: to provide homeowners
                 with reliable, professional, and affordable home improvement
                 services. What began as a one-person operation has grown into a
                 trusted team of skilled professionals.
               </p>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-md sm:text-lg text-gray-600 mb-6 text-justify">
                 Over the years, we've had the privilege of working with hundreds
                 of families, helping them transform their houses into dream
                 homes. From small repairs to complete renovations, we approach
                 every project with the same level of dedication and attention to
                 detail.
               </p>
-              <p className="text-lg text-gray-600">
+              <p className="text-md sm:text-lg text-gray-600 text-justify">
                 Today, we're proud to be one of the most trusted home service
                 providers in the area, known for our quality workmanship, fair
                 pricing, and exceptional customer service.
@@ -157,9 +157,9 @@ export default function About() {
             </div>
             <div>
               <img
-                src="https://images.pexels.com/photos/5691600/pexels-photo-5691600.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2"
+                src="https://images.unsplash.com/photo-1564078516393-cf04bd966897?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Our team at work"
-                className="rounded-lg shadow-xl"
+                className="rounded-lg shadow-xl sm:ml-32 object-cover"
               />
             </div>
           </div>
@@ -167,38 +167,38 @@ export default function About() {
       </section>
 
       {/* Our Values */}
-      <section className="py-20 bg-white">
+      <section className="py-6 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-6">
+            <h2 className="text-3xl font-bold text-gray-900 mb-2">
               Our Values
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-md sm:text-xl text-gray-600 max-w-3xl mx-auto">
               These core values guide everything we do and every decision we
               make.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7 lg:gap-10">
             {values.slice(0, 3).map((value, index) => (
-              <div key={index} className="text-center p-6">
+              <div key={index} className="text-center p-2 ">
                 <div className="flex justify-center mb-4">{value.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-xl font-semibold text-gray-900 mb-1">
                   {value.title}
                 </h3>
-                <p className="text-gray-600">{value.description}</p>
+                <p className="text-gray-600 text-base">{value.description}</p>
               </div>
             ))}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 max-w-4xl mx-auto">
             {values.slice(3).map((value, index) => (
-              <div key={index} className="text-center p-6">
+              <div key={index} className="text-center p-2 ">
                 <div className="flex justify-center mb-4">{value.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-xl font-semibold text-gray-900 mb-1">
                   {value.title}
                 </h3>
-                <p className="text-gray-600">{value.description}</p>
+                <p className="text-gray-600 text-base">{value.description}</p>
               </div>
             ))}
           </div>
@@ -206,13 +206,13 @@ export default function About() {
       </section>
 
       {/* Meet Our Team */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-4 sm:py-6 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
               Meet Our Expert Team
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-md sm:text-xl text-gray-600 max-w-3xl mx-auto">
               Our skilled professionals bring years of experience and dedication
               to every project.
             </p>
@@ -229,14 +229,14 @@ export default function About() {
                   alt={member.name}
                   className="w-full h-48 object-cover"
                 />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                <div className="px-4 py-2">
+                  <h3 className="text-md sm:text-xl font-semibold text-gray-900 mb-2">
                     {member.name}
                   </h3>
-                  <p className="text-blue-600 font-medium mb-2">
+                  <p className="text-blue-600 font-medium mb-1 text-sm sm:text-md">
                     {member.role}
                   </p>
-                  <p className="text-gray-600 text-sm mb-2">
+                  <p className="text-gray-600 text-sm mb-1 text-am sm:text-md">
                     {member.experience} Experience
                   </p>
                   <p className="text-gray-500 text-sm">{member.specialty}</p>
@@ -248,18 +248,18 @@ export default function About() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-blue-600 text-white">
+      <section className="py-8 bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-2">
               Why Choose Bharath Painters Services?
             </h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-md sm:text-lg text-blue-100 max-w-3xl mx-auto">
               Here's what sets us apart from other home service providers.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
             {[
               "Free detailed estimates with no hidden costs",
               "All work guaranteed with written warranties",

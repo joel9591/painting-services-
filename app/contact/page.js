@@ -22,10 +22,10 @@ export default function ContactPage() {
       <Navigation />
 
       {/* Hero */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-purple-500 to-blue-400 text-white">
+      <section className="pt-24 pb-12 bg-gradient-to-br from-purple-500 to-blue-400 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-6">Contact Us</h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <h1 className="text-2xl sm:text-4xl font-bold mb-3">Contact Us</h1>
+          <p className="text-md sm:text-lg text-blue-100 max-w-3xl mx-auto">
             Get in touch with our team for a free consultation and Quotation on
             your home service needs.
           </p>
@@ -103,8 +103,8 @@ export default function ContactPage() {
               Service Areas
             </h2>
             <p className="text-gray-700 mb-4 text-center">
-              We provide our professional home services frequently throughout the following
-              areas:
+              We provide our professional home services frequently throughout
+              the following areas:
             </p>
             <ul className="grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-2 md:gap-3 lg:gap-4 text-gray-700 list-disc list-inside text-sm lg:text-md md:text-base">
               <li>Downtown</li>

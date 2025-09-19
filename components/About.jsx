@@ -85,14 +85,14 @@ export default function About() {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 lg:mb-6 text-center md:text-left lg:text-left">
               About Bharath Painters
             </h2>
-            <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-4 lg:mb-6">
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-4 lg:mb-6 text-justify">
               With over 10 years of experience in the home services industry,
               we've built our reputation on delivering exceptional quality and
               customer satisfaction. Our team of licensed professionals is
               committed to transforming your home with reliable, efficient, and
               affordable services.
             </p>
-            <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-6 lg:mb-8">
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-6 lg:mb-8 text-justify">
               From small repairs to complete home renovations, we handle every
               project with the same level of care and attention to detail. We
               use only the finest materials and latest techniques to ensure
