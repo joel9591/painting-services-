@@ -1,15 +1,15 @@
-import Link from 'next/link';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import { CheckCircle, Paintbrush, Shield, Clock, Star } from 'lucide-react';
+import Link from "next/link";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import { CheckCircle, Paintbrush, Shield, Clock, Star } from "lucide-react";
 
 export const metadata = {
-  title: 'Professional House Painting Services | Interior & Exterior Painting',
-  description: 'Expert house painting services including interior and exterior painting, color consultation, wall preparation, and specialty finishes. Licensed painters with quality guarantee.',
-  keywords: 'house painting services, interior painting, exterior painting, residential painters, professional painting contractors, color consultation, wall painting, home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services, renovation, house renovate, house renovation, bharath, painters, paintings, bharath painters',
+  title: "Professional House Painting Services | Interior & Exterior Painting",
+  description: "Expert house painting services including interior and exterior painting, color consultation, wall preparation, and specialty finishes. Licensed painters with quality guarantee.",
+  keywords: "house painting services, interior painting, exterior painting, residential painters, professional painting contractors, color consultation, wall painting, home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services, renovation, house renovate, house renovation, bharath, painters, paintings, bharath painters",
   openGraph: {
-    title: 'Professional House Painting Services - Transform Your Home',
-    description: 'Transform your home with our expert painting services. Interior, exterior, and specialty finishes with quality guarantee.',
+    title: "Professional House Painting Services - Transform Your Home",
+    description: "Transform your home with our expert painting services. Interior, exterior, and specialty finishes with quality guarantee.",
   },
 };
 
@@ -29,7 +29,7 @@ export default function HousePainting() {
     },
     {
       title: "Exterior Painting",
-      description: "Boost your home's curb appeal with weather-resistant exterior painting.",
+      description: "Boost your home"s curb appeal with weather-resistant exterior painting.",
       features: [
         "Siding & trim painting",
         "Deck & fence staining",
@@ -217,7 +217,7 @@ export default function HousePainting() {
               Why Choose Our Painting Services?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're committed to delivering exceptional painting results with professional service.
+              We"re committed to delivering exceptional painting results with professional service.
             </p>
           </div>
 

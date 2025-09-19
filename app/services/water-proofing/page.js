@@ -1,15 +1,15 @@
-import Link from 'next/link';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import { CheckCircle, Droplet, Shield, Clock, Star, Home } from 'lucide-react';
+import Link from "next/link";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import { CheckCircle, Droplet, Shield, Clock, Star, Home } from "lucide-react";
 
 export const metadata = {
-  title: 'Professional Waterproofing Services | Leak Prevention Solutions',
-  description: 'Expert waterproofing services for roofs, basements, bathrooms, and exterior walls. Prevent water damage with our professional solutions.',
-  keywords: 'waterproofing services, leak prevention, roof waterproofing, basement waterproofing, bathroom waterproofing, exterior wall waterproofing, water damage prevention, home services, professional waterproofing, bharath painters',
+  title: "Professional Waterproofing Services | Leak Prevention Solutions",
+  description: "Expert waterproofing services for roofs, basements, bathrooms, and exterior walls. Prevent water damage with our professional solutions.",
+  keywords: "waterproofing services, leak prevention, roof waterproofing, basement waterproofing, bathroom waterproofing, exterior wall waterproofing, water damage prevention, home services, professional waterproofing, bharath painters",
   openGraph: {
-    title: 'Professional Waterproofing Services - Protect Your Home From Water Damage',
-    description: 'Protect your property with our expert waterproofing solutions. Prevent leaks and water damage with quality materials and professional application.',
+    title: "Professional Waterproofing Services - Protect Your Home From Water Damage",
+    description: "Protect your property with our expert waterproofing solutions. Prevent leaks and water damage with quality materials and professional application.",
   },
 };
 
@@ -85,7 +85,7 @@ export default function WaterProofing() {
     {
       icon: <Home size={32} />,
       title: "Property Value Preservation",
-      description: "Prevent costly structural damage and maintain your property's value with proper waterproofing."
+      description: "Prevent costly structural damage and maintain your property"s value with proper waterproofing."
     },
     {
       icon: <Droplet size={32} />,

@@ -362,7 +362,7 @@ export default function Services() {
               Why Choose Our Services?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're committed to delivering exceptional results on every
+              We"re committed to delivering exceptional results on every
               project, big or small.
             </p>
           </div>
@@ -415,7 +415,7 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Contact us today for a free estimate and consultation. We're here to
+            Contact us today for a free estimate and consultation. We"re here to
             help transform your home.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

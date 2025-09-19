@@ -1,15 +1,19 @@
-import Link from 'next/link';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import { CheckCircle, Paintbrush, Shield, Clock, Star } from 'lucide-react';
+import Link from "next/link";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import { CheckCircle, Paintbrush, Shield, Clock, Star } from "lucide-react";
 
 export const metadata = {
-  title: 'Professional Interior Painting Services | Premium Quality Finishes',
-  description: 'Expert interior painting services including living rooms, bedrooms, kitchens, bathrooms, and specialty finishes. Licensed painters with quality guarantee.',
-  keywords: 'interior painting services, indoor painting, wall painting, ceiling painting, trim painting, cabinet painting, home services, professional painters, color consultation, wall preparation, bharath painters',
+  title: "Professional Interior Painting Services | Premium Quality Finishes",
+  description:
+    "Expert interior painting services including living rooms, bedrooms, kitchens, bathrooms, and specialty finishes. Licensed painters with quality guarantee.",
+  keywords:
+    "interior painting services, indoor painting, wall painting, ceiling painting, trim painting, cabinet painting, home services, professional painters, color consultation, wall preparation, bharath painters",
   openGraph: {
-    title: 'Professional Interior Painting Services - Transform Your Indoor Spaces',
-    description: 'Transform your indoor spaces with our expert interior painting services. Premium finishes with quality guarantee.',
+    title:
+      "Professional Interior Painting Services - Transform Your Indoor Spaces",
+    description:
+      "Transform your indoor spaces with our expert interior painting services. Premium finishes with quality guarantee.",
   },
 };
 
@@ -17,92 +21,103 @@ export default function InteriorPainting() {
   const paintingServices = [
     {
       title: "Living Spaces",
-      description: "Transform your living rooms, bedrooms, and hallways with premium interior painting.",
+      description:
+        "Transform your living rooms, bedrooms, and hallways with premium interior painting.",
       features: [
         "Living room & family room painting",
         "Bedroom & guest room painting",
         "Hallway & stairwell painting",
         "Ceiling painting",
         "Trim & baseboard painting",
-        "Color matching & consultation"
-      ]
+        "Color matching & consultation",
+      ],
     },
     {
       title: "Kitchen & Bathrooms",
-      description: "Specialized painting for moisture-prone areas with durable, washable finishes.",
+      description:
+        "Specialized painting for moisture-prone areas with durable, washable finishes.",
       features: [
         "Kitchen wall painting",
         "Bathroom painting",
         "Cabinet refinishing",
         "Moisture-resistant paints",
         "Mold & mildew resistant coatings",
-        "Easy-clean finishes"
-      ]
+        "Easy-clean finishes",
+      ],
     },
     {
       title: "Specialty Services",
-      description: "Expert techniques for unique interior painting projects and finishes.",
+      description:
+        "Expert techniques for unique interior painting projects and finishes.",
       features: [
         "Accent walls",
         "Faux finishes",
         "Textured painting",
         "Drywall repair",
         "Color consultation",
-        "Eco-friendly paint options"
-      ]
-    }
+        "Eco-friendly paint options",
+      ],
+    },
   ];
 
   const process = [
     {
       step: "1",
       title: "Free Consultation",
-      description: "We assess your interior spaces, discuss color options, and provide a detailed estimate."
+      description:
+        "We assess your interior spaces, discuss color options, and provide a detailed estimate.",
     },
     {
-      step: "2", 
+      step: "2",
       title: "Surface Preparation",
-      description: "Thorough cleaning, sanding, priming, and repair work for the best results."
+      description:
+        "Thorough cleaning, sanding, priming, and repair work for the best results.",
     },
     {
       step: "3",
       title: "Professional Painting",
-      description: "Expert application using premium paints and proven techniques for flawless finishes."
+      description:
+        "Expert application using premium paints and proven techniques for flawless finishes.",
     },
     {
       step: "4",
       title: "Final Inspection",
-      description: "Quality check and cleanup to ensure your complete satisfaction with every detail."
-    }
+      description:
+        "Quality check and cleanup to ensure your complete satisfaction with every detail.",
+    },
   ];
 
   const benefits = [
     {
       icon: <Shield size={32} />,
       title: "Premium Materials",
-      description: "We use only high-quality paints and materials for lasting, beautiful results."
+      description:
+        "We use only high-quality paints and materials for lasting, beautiful results.",
     },
     {
       icon: <Clock size={32} />,
       title: "Efficient Service",
-      description: "Projects completed on schedule with minimal disruption to your daily life."
+      description:
+        "Projects completed on schedule with minimal disruption to your daily life.",
     },
     {
       icon: <CheckCircle size={32} />,
       title: "Meticulous Cleanup",
-      description: "Professional job site management and thorough cleanup after completion."
+      description:
+        "Professional job site management and thorough cleanup after completion.",
     },
     {
       icon: <Star size={32} />,
       title: "Satisfaction Guarantee",
-      description: "100% satisfaction guarantee on all interior painting projects."
-    }
+      description:
+        "100% satisfaction guarantee on all interior painting projects.",
+    },
   ];
 
   return (
     <>
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-blue-600 to-blue-400 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -111,8 +126,9 @@ export default function InteriorPainting() {
               Professional Interior Painting Services
             </h1>
             <p className="text-xl text-blue-100 mb-8">
-              Transform your indoor spaces with our expert interior painting services. 
-              From color consultation to final touches, we deliver exceptional results that last.
+              Transform your indoor spaces with our expert interior painting
+              services. From color consultation to final touches, we deliver
+              exceptional results that last.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -140,26 +156,31 @@ export default function InteriorPainting() {
               Our Interior Painting Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From single room touch-ups to complete home makeovers, we provide comprehensive interior painting services for every need.
+              From single room touch-ups to complete home makeovers, we provide
+              comprehensive interior painting services for every need.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {paintingServices.map((service, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <div
+                key={index}
+                className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              >
                 <div className="text-blue-600 mb-4">
                   <Paintbrush size={48} />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 mb-6">
-                  {service.description}
-                </p>
+                <p className="text-gray-600 mb-6">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-700">
-                      <CheckCircle className="text-green-500 flex-shrink-0 mr-3" size={16} />
+                      <CheckCircle
+                        className="text-green-500 flex-shrink-0 mr-3"
+                        size={16}
+                      />
                       {feature}
                     </li>
                   ))}
@@ -178,22 +199,24 @@ export default function InteriorPainting() {
               Our Interior Painting Process
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We follow a proven process to ensure exceptional results for every interior painting project.
+              We follow a proven process to ensure exceptional results for every
+              interior painting project.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {process.map((step, index) => (
-              <div key={index} className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <div
+                key={index}
+                className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              >
                 <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl mb-6">
                   {step.step}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
                   {step.title}
                 </h3>
-                <p className="text-gray-600">
-                  {step.description}
-                </p>
+                <p className="text-gray-600">{step.description}</p>
               </div>
             ))}
           </div>
@@ -208,22 +231,24 @@ export default function InteriorPainting() {
               Why Choose Our Interior Painting Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We deliver exceptional quality, reliability, and customer satisfaction with every project.
+              We deliver exceptional quality, reliability, and customer
+              satisfaction with every project.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 p-6 rounded-xl">
+              <div
+                key={index}
+                className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 p-6 rounded-xl"
+              >
                 <div className="text-blue-600 flex justify-center mb-4">
                   {benefit.icon}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
                   {benefit.title}
                 </h3>
-                <p className="text-gray-600">
-                  {benefit.description}
-                </p>
+                <p className="text-gray-600">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -237,7 +262,8 @@ export default function InteriorPainting() {
             Ready to Transform Your Indoor Spaces?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Contact us today for a free consultation and quote. Our expert team is ready to bring your vision to life.
+            Contact us today for a free consultation and quote. Our expert team
+            is ready to bring your vision to life.
           </p>
           <Link
             href="#contact"

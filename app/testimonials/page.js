@@ -101,7 +101,7 @@ export default function Testimonials() {
             Client Testimonials
           </h1>
           <p className="text-md sm:text-lg text-blue-100 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what our clients have to say
+            Don"t just take our word for it. Here"s what our clients have to say
             about our services.
           </p>
         </div>

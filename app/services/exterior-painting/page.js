@@ -1,15 +1,15 @@
-import Link from 'next/link';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import { CheckCircle, Paintbrush, Shield, Clock, Star, Sun } from 'lucide-react';
+import Link from "next/link";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import { CheckCircle, Paintbrush, Shield, Clock, Star, Sun } from "lucide-react";
 
 export const metadata = {
-  title: 'Professional Exterior Painting Services | Weather-Resistant Finishes',
-  description: 'Expert exterior painting services including house facades, decks, fences, and weather-resistant coatings. Licensed painters with quality guarantee.',
-  keywords: 'exterior painting services, outdoor painting, house painting, deck painting, fence painting, weather-resistant paint, home services, professional painters, color consultation, surface preparation, bharath painters',
+  title: "Professional Exterior Painting Services | Weather-Resistant Finishes",
+  description: "Expert exterior painting services including house facades, decks, fences, and weather-resistant coatings. Licensed painters with quality guarantee.",
+  keywords: "exterior painting services, outdoor painting, house painting, deck painting, fence painting, weather-resistant paint, home services, professional painters, color consultation, surface preparation, bharath painters",
   openGraph: {
-    title: 'Professional Exterior Painting Services - Transform Your Home's Exterior',
-    description: 'Transform your home's exterior with our expert painting services. Weather-resistant finishes with quality guarantee.',
+    title: "Professional Exterior Painting Services - Transform Your Home's Exterior",
+    description: "Transform your homes exterior with our expert painting services. Weather-resistant finishes with quality guarantee.",
   },
 };
 
@@ -110,8 +110,8 @@ export default function ExteriorPainting() {
             Professional Exterior Painting Services
           </h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Transform your home's exterior with our expert painting services. We deliver beautiful, 
-            weather-resistant finishes that protect and enhance your property's appearance.
+            Transform your home"s exterior with our expert painting services. We deliver beautiful, 
+            weather-resistant finishes that protect and enhance your property"s appearance.
           </p>
         </div>
       </section>
@@ -180,7 +180,7 @@ export default function ExteriorPainting() {
       {/* CTA Section */}
       <section className="py-16 bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Home's Exterior?</h2>
+          <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Home"s Exterior?</h2>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
             Contact us today for a free consultation and estimate on your exterior painting project.
           </p>

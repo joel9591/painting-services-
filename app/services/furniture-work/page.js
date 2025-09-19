@@ -1,15 +1,15 @@
-import Link from 'next/link';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import { CheckCircle, Sofa, Shield, Clock, Star } from 'lucide-react';
+import Link from "next/link";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import { CheckCircle, Sofa, Shield, Clock, Star } from "lucide-react";
 
 export const metadata = {
-  title: 'Professional Furniture Services | Bharath Painters',
-  description: 'Expert furniture repair, restoration, assembly, and upholstery services by skilled craftsmen.',
-  keywords: 'furniture repair, furniture restoration, custom assembly, upholstery work, furniture services, custom furniture, home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services, renovation, house renovate, house renovation, bharath, painters, paintings, bharath painters',
+  title: "Professional Furniture Services | Bharath Painters",
+  description: "Expert furniture repair, restoration, assembly, and upholstery services by skilled craftsmen.",
+  keywords: "furniture repair, furniture restoration, custom assembly, upholstery work, furniture services, custom furniture, home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services, renovation, house renovate, house renovation, bharath, painters, paintings, bharath painters",
   openGraph: {
-    title: 'Professional Furniture Services - Bharath Painters',
-    description: 'Quality furniture repair, restoration, and assembly services. Expert craftsmanship with attention to detail.',
+    title: "Professional Furniture Services - Bharath Painters",
+    description: "Quality furniture repair, restoration, and assembly services. Expert craftsmanship with attention to detail.",
   },
 };
 
@@ -60,7 +60,7 @@ export default function FurnitureWork() {
       {/* Hero Section */}
       <section className="relative bg-orange-700 py-24">
         <div className="absolute inset-0 bg-gradient-to-r from-orange-900 to-orange-700 opacity-90"></div>
-        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=1200')] bg-cover bg-center mix-blend-overlay"></div>
+        <div className="absolute inset-0 bg-[url("https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=1200")] bg-cover bg-center mix-blend-overlay"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
           <div className="flex flex-col md:flex-row md:items-center">
             <div className="md:w-1/2 mb-10 md:mb-0">
@@ -219,7 +219,7 @@ export default function FurnitureWork() {
             </div>
             <div className="bg-gray-50 rounded-xl p-6">
               <h3 className="text-xl font-bold text-gray-900 mb-3">How long does furniture restoration typically take?</h3>
-              <p className="text-gray-600">The timeline varies depending on the complexity of the project. Simple repairs may take a few days, while extensive restorations can take several weeks. We'll provide a specific timeline during the initial consultation.</p>
+              <p className="text-gray-600">The timeline varies depending on the complexity of the project. Simple repairs may take a few days, while extensive restorations can take several weeks. We"ll provide a specific timeline during the initial consultation.</p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Do you offer in-home furniture services?</h3>

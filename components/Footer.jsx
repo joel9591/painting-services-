@@ -43,13 +43,22 @@ export default function Footer() {
               quality, reliability, and exceptional service with every project.
             </p>
             <div className="flex space-x-4">
-              <a href="https://facebook.com" className="text-gray-400 hover:text-blue-400 transition-colors duration-200">
+              <a
+                href="https://facebook.com"
+                className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
+              >
                 <Facebook size={24} />
               </a>
-              <a href="https://instagram.com" className="text-gray-400 hover:text-pink-400 transition-colors duration-200">
+              <a
+                href="https://instagram.com"
+                className="text-gray-400 hover:text-pink-400 transition-colors duration-200"
+              >
                 <Instagram size={24} />
               </a>
-              <a href="https://twitter.com" className="text-gray-400 hover:text-blue-400 transition-colors duration-200">
+              <a
+                href="https://twitter.com"
+                className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
+              >
                 <Twitter size={24} />
               </a>
             </div>
@@ -97,7 +106,10 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
-                <MapPin className="text-blue-400 flex-shrink-0 mt-1" size={20} />
+                <MapPin
+                  className="text-blue-400 flex-shrink-0 mt-1"
+                  size={20}
+                />
                 <div>
                   <p className="text-gray-300">123 Main Street, Suite 200</p>
                   <p className="text-gray-300">New town, Yelahanka 560064</p>
@@ -107,14 +119,20 @@ export default function Footer() {
 
               <div className="flex items-center space-x-3">
                 <Phone className="text-blue-400 flex-shrink-0" size={20} />
-                <a href="tel:+917978114096" className="text-gray-300 hover:text-white transition-colors duration-200">
+                <a
+                  href="tel:+917978114096"
+                  className="text-gray-300 hover:text-white transition-colors duration-200"
+                >
                   +91 7978114096
                 </a>
               </div>
 
               <div className="flex items-center space-x-3">
                 <Mail className="text-blue-400 flex-shrink-0" size={20} />
-                <a href="mailto:info@bharathpainters.com" className="text-gray-300 hover:text-white transition-colors duration-200">
+                <a
+                  href="mailto:info@bharathpainters.com"
+                  className="text-gray-300 hover:text-white transition-colors duration-200"
+                >
                   info@bharathpainters.com
                 </a>
               </div>
@@ -137,7 +155,7 @@ export default function Footer() {
             24/7 Emergency Services Available
           </h4>
           <p className="mb-4">
-            Plumbing or electrical emergency? We're here to help anytime!
+            Plumbing or electrical emergency? We"re here to help anytime!
           </p>
           <a
             href="tel:+91 7978114096"

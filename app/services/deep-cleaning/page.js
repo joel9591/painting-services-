@@ -1,15 +1,15 @@
-import Link from 'next/link';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import { CheckCircle, Sparkles, Shield, Clock, Star } from 'lucide-react';
+import Link from "next/link";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import { CheckCircle, Sparkles, Shield, Clock, Star } from "lucide-react";
 
 export const metadata = {
-  title: 'Professional Deep Cleaning Services | Bharath Painters',
-  description: 'Expert deep cleaning services including post-construction cleanup, move-in/move-out cleaning, regular maintenance, and specialized cleaning solutions.',
-  keywords: 'deep cleaning services, house cleaning, post-construction cleanup, move-in cleaning, move-out cleaning, professional cleaning services, home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services, renovation, house renovate, house renovation, bharath, painters, paintings, bharath painters',
+  title: "Professional Deep Cleaning Services | Bharath Painters",
+  description: "Expert deep cleaning services including post-construction cleanup, move-in/move-out cleaning, regular maintenance, and specialized cleaning solutions.",
+  keywords: "deep cleaning services, house cleaning, post-construction cleanup, move-in cleaning, move-out cleaning, professional cleaning services, home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services, renovation, house renovate, house renovation, bharath, painters, paintings, bharath painters",
   openGraph: {
-    title: 'Professional Deep Cleaning Services - Bharath Painters',
-    description: 'Transform your space with our expert deep cleaning services. Comprehensive cleaning solutions with quality guarantee.',
+    title: "Professional Deep Cleaning Services - Bharath Painters",
+    description: "Transform your space with our expert deep cleaning services. Comprehensive cleaning solutions with quality guarantee.",
   },
 };
 
@@ -60,7 +60,7 @@ export default function DeepCleaning() {
       {/* Hero Section */}
       <section className="relative bg-blue-700 py-24">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900 to-blue-700 opacity-90"></div>
-        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/4239091/pexels-photo-4239091.jpeg?auto=compress&cs=tinysrgb&w=1200')] bg-cover bg-center mix-blend-overlay"></div>
+        <div className="absolute inset-0 bg-[url("https://images.pexels.com/photos/4239091/pexels-photo-4239091.jpeg?auto=compress&cs=tinysrgb&w=1200")] bg-cover bg-center mix-blend-overlay"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
           <div className="flex flex-col md:flex-row md:items-center">
             <div className="md:w-1/2 mb-10 md:mb-0">

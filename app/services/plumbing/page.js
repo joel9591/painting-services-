@@ -1,15 +1,15 @@
-import Link from 'next/link';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import { CheckCircle, Wrench, Shield, Clock, Star } from 'lucide-react';
+import Link from "next/link";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import { CheckCircle, Wrench, Shield, Clock, Star } from "lucide-react";
 
 export const metadata = {
-  title: 'Professional Plumbing Services | Bharath Painters',
-  description: 'Expert plumbing services including leak repairs, pipe installation, fixture replacement, and emergency services by licensed professionals.',
-  keywords: 'plumbing services, leak repairs, pipe installation, fixture replacement, emergency plumbing, licensed plumbers, home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services, renovation, house renovate, house renovation, bharath, painters, paintings, bharath painters',
+  title: "Professional Plumbing Services | Bharath Painters",
+  description: "Expert plumbing services including leak repairs, pipe installation, fixture replacement, and emergency services by licensed professionals.",
+  keywords: "plumbing services, leak repairs, pipe installation, fixture replacement, emergency plumbing, licensed plumbers, home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services, renovation, house renovate, house renovation, bharath, painters, paintings, bharath painters",
   openGraph: {
-    title: 'Professional Plumbing Services - Bharath Painters',
-    description: 'Reliable plumbing solutions for your home. Expert repairs, installations, and maintenance with quality guarantee.',
+    title: "Professional Plumbing Services - Bharath Painters",
+    description: "Reliable plumbing solutions for your home. Expert repairs, installations, and maintenance with quality guarantee.",
   },
 };
 
@@ -60,7 +60,7 @@ export default function Plumbing() {
       {/* Hero Section */}
       <section className="relative bg-green-700 py-24">
         <div className="absolute inset-0 bg-gradient-to-r from-green-900 to-green-700 opacity-90"></div>
-        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/8293660/pexels-photo-8293660.jpeg?auto=compress&cs=tinysrgb&w=1200')] bg-cover bg-center mix-blend-overlay"></div>
+        <div className="absolute inset-0 bg-[url("https://images.pexels.com/photos/8293660/pexels-photo-8293660.jpeg?auto=compress&cs=tinysrgb&w=1200")] bg-cover bg-center mix-blend-overlay"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
           <div className="flex flex-col md:flex-row md:items-center">
             <div className="md:w-1/2 mb-10 md:mb-0">

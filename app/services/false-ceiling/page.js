@@ -1,15 +1,15 @@
-import Link from 'next/link';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import { CheckCircle, Layers, Shield, Clock, Star } from 'lucide-react';
+import Link from "next/link";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import { CheckCircle, Layers, Shield, Clock, Star } from "lucide-react";
 
 export const metadata = {
-  title: 'Professional False Ceiling Services | Bharath Painters',
-  description: 'Expert false ceiling installation, design, and repair services for residential and commercial spaces.',
-  keywords: 'false ceiling, POP ceiling, gypsum ceiling, ceiling design, ceiling installation, ceiling repair, home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services, renovation, house renovate, house renovation, bharath, painters, paintings, bharath painters',
+  title: "Professional False Ceiling Services | Bharath Painters",
+  description: "Expert false ceiling installation, design, and repair services for residential and commercial spaces.",
+  keywords: "false ceiling, POP ceiling, gypsum ceiling, ceiling design, ceiling installation, ceiling repair, home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services, renovation, house renovate, house renovation, bharath, painters, paintings, bharath painters",
   openGraph: {
-    title: 'Professional False Ceiling Services - Bharath Painters',
-    description: 'Transform your space with our expert false ceiling installation, design, and repair services.',
+    title: "Professional False Ceiling Services - Bharath Painters",
+    description: "Transform your space with our expert false ceiling installation, design, and repair services.",
   },
 };
 
@@ -60,7 +60,7 @@ export default function FalseCeiling() {
       {/* Hero Section */}
       <section className="relative bg-blue-700 py-24">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900 to-blue-700 opacity-90"></div>
-        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/5824901/pexels-photo-5824901.jpeg?auto=compress&cs=tinysrgb&w=1200')] bg-cover bg-center mix-blend-overlay"></div>
+        <div className="absolute inset-0 bg-[url("https://images.pexels.com/photos/5824901/pexels-photo-5824901.jpeg?auto=compress&cs=tinysrgb&w=1200")] bg-cover bg-center mix-blend-overlay"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
           <div className="flex flex-col md:flex-row md:items-center">
             <div className="md:w-1/2 mb-10 md:mb-0">
@@ -215,7 +215,7 @@ export default function FalseCeiling() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-gray-50 rounded-xl p-6">
               <h3 className="text-xl font-bold text-gray-900 mb-3">How long does it take to install a false ceiling?</h3>
-              <p className="text-gray-600">The installation time depends on the size and complexity of the project. A standard room typically takes 2-3 days, while larger or more intricate designs may take longer. We'll provide a specific timeline during consultation.</p>
+              <p className="text-gray-600">The installation time depends on the size and complexity of the project. A standard room typically takes 2-3 days, while larger or more intricate designs may take longer. We"ll provide a specific timeline during consultation.</p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">
               <h3 className="text-xl font-bold text-gray-900 mb-3">What materials do you use for false ceilings?</h3>

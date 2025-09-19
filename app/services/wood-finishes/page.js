@@ -1,15 +1,19 @@
-import Link from 'next/link';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import { CheckCircle, Trees, Shield, Clock, Star, Brush } from 'lucide-react';
+import Link from "next/link";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import { CheckCircle, Trees, Shield, Clock, Star, Brush } from "lucide-react";
 
 export const metadata = {
-  title: 'Professional Wood Finishing Services | Premium Staining & Varnishing',
-  description: 'Expert wood finishing services including staining, varnishing, polishing, and restoration. Transform your wooden surfaces with our professional solutions.',
-  keywords: 'wood finishing, wood staining, varnishing, wood polishing, furniture restoration, deck staining, cabinet refinishing, home services, professional wood finishes, bharath painters',
+  title: "Professional Wood Finishing Services | Premium Staining & Varnishing",
+  description:
+    "Expert wood finishing services including staining, varnishing, polishing, and restoration. Transform your wooden surfaces with our professional solutions.",
+  keywords:
+    "wood finishing, wood staining, varnishing, wood polishing, furniture restoration, deck staining, cabinet refinishing, home services, professional wood finishes, bharath painters",
   openGraph: {
-    title: 'Professional Wood Finishing Services - Transform Your Wooden Surfaces',
-    description: 'Transform your wooden surfaces with our expert wood finishing services. Premium staining, varnishing, and restoration solutions.',
+    title:
+      "Professional Wood Finishing Services - Transform Your Wooden Surfaces",
+    description:
+      "Transform your wooden surfaces with our expert wood finishing services. Premium staining, varnishing, and restoration solutions.",
   },
 };
 
@@ -17,92 +21,103 @@ export default function WoodFinishes() {
   const woodServices = [
     {
       title: "Wood Staining & Coloring",
-      description: "Expert wood staining services to enhance the natural beauty of your wooden surfaces.",
+      description:
+        "Expert wood staining services to enhance the natural beauty of your wooden surfaces.",
       features: [
         "Custom color matching",
         "Water-based & oil-based stains",
         "Transparent & semi-transparent stains",
         "Solid color stains",
         "Specialty wood toners",
-        "Eco-friendly staining options"
-      ]
+        "Eco-friendly staining options",
+      ],
     },
     {
       title: "Varnishing & Sealing",
-      description: "Professional varnishing and sealing to protect and beautify your wooden elements.",
+      description:
+        "Professional varnishing and sealing to protect and beautify your wooden elements.",
       features: [
         "Polyurethane application",
         "Lacquer finishing",
         "Shellac treatments",
         "Oil-rubbed finishes",
         "Water-resistant sealants",
-        "UV-protective coatings"
-      ]
+        "UV-protective coatings",
+      ],
     },
     {
       title: "Restoration & Refinishing",
-      description: "Comprehensive restoration services to bring new life to worn or damaged wood.",
+      description:
+        "Comprehensive restoration services to bring new life to worn or damaged wood.",
       features: [
         "Furniture refinishing",
         "Cabinet restoration",
         "Deck & fence renewal",
         "Hardwood floor refinishing",
         "Antique wood restoration",
-        "Scratch & damage repair"
-      ]
-    }
+        "Scratch & damage repair",
+      ],
+    },
   ];
 
   const process = [
     {
       step: "1",
       title: "Consultation & Assessment",
-      description: "We evaluate your wooden surfaces, discuss finish options, and recommend the best approach."
+      description:
+        "We evaluate your wooden surfaces, discuss finish options, and recommend the best approach.",
     },
     {
-      step: "2", 
+      step: "2",
       title: "Surface Preparation",
-      description: "Thorough cleaning, sanding, and preparation to ensure optimal finish adhesion and appearance."
+      description:
+        "Thorough cleaning, sanding, and preparation to ensure optimal finish adhesion and appearance.",
     },
     {
       step: "3",
       title: "Staining & Finishing",
-      description: "Expert application of stains, varnishes, or other finishes using professional techniques."
+      description:
+        "Expert application of stains, varnishes, or other finishes using professional techniques.",
     },
     {
       step: "4",
       title: "Protection & Curing",
-      description: "Final protective coatings and proper curing time to ensure a beautiful, long-lasting finish."
-    }
+      description:
+        "Final protective coatings and proper curing time to ensure a beautiful, long-lasting finish.",
+    },
   ];
 
   const benefits = [
     {
       icon: <Shield size={32} />,
       title: "Enhanced Protection",
-      description: "Our wood finishes protect against moisture, UV damage, wear, and daily use."
+      description:
+        "Our wood finishes protect against moisture, UV damage, wear, and daily use.",
     },
     {
       icon: <Trees size={32} />,
       title: "Natural Beauty",
-      description: "We enhance the natural grain and character of your wood while adding rich color."
+      description:
+        "We enhance the natural grain and character of your wood while adding rich color.",
     },
     {
       icon: <Brush size={32} />,
       title: "Expert Application",
-      description: "Our skilled craftsmen ensure flawless application for beautiful, consistent results."
+      description:
+        "Our skilled craftsmen ensure flawless application for beautiful, consistent results.",
     },
     {
       icon: <Star size={32} />,
       title: "Satisfaction Guarantee",
-      description: "100% satisfaction guarantee on all our wood finishing projects."
-    }
+      description:
+        "100% satisfaction guarantee on all our wood finishing projects.",
+    },
   ];
 
   return (
     <>
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-amber-700 to-amber-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -110,8 +125,9 @@ export default function WoodFinishes() {
             Professional Wood Finishing Services
           </h1>
           <p className="text-xl text-amber-100 max-w-3xl mx-auto">
-            Transform your wooden surfaces with our expert wood finishing solutions. 
-            We provide premium staining, varnishing, and restoration services to enhance and protect your wood.
+            Transform your wooden surfaces with our expert wood finishing
+            solutions. We provide premium staining, varnishing, and restoration
+            services to enhance and protect your wood.
           </p>
         </div>
       </section>
@@ -119,10 +135,15 @@ export default function WoodFinishes() {
       {/* Services Grid */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Wood Finishing Services</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Our Wood Finishing Services
+          </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {woodServices.map((service, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div
+                key={index}
+                className="bg-white rounded-lg shadow-lg overflow-hidden"
+              >
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-3">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
@@ -144,7 +165,9 @@ export default function WoodFinishes() {
       {/* Process Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Wood Finishing Process</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Our Wood Finishing Process
+          </h2>
           <div className="grid md:grid-cols-4 gap-8">
             {process.map((step, index) => (
               <div key={index} className="text-center">
@@ -162,7 +185,9 @@ export default function WoodFinishes() {
       {/* Benefits Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Why Choose Our Wood Finishing Services</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Why Choose Our Wood Finishing Services
+          </h2>
           <div className="grid md:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
@@ -180,11 +205,17 @@ export default function WoodFinishes() {
       {/* CTA Section */}
       <section className="py-16 bg-amber-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Wooden Surfaces?</h2>
+          <h2 className="text-3xl font-bold mb-6">
+            Ready to Transform Your Wooden Surfaces?
+          </h2>
           <p className="text-xl text-amber-100 max-w-3xl mx-auto mb-8">
-            Contact us today for a free consultation and estimate on your wood finishing project.
+            Contact us today for a free consultation and estimate on your wood
+            finishing project.
           </p>
-          <Link href="/contact" className="inline-block bg-white text-amber-700 font-bold py-3 px-8 rounded-lg hover:bg-amber-50 transition duration-300">
+          <Link
+            href="/contact"
+            className="inline-block bg-white text-amber-700 font-bold py-3 px-8 rounded-lg hover:bg-amber-50 transition duration-300"
+          >
             Get a Free Quote
           </Link>
         </div>

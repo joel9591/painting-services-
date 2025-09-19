@@ -1,6 +1,6 @@
-'use client';
-import { useState, useEffect } from 'react';
-import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+"use client";
+import { useState, useEffect } from "react";
+import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 
 export default function Testimonials() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -12,7 +12,8 @@ export default function Testimonials() {
       service: "House Painting",
       rating: 5,
       text: "Absolutely amazing work! The team was professional, punctual, and the quality of their painting exceeded our expectations. Our home looks brand new!",
-      image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2"
+      image:
+        "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2",
     },
     {
       name: "Michael Chen",
@@ -20,7 +21,8 @@ export default function Testimonials() {
       service: "Plumbing",
       rating: 5,
       text: "Quick response to our plumbing emergency. The technician was knowledgeable and fixed the issue efficiently. Highly recommend their services!",
-      image: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2"
+      image:
+        "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2",
     },
     {
       name: "Emily Rodriguez",
@@ -28,7 +30,8 @@ export default function Testimonials() {
       service: "Deep Cleaning",
       rating: 5,
       text: "The deep cleaning service was thorough and impressive. They cleaned areas I never even thought about. My house has never been cleaner!",
-      image: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2"
+      image:
+        "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2",
     },
     {
       name: "David Thompson",
@@ -36,7 +39,8 @@ export default function Testimonials() {
       service: "Electrical Work",
       rating: 5,
       text: "Professional electrical work at a fair price. They installed new lighting throughout our home and everything works perfectly. Great service!",
-      image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2"
+      image:
+        "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2",
     },
     {
       name: "Lisa Park",
@@ -44,8 +48,9 @@ export default function Testimonials() {
       service: "Furniture Work",
       rating: 5,
       text: "They restored our antique dining set beautifully. The craftsmanship is exceptional and the furniture looks better than when we first bought it!",
-      image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2"
-    }
+      image:
+        "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2",
+    },
   ];
 
   useEffect(() => {
@@ -60,7 +65,9 @@ export default function Testimonials() {
   };
 
   const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentTestimonial(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
   };
 
   return (
@@ -71,14 +78,18 @@ export default function Testimonials() {
             What Our Customers Say
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-blue-100 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what our satisfied customers have to say about our services.
+            Don"t just take our word for it. Here"s what our satisfied customers
+            have to say about our services.
           </p>
         </div>
 
         <div className="relative max-w-7xl mx-auto sm:-mt-6 lg:-mt-6">
           {/* Main Testimonial */}
           <div className="bg-white rounded-xl shadow-2xl p-3 sm:p-5 lg:p-6 relative">
-            <Quote className="absolute top-2 sm:top-1 left-3 sm:left-1 text-blue-600 opacity-20" size={36} />
+            <Quote
+              className="absolute top-2 sm:top-1 left-3 sm:left-1 text-blue-600 opacity-20"
+              size={36}
+            />
 
             <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
               {/* Image smaller on mobile */}
@@ -92,9 +103,15 @@ export default function Testimonials() {
 
               <div className="flex-1 text-center sm:text-left">
                 <div className="flex justify-center sm:justify-start mb-2 sm:mb-4">
-                  {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
-                    <Star key={i} className="text-yellow-400 fill-current" size={16} />
-                  ))}
+                  {[...Array(testimonials[currentTestimonial].rating)].map(
+                    (_, i) => (
+                      <Star
+                        key={i}
+                        className="text-yellow-400 fill-current"
+                        size={16}
+                      />
+                    )
+                  )}
                 </div>
 
                 {/* Font size smaller on mobile */}
@@ -107,7 +124,8 @@ export default function Testimonials() {
                     {testimonials[currentTestimonial].name}
                   </div>
                   <div className="text-blue-600 font-medium text-sm sm:text-base">
-                    {testimonials[currentTestimonial].service} • {testimonials[currentTestimonial].location}
+                    {testimonials[currentTestimonial].service} •{" "}
+                    {testimonials[currentTestimonial].location}
                   </div>
                 </div>
               </div>
@@ -129,7 +147,7 @@ export default function Testimonials() {
                   key={index}
                   onClick={() => setCurrentTestimonial(index)}
                   className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-200 ${
-                    index === currentTestimonial ? 'bg-white' : 'bg-white/50'
+                    index === currentTestimonial ? "bg-white" : "bg-white/50"
                   }`}
                 />
               ))}
@@ -153,7 +171,7 @@ export default function Testimonials() {
             <div className="text-white font-bold">★ Google Reviews</div>
             <div className="text-white font-bold">★ Better Business Bureau</div>
             <div className="text-white font-bold">★ HomeAdvisor</div>
-            <div className="text-white font-bold">★ Angie's List</div>
+            <div className="text-white font-bold">★ Angie"s List</div>
           </div>
         </div>
       </div>
