@@ -95,38 +95,38 @@ export default function Testimonials() {
     <main>
       <Navigation />
 
-      <section className="pt-24 pb-16 bg-gradient-to-br from-purple-500 to-blue-400 text-white">
-        <div className="text-center ">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+      <section className="pt-24 pb-12 bg-gradient-to-br from-purple-500 to-blue-400 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-2xl sm:text-4xl font-bold mb-3">
             Client Testimonials
           </h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="text-md sm:text-lg text-blue-100 max-w-3xl mx-auto">
             Don't just take our word for it. Here's what our clients have to say
             about our services.
           </p>
         </div>
       </section>
-      <section className="py-20 bg-gray-50">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="py-8 bg-gray-50">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-2">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
-              <div className="p-8">
-                <div className="flex items-center mb-6">
+              <div className="p-4">
+                <div className="flex items-center mb-3">
                   <div className="mr-4">
                     <img
                       src={testimonial.image}
                       alt={testimonial.name}
-                      className="w-16 h-16 rounded-full object-cover"
+                      className="w-12 h-12 rounded-full object-cover"
                     />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">
                       {testimonial.name}
                     </h3>
-                    <p className="text-blue-600">
+                    <p className="text-blue-600 text-xs">
                       {testimonial.service} • {testimonial.location}
                     </p>
                   </div>
@@ -137,7 +137,7 @@ export default function Testimonials() {
                     <Star
                       key={i}
                       className="text-yellow-400 fill-current"
-                      size={20}
+                      size={15}
                     />
                   ))}
                 </div>
@@ -145,9 +145,9 @@ export default function Testimonials() {
                 <div className="relative">
                   <Quote
                     className="absolute -top-2 -left-2 text-blue-100"
-                    size={32}
+                    size={24}
                   />
-                  <p className="text-gray-700 italic relative z-10 pl-4">
+                  <p className="text-gray-700 italic relative z-10 pl-4 text-sm md:text-md lg:text-base">
                     "{testimonial.text}"
                   </p>
                 </div>
@@ -156,8 +156,8 @@ export default function Testimonials() {
           ))}
         </div>
 
-        <div className="text-center mt-16">
-          <p className="text-lg text-gray-700 mb-6">
+        <div className="text-center mt-8 -mb-2">
+          <p className="text-md sm:text-lg text-gray-700 mb-2">
             Ready to experience our quality service for yourself?
           </p>
           <a

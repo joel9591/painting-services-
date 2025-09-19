@@ -17,12 +17,14 @@ export default function ServiceForm() {
   const [submitStatus, setSubmitStatus] = useState(null);
 
   const services = [
-    "House Painting",
+    "Interior Painting",
+    "Exterior Painting",
+    "Waterproofing",
+    "Grouting",
+    "Texture Painting",
+    "Wood Finishes",
+    "Wallpapers",
     "Deep Cleaning",
-    "Plumbing",
-    "Electrical Work",
-    "Furniture Work",
-    "False Ceiling",
     "Other",
   ];
 

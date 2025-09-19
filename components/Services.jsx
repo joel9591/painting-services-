@@ -115,14 +115,74 @@ export default function Services() {
   const services = [
     {
       icon: <Paintbrush className="text-blue-600" size={32} />,
-      title: "House Painting",
-      description: "Interior and exterior painting with premium finishes.",
+      title: "Interior Painting",
+      description: "Transform your indoor spaces with premium finishes.",
       price: 12,
-      href: "/services/house-painting",
+      href: "/services/interior-painting",
       images: [
         "https://images.pexels.com/photos/5691693/pexels-photo-5691693.jpeg",
         "https://images.pexels.com/photos/7217966/pexels-photo-7217966.jpeg",
         "https://images.pexels.com/photos/1917849/pexels-photo-1917849.jpeg",
+      ],
+    },
+    {
+      icon: <Paintbrush className="text-green-600" size={32} />,
+      title: "Exterior Painting",
+      description: "Enhance curb appeal with weather-resistant finishes.",
+      price: 15,
+      href: "/services/exterior-painting",
+      images: [
+        "https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg",
+        "https://images.pexels.com/photos/2121121/pexels-photo-2121121.jpeg",
+        "https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg",
+      ],
+    },
+    {
+      icon: <Wrench className="text-blue-600" size={32} />,
+      title: "Water Proofing",
+      description: "Effective solutions for moisture & water damage prevention.",
+      price: 18,
+      href: "/services/water-proofing",
+      images: [
+        "https://images.pexels.com/photos/5691693/pexels-photo-5691693.jpeg",
+        "https://images.pexels.com/photos/7217966/pexels-photo-7217966.jpeg",
+        "https://images.pexels.com/photos/1917849/pexels-photo-1917849.jpeg",
+      ],
+    },
+    {
+      icon: <Wrench className="text-yellow-600" size={32} />,
+      title: "Grouting",
+      description: "Professional tile grouting & restoration services.",
+      price: 14,
+      href: "/services/grouting",
+      images: [
+        "https://images.pexels.com/photos/5691693/pexels-photo-5691693.jpeg",
+        "https://images.pexels.com/photos/7217966/pexels-photo-7217966.jpeg",
+        "https://images.pexels.com/photos/1917849/pexels-photo-1917849.jpeg",
+      ],
+    },
+    {
+      icon: <Paintbrush className="text-purple-600" size={32} />,
+      title: "Texture",
+      description: "Custom wall textures & decorative finishes.",
+      price: 16,
+      href: "/services/texture",
+      images: [
+        "https://images.pexels.com/photos/5691693/pexels-photo-5691693.jpeg",
+        "https://images.pexels.com/photos/7217966/pexels-photo-7217966.jpeg",
+        "https://images.pexels.com/photos/1917849/pexels-photo-1917849.jpeg",
+      ],
+    },
+    {
+      icon: <Home className="text-teal-600" size={32} />,
+      title: "Wallpapers",
+      description: "Premium wallpaper installation & removal services.",
+      price: 20,
+      href: "/services/wallpapers",
+      images: [
+        "https://images.pexels.com/photos/259962/pexels-photo-259962.jpeg",
+        "https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg",
+        "https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg",
       ],
     },
     {
@@ -135,6 +195,32 @@ export default function Services() {
         "https://images.pexels.com/photos/4239130/pexels-photo-4239130.jpeg",
         "https://images.pexels.com/photos/6195951/pexels-photo-6195951.jpeg",
         "https://images.pexels.com/photos/4401538/pexels-photo-4401538.jpeg",
+      ],
+    },
+    {
+      icon: <Sofa className="text-red-600" size={32} />,
+      title: "Wood Finishes",
+      description: "Expert wood finishing & restoration services.",
+      price: 22,
+      href: "/services/wood-finishes",
+      images: [
+        "https://images.pexels.com/photos/313776/pexels-photo-313776.jpeg",
+        "https://images.pexels.com/photos/374861/pexels-photo-374861.jpeg",
+        "https://images.pexels.com/photos/3814513/pexels-photo-3814513.jpeg",
+      ],
+    },
+    
+    /* Old Services - Commented Out for Reference
+    {
+      icon: <Paintbrush className="text-blue-600" size={32} />,
+      title: "House Painting",
+      description: "Interior and exterior painting with premium finishes.",
+      price: 12,
+      href: "/services/house-painting",
+      images: [
+        "https://images.pexels.com/photos/5691693/pexels-photo-5691693.jpeg",
+        "https://images.pexels.com/photos/7217966/pexels-photo-7217966.jpeg",
+        "https://images.pexels.com/photos/1917849/pexels-photo-1917849.jpeg",
       ],
     },
     {
@@ -185,6 +271,7 @@ export default function Services() {
         "https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg",
       ],
     },
+    */
   ];
 
   const visibleCount = 3; // number of cards visible

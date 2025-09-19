@@ -1,29 +1,180 @@
-import Link from 'next/link';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import { 
-  Paintbrush, 
-  Sparkles, 
-  Wrench, 
-  Zap, 
-  Sofa, 
+import Link from "next/link";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import {
+  Paintbrush,
+  Sparkles,
+  Wrench,
+  Zap,
+  Sofa,
   Home,
   ArrowRight,
-  CheckCircle
-} from 'lucide-react';
+  CheckCircle,
+} from "lucide-react";
 
 export const metadata = {
-  title: 'Professional Home Services | Painting, Plumbing, Cleaning & More',
-  description: 'Comprehensive home services including house painting, deep cleaning, plumbing, electrical work, furniture repair, and false ceiling installation. Licensed professionals, quality guaranteed.',
-  keywords: 'home services, house painting services, plumbing services, electrical work, deep cleaning services, furniture repair, false ceiling installation, home improvement, home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services, renovation, house renovate, house renovation, bharath, painters, paintings, bharath painters',
+  title: "Professional Home Services | Painting, Plumbing, Cleaning & More",
+  description:
+    "Comprehensive home services including house painting, deep cleaning, plumbing, electrical work, furniture repair, and false ceiling installation. Licensed professionals, quality guaranteed.",
+  keywords:
+    "home services, house painting services, plumbing services, electrical work, deep cleaning services, furniture repair, false ceiling installation, home improvement, home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services, renovation, house renovate, house renovation, bharath, painters, paintings, bharath painters",
   openGraph: {
-    title: 'Professional Home Services - Quality Home Improvement Solutions',
-    description: 'Expert home services including painting, plumbing, electrical, cleaning, and more. Licensed professionals with quality guarantee.',
+    title: "Professional Home Services - Quality Home Improvement Solutions",
+    description:
+      "Expert home services including painting, plumbing, electrical, cleaning, and more. Licensed professionals with quality guarantee.",
   },
 };
 
 export default function Services() {
   const services = [
+    {
+      icon: <Paintbrush className="text-blue-600" size={48} />,
+      title: "Interior Painting",
+      description:
+        "Transform your indoor spaces with our professional painting services. We use premium quality paints and deliver flawless finishes for every room.",
+      features: [
+        "Living Room & Bedroom Painting",
+        "Kitchen & Bathroom Painting",
+        "Color Consultation & Design",
+        "Wall Preparation & Repair",
+        "Cabinet & Trim Painting",
+        "Ceiling Painting",
+      ],
+      href: "/services/interior-painting",
+      image:
+        "https://images.pexels.com/photos/1669799/pexels-photo-1669799.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+      startingPrice: "₹299",
+    },
+    {
+      icon: <Paintbrush className="text-green-600" size={48} />,
+      title: "Exterior Painting",
+      description:
+        "Enhance your home's curb appeal with our weather-resistant exterior painting services. Durable finishes that protect and beautify your property.",
+      features: [
+        "House Exterior Painting",
+        "Deck & Fence Staining",
+        "Weather Protection Coatings",
+        "Power Washing Preparation",
+        "Siding & Trim Painting",
+        "Garage Door Painting",
+      ],
+      href: "/services/exterior-painting",
+      image:
+        "https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+      startingPrice: "₹349",
+    },
+    {
+      icon: <Wrench className="text-blue-600" size={48} />,
+      title: "Water Proofing",
+      description:
+        "Effective waterproofing solutions to protect your property from water damage. We provide long-lasting protection for walls, roofs, and basements.",
+      features: [
+        "Roof Waterproofing",
+        "Basement Waterproofing",
+        "Bathroom Waterproofing",
+        "Exterior Wall Sealing",
+        "Foundation Waterproofing",
+        "Terrace & Balcony Treatment",
+      ],
+      href: "/services/water-proofing",
+      image:
+        "https://images.pexels.com/photos/5691693/pexels-photo-5691693.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+      startingPrice: "₹199",
+    },
+    {
+      icon: <Wrench className="text-yellow-600" size={48} />,
+      title: "Grouting",
+      description:
+        "Professional tile grouting services to restore and enhance the appearance of your tiled surfaces. We ensure proper sealing and long-lasting results.",
+      features: [
+        "Tile Grout Repair",
+        "Grout Cleaning & Sealing",
+        "Color Grout Restoration",
+        "Bathroom Tile Grouting",
+        "Kitchen Tile Grouting",
+        "Floor Tile Grouting",
+      ],
+      href: "/services/grouting",
+      image:
+        "https://images.pexels.com/photos/5691693/pexels-photo-5691693.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+      startingPrice: "₹149",
+    },
+    {
+      icon: <Paintbrush className="text-purple-600" size={48} />,
+      title: "Texture",
+      description:
+        "Custom wall texturing services to add dimension and character to your spaces. We offer a variety of texture styles to match your design preferences.",
+      features: [
+        "Knockdown Texture",
+        "Orange Peel Texture",
+        "Popcorn Ceiling Texture",
+        "Venetian Plaster",
+        "Stucco Texturing",
+        "Custom Texture Designs",
+      ],
+      href: "/services/texture",
+      image:
+        "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+      startingPrice: "₹179",
+    },
+    {
+      icon: <Home className="text-teal-600" size={48} />,
+      title: "Wallpapers",
+      description:
+        "Premium wallpaper installation and removal services. We offer a wide selection of wallpaper styles and expert installation for perfect results.",
+      features: [
+        "Wallpaper Installation",
+        "Wallpaper Removal",
+        "Custom Wallpaper Solutions",
+        "Accent Wall Design",
+        "Wallpaper Repair",
+        "Wallpaper Consultation",
+      ],
+      href: "/services/wallpapers",
+      image:
+        "https://images.pexels.com/photos/259962/pexels-photo-259962.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+      startingPrice: "₹249",
+    },
+    {
+      icon: <Sparkles className="text-purple-600" size={48} />,
+      title: "Deep Cleaning",
+      description:
+        "Comprehensive deep cleaning services for homes and offices. We clean every corner with attention to detail and eco-friendly products.",
+      features: [
+        "Deep House Cleaning",
+        "Post-Construction Cleanup",
+        "Move-in/Move-out Cleaning",
+        "Regular Maintenance Cleaning",
+        "Carpet & Upholstery Cleaning",
+        "Window Cleaning",
+      ],
+      href: "/services/deep-cleaning",
+      image:
+        "https://images.pexels.com/photos/4239091/pexels-photo-4239091.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+      startingPrice: "₹149",
+    },
+    {
+      icon: <Sofa className="text-red-600" size={48} />,
+      title: "Wood Finishes",
+      description:
+        "Expert wood finishing and restoration services. Our skilled craftsmen bring new life to wooden surfaces with premium stains and finishes.",
+      features: [
+        "Wood Staining & Sealing",
+        "Furniture Refinishing",
+        "Cabinet Refinishing",
+        "Deck & Fence Finishing",
+        "Custom Wood Treatments",
+        "Antique Wood Restoration",
+      ],
+      href: "/services/wood-finishes",
+      image:
+        "https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+      startingPrice: "₹199",
+    },
+  ];
+
+  /* Old Services - Commented Out for Reference
+  const oldServices = [
     {
       icon: <Paintbrush className="text-blue-600" size={48} />,
       title: "House Painting",
@@ -39,22 +190,6 @@ export default function Services() {
       href: "/services/house-painting",
       image: "https://images.pexels.com/photos/1669799/pexels-photo-1669799.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
       startingPrice: "₹299"
-    },
-    {
-      icon: <Sparkles className="text-purple-600" size={48} />,
-      title: "Deep Cleaning",
-      description: "Comprehensive deep cleaning services for homes and offices. We clean every corner with attention to detail and eco-friendly products.",
-      features: [
-        "Deep House Cleaning",
-        "Post-Construction Cleanup",
-        "Move-in/Move-out Cleaning",
-        "Regular Maintenance Cleaning",
-        "Carpet & Upholstery Cleaning",
-        "Window Cleaning"
-      ],
-      href: "/services/deep-cleaning",
-      image: "https://images.pexels.com/photos/4239091/pexels-photo-4239091.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
-      startingPrice: "₹149"
     },
     {
       icon: <Wrench className="text-green-600" size={48} />,
@@ -121,20 +256,23 @@ export default function Services() {
       startingPrice: "₹199"
     }
   ];
+  */
 
   return (
     <>
       <Navigation />
-      
+
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br  from-purple-500 to-blue-400 text-white">
+      <section className="pt-24 pb-12 bg-gradient-to-br from-purple-500 to-blue-400 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+          <h1 className="text-2xl sm:text-4xl font-bold mb-3">
             Our Professional Services
           </h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            From painting to plumbing, we provide comprehensive home services with unmatched quality, 
-            reliability, and customer satisfaction. All our work is guaranteed and performed by licensed professionals.
+          <p className="text-md sm:text-lg text-blue-100 max-w-3xl mx-auto">
+            From interior painting to wood finishes, we provide comprehensive
+            home services with unmatched quality, reliability, and customer
+            satisfaction. All our work is guaranteed and performed by licensed
+            professionals.
           </p>
         </div>
       </section>
@@ -161,25 +299,33 @@ export default function Services() {
                     </div>
                     <div className="text-white">
                       <p className="text-sm">Starting at</p>
-                      <p className="text-xl font-bold">{service.startingPrice}</p>
+                      <p className="text-xl font-bold">
+                        {service.startingPrice}
+                      </p>
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="p-8">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 mb-6">
-                    {service.description}
-                  </p>
-                  
+                  <p className="text-gray-600 mb-6">{service.description}</p>
+
                   <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-3">What We Offer:</h4>
+                    <h4 className="font-semibold text-gray-900 mb-3">
+                      What We Offer:
+                    </h4>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {service.features.map((feature, idx) => (
-                        <div key={idx} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="text-green-500 flex-shrink-0 mr-2" size={16} />
+                        <div
+                          key={idx}
+                          className="flex items-center text-sm text-gray-600"
+                        >
+                          <CheckCircle
+                            className="text-green-500 flex-shrink-0 mr-2"
+                            size={16}
+                          />
                           {feature}
                         </div>
                       ))}
@@ -216,7 +362,8 @@ export default function Services() {
               Why Choose Our Services?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're committed to delivering exceptional results on every project, big or small.
+              We're committed to delivering exceptional results on every
+              project, big or small.
             </p>
           </div>
 
@@ -229,7 +376,8 @@ export default function Services() {
                 Licensed & Insured
               </h3>
               <p className="text-gray-600">
-                All our professionals are fully licensed, bonded, and insured for your complete peace of mind.
+                All our professionals are fully licensed, bonded, and insured
+                for your complete peace of mind.
               </p>
             </div>
 
@@ -241,7 +389,8 @@ export default function Services() {
                 Quality Guarantee
               </h3>
               <p className="text-gray-600">
-                We stand behind our work with a 100% satisfaction guarantee and comprehensive warranties.
+                We stand behind our work with a 100% satisfaction guarantee and
+                comprehensive warranties.
               </p>
             </div>
 
@@ -253,7 +402,8 @@ export default function Services() {
                 Transparent Pricing
               </h3>
               <p className="text-gray-600">
-                Fair, upfront pricing with detailed estimates and no hidden fees or surprise costs.
+                Fair, upfront pricing with detailed estimates and no hidden fees
+                or surprise costs.
               </p>
             </div>
           </div>
@@ -263,11 +413,10 @@ export default function Services() {
       {/* CTA Section */}
       <section className="py-20 bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            Ready to Get Started?
-          </h2>
+          <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Contact us today for a free estimate and consultation. We're here to help transform your home.
+            Contact us today for a free estimate and consultation. We're here to
+            help transform your home.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

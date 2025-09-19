@@ -85,27 +85,30 @@ export default function About() {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 lg:mb-6 text-center md:text-left lg:text-left">
               About Bharath Painters
             </h2>
-            <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-4 lg:mb-6 text-justify">
-              With over 10 years of experience in the home services industry,
-              we've built our reputation on delivering exceptional quality and
-              customer satisfaction. Our team of licensed professionals is
-              committed to transforming your home with reliable, efficient, and
-              affordable services.
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-1.5 lg:mb-2 text-justify">
+              With over 10 years of expertise in transforming homes across
+              Bangalore, Bharath Painters has earned a reputation for
+              exceptional quality, timely service, and customer-first approach.
             </p>
-            <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-6 lg:mb-8 text-justify">
-              From small repairs to complete home renovations, we handle every
-              project with the same level of care and attention to detail. We
-              use only the finest materials and latest techniques to ensure
-              lasting results that exceed your expectations.
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-1.5 lg:mb-2 text-justify">
+              Our team of licensed and insured professionals ensures that every
+              project-whether it's a quick touch-up, a stylish texture finish,
+              or a complete home makeover-is handled with care, precision, and
+              affordability.
+            </p>
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-3 lg:mb-4 text-justify">
+              We believe in using eco-friendly, durable materials and the latest
+              painting techniques, ensuring that your walls not only look
+              stunning today but stay beautiful for years to come.
             </p>
 
             <div className="space-y-3 lg:space-y-4">
               {[
                 "Licensed & Insured Professionals",
-                "Free Estimates & Consultations",
+                "Free Estimates & Expert Consultations",
                 "100% Satisfaction Guarantee",
-                "Eco-Friendly Materials Available",
-                "Emergency Services Available",
+                "Eco-Friendly & Long-Lasting Materials",
+                "Emergency & Same-Day Services Available",
               ].map((item, index) => (
                 <div
                   key={index}

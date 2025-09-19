@@ -126,7 +126,8 @@ export default function Hero() {
               Professional Home Services You Can Trust
             </h1>
             <p className="text-sm lg:text-base text-blue-100 mt-2">
-              From painting to plumbing, electrical work to deep cleaning, we
+              From interior and exterior painting to water proofing, grouting,
+              texture, wood finishes, wallpapers work to deep cleaning, we
               provide comprehensive home services with quality guaranteed.
             </p>
             <div className="flex gap-3 mt-4">
