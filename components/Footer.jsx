@@ -155,7 +155,7 @@ export default function Footer() {
             24/7 Emergency Services Available
           </h4>
           <p className="mb-4">
-            Plumbing or electrical emergency? We"re here to help anytime!
+            Plumbing or electrical emergency? We're here to help anytime!
           </p>
           <a
             href="tel:+91 7978114096"

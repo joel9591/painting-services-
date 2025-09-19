@@ -92,7 +92,7 @@ export default function About() {
             </p>
             <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-1.5 lg:mb-2 text-justify">
               Our team of licensed and insured professionals ensures that every
-              project-whether it"s a quick touch-up, a stylish texture finish,
+              project-whether it's a quick touch-up, a stylish texture finish,
               or a complete home makeover-is handled with care, precision, and
               affordability.
             </p>

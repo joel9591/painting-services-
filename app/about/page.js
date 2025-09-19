@@ -105,7 +105,7 @@ export default function About() {
           </h1>
           <p className="text-md sm:text-lg text-blue-100 max-w-3xl mx-auto">
             Your trusted partner for professional home improvement services
-            since 2014. We"re committed to transforming your home with quality,
+            since 2014. We're committed to transforming your home with quality,
             reliability, and exceptional service.
           </p>
         </div>
@@ -143,14 +143,14 @@ export default function About() {
                 trusted team of skilled professionals.
               </p>
               <p className="text-md sm:text-lg text-gray-600 mb-6 text-justify">
-                Over the years, we"ve had the privilege of working with hundreds
+                Over the years, we've had the privilege of working with hundreds
                 of families, helping them transform their houses into dream
                 homes. From small repairs to complete renovations, we approach
                 every project with the same level of dedication and attention to
                 detail.
               </p>
               <p className="text-md sm:text-lg text-gray-600 text-justify">
-                Today, we"re proud to be one of the most trusted home service
+                Today, we're proud to be one of the most trusted home service
                 providers in the area, known for our quality workmanship, fair
                 pricing, and exceptional customer service.
               </p>
@@ -255,7 +255,7 @@ export default function About() {
               Why Choose Bharath Painters Services?
             </h2>
             <p className="text-md sm:text-lg text-blue-100 max-w-3xl mx-auto">
-              Here"s what sets us apart from other home service providers.
+              Here's what sets us apart from other home service providers.
             </p>
           </div>
 

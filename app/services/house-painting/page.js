@@ -217,7 +217,7 @@ export default function HousePainting() {
               Why Choose Our Painting Services?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We"re committed to delivering exceptional painting results with professional service.
+              We're committed to delivering exceptional painting results with professional service.
             </p>
           </div>
 

@@ -111,7 +111,7 @@ export default function ExteriorPainting() {
           </h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
             Transform your home's exterior with our expert painting services. We deliver beautiful, 
-            weather-resistant finishes that protect and enhance your property"s appearance.
+            weather-resistant finishes that protect and enhance your property's appearance.
           </p>
         </div>
       </section>

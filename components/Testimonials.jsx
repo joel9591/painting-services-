@@ -78,7 +78,7 @@ export default function Testimonials() {
             What Our Customers Say
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-blue-100 max-w-3xl mx-auto">
-            Don"t just take our word for it. Here"s what our satisfied customers
+            Don't just take our word for it. Here's what our satisfied customers
             have to say about our services.
           </p>
         </div>
@@ -171,7 +171,7 @@ export default function Testimonials() {
             <div className="text-white font-bold">★ Google Reviews</div>
             <div className="text-white font-bold">★ Better Business Bureau</div>
             <div className="text-white font-bold">★ HomeAdvisor</div>
-            <div className="text-white font-bold">★ Angie"s List</div>
+            <div className="text-white font-bold">★ Angie's List</div>
           </div>
         </div>
       </div>

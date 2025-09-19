@@ -85,7 +85,7 @@ export default function WaterProofing() {
     {
       icon: <Home size={32} />,
       title: "Property Value Preservation",
-      description: "Prevent costly structural damage and maintain your property"s value with proper waterproofing."
+      description: "Prevent costly structural damage and maintain your property's value with proper waterproofing."
     },
     {
       icon: <Droplet size={32} />,
