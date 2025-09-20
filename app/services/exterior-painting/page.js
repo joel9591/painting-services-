@@ -60,7 +60,7 @@
 //       description: "We assess your exterior surfaces, discuss color options, and provide a detailed estimate."
 //     },
 //     {
-//       step: "2", 
+//       step: "2",
 //       title: "Surface Preparation",
 //       description: "Thorough cleaning, pressure washing, scraping, sanding, and priming for optimal paint adhesion."
 //     },
@@ -102,7 +102,7 @@
 //   return (
 //     <>
 //       <Navigation />
-      
+
 //       {/* Hero Section */}
 //       <section className="pt-24 pb-16 bg-gradient-to-br from-blue-500 to-blue-700 text-white">
 //         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -110,7 +110,7 @@
 //             Professional Exterior Painting Services
 //           </h1>
 //           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-//             Transform your home's exterior with our expert painting services. We deliver beautiful, 
+//             Transform your home's exterior with our expert painting services. We deliver beautiful,
 //             weather-resistant finishes that protect and enhance your property's appearance.
 //           </p>
 //         </div>
@@ -195,12 +195,17 @@
 //   );
 // }
 
-
-
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { CheckCircle, Droplet, Home, Paintbrush, Shield } from "lucide-react";
+import {
+  ArrowLeft,
+  CheckCircle,
+  Droplet,
+  Home,
+  Paintbrush,
+  Shield,
+} from "lucide-react";
 
 export const metadata = {
   title: "Professional Exterior Painting Services | Weather-Resistant Finishes",
@@ -209,7 +214,8 @@ export const metadata = {
   keywords:
     "exterior painting, house painting, wall painting, outdoor painting, weatherproof painting, protective coating, home painting services, bharath painters",
   openGraph: {
-    title: "Professional Exterior Painting Services - Transform Your Home's Exterior",
+    title:
+      "Professional Exterior Painting Services - Transform Your Home's Exterior",
     description:
       "Enhance your home's beauty and durability with our professional exterior painting services. Weather-resistant, long-lasting finishes.",
   },
@@ -295,10 +301,26 @@ export default function ExteriorPainting() {
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">
             Professional Exterior Painting Services
           </h1>
-          <p className="text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto mb-2">
             Transform and protect your home's exterior with our expert painting
             services. Long-lasting finishes that withstand every season.
           </p>
+          <div className="flex  gap-3 items-center justify-center flex-col sm:flex-row">
+            <Link
+              href="/contact"
+              className="bg-white text-blue-600 hover:bg-blue-50 px-0 py-2 rounded-lg font-semibold transition-all duration-300 text-center w-52 "
+            >
+              Get a Free Quote
+            </Link>
+            <Link
+              href="/services"
+              className="bg-blue-700 text-white hover:bg-blue-800 px-0 py-2 rounded-lg font-semibold transition-all duration-300 text-center w-52"
+            >
+              <div className="flex items-center justify-center gap-2">
+                <ArrowLeft /> Back
+              </div>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -359,8 +381,8 @@ export default function ExteriorPainting() {
             Ready to Transform Your Home’s Exterior?
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
-            Contact us today for a free consultation and professional
-            exterior painting services tailored to your home.
+            Contact us today for a free consultation and professional exterior
+            painting services tailored to your home.
           </p>
           <Link
             href="/contact"

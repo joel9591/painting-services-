@@ -8,6 +8,7 @@ import {
   Clock,
   Star,
   Palette,
+  ArrowLeft,
 } from "lucide-react";
 
 export const metadata = {
@@ -125,23 +126,39 @@ export default function Texture() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-purple-600 to-indigo-800 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+      <section className="pt-24 pb-6 bg-gradient-to-br from-blue-600 to-blue-400 text-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2 text-center">
             Professional Texture Painting Services
           </h1>
-          <p className="text-xl text-purple-200 max-w-3xl mx-auto">
+          <p className="text-md sm:text-lg text-blue-100 mb-6 text-center">
             Transform your spaces with our expert texture painting solutions. We
             provide beautiful decorative finishes and textured wall treatments
             to add dimension and style to your home.
           </p>
+          <div className="flex  gap-3 items-center justify-center flex-col sm:flex-row">
+            <Link
+              href="/contact"
+              className="bg-white text-blue-600 hover:bg-blue-50 px-0 py-2 rounded-lg font-semibold transition-all duration-300 text-center w-52 "
+            >
+              Get a Free Quote
+            </Link>
+            <Link
+              href="/services"
+              className="bg-blue-700 text-white hover:bg-blue-800 px-0 py-2 rounded-lg font-semibold transition-all duration-300 text-center w-52"
+            >
+              <div className="flex items-center justify-center gap-2">
+                <ArrowLeft /> Back
+              </div>
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-16 bg-gray-50">
+      <section className="pt-6 pb-4 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">
+          <h2 className="text-3xl font-bold text-center mb-6">
             Our Texture Painting Services
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -150,7 +167,7 @@ export default function Texture() {
                 key={index}
                 className="bg-white rounded-lg shadow-lg overflow-hidden"
               >
-                <div className="p-6">
+                <div className="px-3 py-4">
                   <h3 className="text-xl font-bold mb-3">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <ul className="space-y-2">
@@ -169,9 +186,9 @@ export default function Texture() {
       </section>
 
       {/* Process Section */}
-      <section className="py-16 bg-white">
+      <section className="py-6 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">
+          <h2 className="text-3xl font-bold text-center mb-6">
             Our Texture Painting Process
           </h2>
           <div className="grid md:grid-cols-4 gap-8">
@@ -189,9 +206,9 @@ export default function Texture() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-6 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">
+          <h2 className="text-3xl font-bold text-center mb-6">
             Why Choose Our Texture Painting Services
           </h2>
           <div className="grid md:grid-cols-4 gap-8">

@@ -1,7 +1,15 @@
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { CheckCircle, Trees, Shield, Clock, Star, Brush } from "lucide-react";
+import {
+  CheckCircle,
+  Trees,
+  Shield,
+  Clock,
+  Star,
+  Brush,
+  ArrowLeft,
+} from "lucide-react";
 
 export const metadata = {
   title: "Professional Wood Finishing Services | Premium Staining & Varnishing",
@@ -119,23 +127,39 @@ export default function WoodFinishes() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-amber-700 to-amber-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+      <section className="pt-24 pb-6 bg-gradient-to-br from-amber-700 to-amber-900 text-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-2xl sm:text-4xl font-bold mb-4">
             Professional Wood Finishing Services
           </h1>
-          <p className="text-xl text-amber-100 max-w-3xl mx-auto">
+          <p className="text-md sm:text-lg text-amber-100 max-w-3xl mx-auto">
             Transform your wooden surfaces with our expert wood finishing
             solutions. We provide premium staining, varnishing, and restoration
             services to enhance and protect your wood.
           </p>
+          <div className="flex  gap-3 items-center justify-center flex-col sm:flex-row mt-2">
+            <Link
+              href="/contact"
+              className="bg-white text-blue-600 hover:bg-blue-50 px-0 py-2 rounded-lg font-semibold transition-all duration-300 text-center w-52 "
+            >
+              Get a Free Quote
+            </Link>
+            <Link
+              href="/services"
+              className="bg-blue-700 text-white hover:bg-blue-800 px-0 py-2 rounded-lg font-semibold transition-all duration-300 text-center w-52"
+            >
+              <div className="flex items-center justify-center gap-2">
+                <ArrowLeft /> Back
+              </div>
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-16 bg-gray-50">
+      <section className="pt-6 pb-4 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">
+          <h2 className="text-3xl font-bold text-center mb-6">
             Our Wood Finishing Services
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -144,7 +168,7 @@ export default function WoodFinishes() {
                 key={index}
                 className="bg-white rounded-lg shadow-lg overflow-hidden"
               >
-                <div className="p-6">
+                <div className="px-3 py-4">
                   <h3 className="text-xl font-bold mb-3">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <ul className="space-y-2">
@@ -163,9 +187,9 @@ export default function WoodFinishes() {
       </section>
 
       {/* Process Section */}
-      <section className="py-16 bg-white">
+      <section className="py-6 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">
+          <h2 className="text-3xl font-bold text-center mb-6">
             Our Wood Finishing Process
           </h2>
           <div className="grid md:grid-cols-4 gap-8">
@@ -183,7 +207,7 @@ export default function WoodFinishes() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-6 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center mb-12">
             Why Choose Our Wood Finishing Services
@@ -191,7 +215,7 @@ export default function WoodFinishes() {
           <div className="grid md:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
-                <div className="text-amber-700 mx-auto mb-4">
+                <div className="text-amber-700 mx-auto mb-4 flex justify-center">
                   {benefit.icon}
                 </div>
                 <h3 className="text-xl font-bold mb-2">{benefit.title}</h3>
@@ -203,12 +227,12 @@ export default function WoodFinishes() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-amber-700 text-white">
+      <section className="py-6 bg-amber-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-2">
             Ready to Transform Your Wooden Surfaces?
           </h2>
-          <p className="text-xl text-amber-100 max-w-3xl mx-auto mb-8">
+          <p className="text-md sm:text-lg text-amber-100 max-w-3xl mx-auto mb-4">
             Contact us today for a free consultation and estimate on your wood
             finishing project.
           </p>

@@ -1,7 +1,14 @@
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { CheckCircle, Paintbrush, Shield, Clock, Star } from "lucide-react";
+import {
+  CheckCircle,
+  Paintbrush,
+  Shield,
+  Clock,
+  Star,
+  ArrowLeft,
+} from "lucide-react";
 
 export const metadata = {
   title: "Professional Interior Painting Services | Premium Quality Finishes",
@@ -121,11 +128,11 @@ export default function InteriorPainting() {
       {/* Hero Section */}
       <section className="pt-24 pb-6 bg-gradient-to-br from-blue-600 to-blue-400 text-white">
         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-          <div className="max-w-3xl text-center mx-auto space-y-6">
-            <h1 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2 text-center">
+          <div className="max-w-3xl text-center mx-auto space-y-6"> 
+            <h1 className="text-2xl sm:text-4xl font-bold mb-2 sm:mb-3 text-center">
               Professional Interior Painting Services
             </h1>
-            <p className="text-md sm:text-lg text-blue-100 mb-8 text-center">
+            <p className="text-md sm:text-lg text-blue-100 mb-4 text-center">
               Transform your indoor spaces with our expert interior painting
               services. From color consultation to final touches, we deliver
               exceptional results that last.
@@ -141,7 +148,9 @@ export default function InteriorPainting() {
                 href="/services"
                 className="bg-blue-700 text-white hover:bg-blue-800 px-0 py-2 rounded-lg font-semibold transition-all duration-300 text-center w-52"
               >
-                Explore All Services
+                <div className="flex items-center justify-center gap-2">
+                   <ArrowLeft/> Back
+                </div>
               </Link>
             </div>
           </div>

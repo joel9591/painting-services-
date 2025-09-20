@@ -198,7 +198,14 @@
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { CheckCircle, Droplet, Shield, Home, Layers } from "lucide-react";
+import {
+  CheckCircle,
+  Droplet,
+  Shield,
+  Home,
+  Layers,
+  ArrowLeft,
+} from "lucide-react";
 
 export const metadata = {
   title: "Professional Waterproofing Services | Protect Your Home",
@@ -293,25 +300,41 @@ export default function Waterproofing() {
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">
             Professional Waterproofing Services
           </h1>
-          <p className="text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto pb-2">
             Keep your home safe and dry with our expert waterproofing solutions.
             From roofs to basements, we provide reliable and long-lasting
             protection.
           </p>
+          <div className="flex  gap-3 items-center justify-center flex-col sm:flex-row">
+            <Link
+              href="/contact"
+              className="bg-white text-blue-600 hover:bg-blue-50 px-0 py-2 rounded-lg font-semibold transition-all duration-300 text-center w-52 "
+            >
+              Get a Free Quote
+            </Link>
+            <Link
+              href="/services"
+              className="bg-blue-700 text-white hover:bg-blue-800 px-0 py-2 rounded-lg font-semibold transition-all duration-300 text-center w-52"
+            >
+              <div className="flex items-center justify-center gap-2">
+                <ArrowLeft /> Back
+              </div>
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Services Section */}
       <section className="pt-6 pb-4 bg-gray-50">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-4">
             Our Waterproofing Services
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition hover:-translate-y-1"
+                className="bg-white rounded-xl py-4 px-3 shadow-lg hover:shadow-xl transition hover:-translate-y-1"
               >
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
                   {service.title}
@@ -334,7 +357,7 @@ export default function Waterproofing() {
       {/* Benefits Section */}
       <section className="pt-8 pb-6 bg-white">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6">
             Why Choose Our Waterproofing
           </h2>
           <div className="grid md:grid-cols-4 gap-6">
@@ -352,12 +375,12 @@ export default function Waterproofing() {
       </section>
 
       {/* CTA Section */}
-      <section className="pt-8 pb-12 bg-gray-100">
+      <section className="pt-3 pb-6 bg-gray-100">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-2">
             Ready to Waterproof Your Property?
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-3">
             Contact us today for professional waterproofing solutions designed
             to protect your home for years to come.
           </p>

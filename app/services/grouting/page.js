@@ -1,7 +1,15 @@
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { CheckCircle, Grid, Shield, Clock, Star, Sparkles } from "lucide-react";
+import {
+  CheckCircle,
+  Grid,
+  Shield,
+  Clock,
+  Star,
+  Sparkles,
+  ArrowLeft,
+} from "lucide-react";
 
 export const metadata = {
   title: "Professional Grouting Services | Tile & Surface Restoration",
@@ -117,23 +125,39 @@ export default function Grouting() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-gray-700 to-gray-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+      <section className="pt-24 pb-6 bg-gradient-to-br from-blue-700 to-blue-900 text-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2 text-center">
             Professional Grouting Services
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-md sm:text-lg text-blue-100 mb-2 text-center">
             Restore and protect your tiled surfaces with our expert grouting
             solutions. We provide comprehensive grouting services for bathrooms,
             kitchens, floors, and walls.
           </p>
+          <div className="flex  gap-3 items-center justify-center flex-col sm:flex-row">
+            <Link
+              href="/contact"
+              className="bg-white text-blue-600 hover:bg-blue-50 px-0 py-2 rounded-lg font-semibold transition-all duration-300 text-center w-52 "
+            >
+              Get a Free Quote
+            </Link>
+            <Link
+              href="/services"
+              className="bg-blue-700 text-white hover:bg-blue-800 px-0 py-2 rounded-lg font-semibold transition-all duration-300 text-center w-52"
+            >
+              <div className="flex items-center justify-center gap-2">
+                <ArrowLeft /> Back
+              </div>
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-16 bg-gray-50">
+      <section className="pt-6 pb-2 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">
+          <h2 className="text-3xl font-bold text-center mb-4">
             Our Grouting Services
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -142,7 +166,7 @@ export default function Grouting() {
                 key={index}
                 className="bg-white rounded-lg shadow-lg overflow-hidden"
               >
-                <div className="p-6">
+                <div className="px-3 py-4">
                   <h3 className="text-xl font-bold mb-3">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <ul className="space-y-2">
@@ -161,9 +185,9 @@ export default function Grouting() {
       </section>
 
       {/* Process Section */}
-      <section className="py-16 bg-white">
+      <section className="py-6 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">
+          <h2 className="text-3xl font-bold text-center mb-6">
             Our Grouting Process
           </h2>
           <div className="grid md:grid-cols-4 gap-8">
@@ -181,7 +205,7 @@ export default function Grouting() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-6 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center mb-12">
             Why Choose Our Grouting Services
