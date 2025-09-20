@@ -278,15 +278,15 @@ export default function Services() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-8 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="relative h-64">
+                <div className="relative h-44 sm:h-48 lg:h-52">
                   <img
                     src={service.image}
                     alt={service.title}
@@ -294,25 +294,25 @@ export default function Services() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 flex items-center space-x-3">
-                    <div className="bg-white p-2 rounded-lg">
+                    <div className="bg-white p-1 rounded-md w-10 h-10 flex items-center justify-center">
                       {service.icon}
                     </div>
-                    <div className="text-white">
-                      <p className="text-sm">Starting at</p>
-                      <p className="text-xl font-bold">
+                    <div className="text-white mt-1">
+                      <p className="text-xs">Starting at</p>
+                      <p className="text-lg font-bold">
                         {service.startingPrice}
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                <div className="px-3 py-2">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  <p className="text-gray-600 mb-2 text-sm sm:text-base">{service.description}</p>
 
-                  <div className="mb-6">
+                  <div className="mb-4 h-52 sm:h-48  overflow-y-auto">
                     <h4 className="font-semibold text-gray-900 mb-3">
                       What We Offer:
                     </h4>
@@ -332,17 +332,17 @@ export default function Services() {
                     </div>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row gap-4">
+                  <div className="flex flex-col sm:flex-row gap-4 -mt-2 sm:-mt-6">
                     <Link
                       href={service.href}
-                      className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center space-x-2"
+                      className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center space-x-2"
                     >
                       <span>Learn More</span>
                       <ArrowRight size={16} />
                     </Link>
                     <Link
                       href="/contact"
-                      className="flex-1 bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 text-center"
+                      className="flex-1 bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-2 rounded-lg font-semibold transition-colors duration-200 text-center -mt-2 sm:-mt-0"
                     >
                       Get Quotation
                     </Link>
@@ -355,53 +355,53 @@ export default function Services() {
       </section>
 
       {/* Why Choose Our Services */}
-      <section className="py-20 bg-white">
+      <section className="py-3 sm:py-4 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-3">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-1">
               Why Choose Our Services?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-md sm:text-lg text-gray-600 max-w-3xl mx-auto">
               We're committed to delivering exceptional results on every
               project, big or small.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-8">
+            <div className="text-center px-6 py-4">
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-2">
                 <CheckCircle className="text-blue-600" size={32} />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 Licensed & Insured
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-sm sm:text-base">
                 All our professionals are fully licensed, bonded, and insured
                 for your complete peace of mind.
               </p>
             </div>
 
-            <div className="text-center p-6">
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center px-6 py-4">
+              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-2">
                 <CheckCircle className="text-green-600" size={32} />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 Quality Guarantee
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-sm sm:text-base">
                 We stand behind our work with a 100% satisfaction guarantee and
                 comprehensive warranties.
               </p>
             </div>
 
-            <div className="text-center p-6">
-              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center px-6 py-4">
+              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-2">
                 <CheckCircle className="text-purple-600" size={32} />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 Transparent Pricing
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-sm sm:text-base">
                 Fair, upfront pricing with detailed estimates and no hidden fees
                 or surprise costs.
               </p>
@@ -411,10 +411,10 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600 text-white">
+      <section className="py-3 sm:py-4 bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-1">Ready to Get Started?</h2>
+          <p className="text-md sm:text-lg text-blue-100 mb-4 max-w-3xl mx-auto">
             Contact us today for a free estimate and consultation. We're here to
             help transform your home.
           </p>

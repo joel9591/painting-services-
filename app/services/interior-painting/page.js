@@ -119,29 +119,29 @@ export default function InteriorPainting() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-blue-600 to-blue-400 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+      <section className="pt-24 pb-6 bg-gradient-to-br from-blue-600 to-blue-400 text-white">
+        <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+          <div className="max-w-3xl text-center mx-auto space-y-6">
+            <h1 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2 text-center">
               Professional Interior Painting Services
             </h1>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-md sm:text-lg text-blue-100 mb-8 text-center">
               Transform your indoor spaces with our expert interior painting
               services. From color consultation to final touches, we deliver
               exceptional results that last.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex  gap-3 items-center justify-center flex-col sm:flex-row">
               <Link
-                href="#contact"
-                className="bg-white text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-center"
+                href="/contact"
+                className="bg-white text-blue-600 hover:bg-blue-50 px-0 py-2 rounded-lg font-semibold transition-all duration-300 text-center w-52 "
               >
                 Get a Free Quote
               </Link>
               <Link
-                href="#services"
-                className="bg-blue-700 text-white hover:bg-blue-800 px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-center"
+                href="/services"
+                className="bg-blue-700 text-white hover:bg-blue-800 px-0 py-2 rounded-lg font-semibold transition-all duration-300 text-center w-52"
               >
-                Explore Our Services
+                Explore All Services
               </Link>
             </div>
           </div>
@@ -149,13 +149,13 @@ export default function InteriorPainting() {
       </section>
 
       {/* Main Content */}
-      <section id="services" className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+      <section id="services" className="pt-6 pb-4">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="text-center mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
               Our Interior Painting Services
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-md sm:text-lg text-gray-600 max-w-3xl mx-auto">
               From single room touch-ups to complete home makeovers, we provide
               comprehensive interior painting services for every need.
             </p>
@@ -165,15 +165,17 @@ export default function InteriorPainting() {
             {paintingServices.map((service, index) => (
               <div
                 key={index}
-                className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                className="bg-gray-50 rounded-xl p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="text-blue-600 mb-4">
-                  <Paintbrush size={48} />
+                <div className="flex mb-4 gap-2">
+                  <div className="text-blue-600 ">
+                    <Paintbrush size={32} />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 ">
+                    {service.title}
+                  </h3>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 mb-6">{service.description}</p>
+                <p className="text-gray-600 mb-3">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-700">
@@ -192,13 +194,13 @@ export default function InteriorPainting() {
       </section>
 
       {/* Our Process */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+      <section className="pt-6 pb-4 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-1">
               Our Interior Painting Process
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-md sm:text-lg text-gray-600 max-w-3xl mx-auto">
               We follow a proven process to ensure exceptional results for every
               interior painting project.
             </p>
@@ -208,12 +210,12 @@ export default function InteriorPainting() {
             {process.map((step, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                className="bg-white rounded-xl p-4 sm:p-8 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl mb-6">
+                <div className="w-8 h-8 sm:w-12 sm:h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl mb-2">
                   {step.step}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
                   {step.title}
                 </h3>
                 <p className="text-gray-600">{step.description}</p>
@@ -224,23 +226,23 @@ export default function InteriorPainting() {
       </section>
 
       {/* Benefits */}
-      <section className="py-20">
+      <section className="pt-8 mb-4 sm:mb-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
               Why Choose Our Interior Painting Services
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-md sm:text-lg text-gray-600 max-w-3xl mx-auto">
               We deliver exceptional quality, reliability, and customer
               satisfaction with every project.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-6 lg:gap-8">
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 p-6 rounded-xl"
+                className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 p-2 md:p-4 lg:p-6 py-4 rounded-xl"
               >
                 <div className="text-blue-600 flex justify-center mb-4">
                   {benefit.icon}
@@ -256,18 +258,18 @@ export default function InteriorPainting() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-400 text-white">
+      <section className="py-8 bg-gradient-to-br from-blue-600 to-blue-400 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-2">
             Ready to Transform Your Indoor Spaces?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+          <p className="text-md sm:text-lg text-blue-100 mb-6 max-w-3xl mx-auto">
             Contact us today for a free consultation and quote. Our expert team
             is ready to bring your vision to life.
           </p>
           <Link
             href="#contact"
-            className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 inline-block"
+            className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-lg font-semibold text-lg transition-all duration-300 inline-block"
           >
             Get Started Today
           </Link>
