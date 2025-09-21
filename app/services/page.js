@@ -43,7 +43,7 @@ export default function Services() {
       href: "/services/interior-painting",
       image:
         "https://images.pexels.com/photos/1669799/pexels-photo-1669799.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
-      startingPrice: "₹299",
+      startingPrice: "₹5.5",
     },
     {
       icon: <Paintbrush className="text-green-600" size={48} />,
@@ -61,7 +61,7 @@ export default function Services() {
       href: "/services/exterior-painting",
       image:
         "https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
-      startingPrice: "₹349",
+      startingPrice: "₹9",
     },
     {
       icon: <Wrench className="text-blue-600" size={48} />,
@@ -79,7 +79,7 @@ export default function Services() {
       href: "/services/water-proofing",
       image:
         "https://images.pexels.com/photos/5691693/pexels-photo-5691693.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
-      startingPrice: "₹199",
+      startingPrice: "₹28",
     },
     {
       icon: <Wrench className="text-yellow-600" size={48} />,
@@ -97,7 +97,7 @@ export default function Services() {
       href: "/services/grouting",
       image:
         "https://images.pexels.com/photos/5691693/pexels-photo-5691693.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
-      startingPrice: "₹149",
+      startingPrice: "₹45",
     },
     {
       icon: <Paintbrush className="text-purple-600" size={48} />,
@@ -115,7 +115,7 @@ export default function Services() {
       href: "/services/texture",
       image:
         "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
-      startingPrice: "₹179",
+      startingPrice: "₹60",
     },
     {
       icon: <Home className="text-teal-600" size={48} />,
@@ -133,7 +133,7 @@ export default function Services() {
       href: "/services/wallpapers",
       image:
         "https://images.pexels.com/photos/259962/pexels-photo-259962.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
-      startingPrice: "₹249",
+      startingPrice: "₹3500",
     },
     {
       icon: <Sparkles className="text-purple-600" size={48} />,
@@ -151,7 +151,7 @@ export default function Services() {
       href: "/services/deep-cleaning",
       image:
         "https://images.pexels.com/photos/4239091/pexels-photo-4239091.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
-      startingPrice: "₹149",
+      startingPrice: "₹5",
     },
     {
       icon: <Sofa className="text-red-600" size={48} />,
@@ -169,7 +169,7 @@ export default function Services() {
       href: "/services/wood-finishes",
       image:
         "https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
-      startingPrice: "₹199",
+      startingPrice: "₹35",
     },
   ];
 
@@ -263,7 +263,7 @@ export default function Services() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-12 bg-gradient-to-br from-purple-500 to-blue-400 text-white">
+      <section className="pt-24 pb-6 bg-gradient-to-br from-purple-500 to-blue-400 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-2xl sm:text-4xl font-bold mb-3">
             Our Professional Services
@@ -300,7 +300,8 @@ export default function Services() {
                     <div className="text-white mt-1">
                       <p className="text-xs">Starting at</p>
                       <p className="text-lg font-bold">
-                        {service.startingPrice}
+                        {service.startingPrice}{" "}
+                        <span className="text-xs ">/sq.ft</span>
                       </p>
                     </div>
                   </div>
@@ -310,7 +311,9 @@ export default function Services() {
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 mb-2 text-sm sm:text-base">{service.description}</p>
+                  <p className="text-gray-600 mb-2 text-sm sm:text-base">
+                    {service.description}
+                  </p>
 
                   <div className="mb-4 h-52 sm:h-48  overflow-y-auto">
                     <h4 className="font-semibold text-gray-900 mb-3">
@@ -413,7 +416,9 @@ export default function Services() {
       {/* CTA Section */}
       <section className="py-3 sm:py-4 bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-1">Ready to Get Started?</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-1">
+            Ready to Get Started?
+          </h2>
           <p className="text-md sm:text-lg text-blue-100 mb-4 max-w-3xl mx-auto">
             Contact us today for a free estimate and consultation. We're here to
             help transform your home.
@@ -426,10 +431,10 @@ export default function Services() {
               Get Free Quotation
             </Link>
             <a
-              href="tel:+91 7978114096"
+              href="tel:+91 8884563601"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
             >
-              Call 7978114096
+              Call 8884563601
             </a>
           </div>
         </div>

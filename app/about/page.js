@@ -6,14 +6,14 @@ export const metadata = {
   title:
     "About Us | Bharath Painters Services - Professional Home Improvement Experts",
   description:
-    "Learn about Bharath Painters Services - over 10 years of experience providing professional house painting, plumbing, electrical work, cleaning, and home improvement services.",
+    "Learn about Bharath Painters Services - over 8+ years of experience providing professional house painting, plumbing, electrical work, cleaning, and home improvement services.",
   keywords:
     "about Bharath Painters services, professional home improvement, licensed contractors, experienced home services team, home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services, renovation, house renovate, house renovation, bharath, painters, paintings, bharath painters",
   openGraph: {
     title:
       "About Bharath Painters Services - Your Trusted Home Improvement Partner",
     description:
-      "Discover our commitment to quality, professional service, and customer satisfaction. Serving homeowners for over 10 years.",
+      "Discover our commitment to quality, professional service, and customer satisfaction. Serving homeowners for over 8+ years.",
   },
 };
 
@@ -87,10 +87,10 @@ export default function About() {
   ];
 
   const stats = [
-    { number: "10+", label: "Years in Business" },
-    { number: "500+", label: "Happy Customers" },
-    { number: "1000+", label: "Projects Completed" },
-    { number: "99%", label: "Customer Satisfaction" },
+    { number: "8+", label: "Years in Business" },
+    { number: "2000+", label: "Happy Customers" },
+    { number: "2000+", label: "Projects Completed" },
+    { number: "99.99%", label: "Customer Satisfaction" },
   ];
 
   return (
@@ -136,23 +136,21 @@ export default function About() {
                 Our Story
               </h2>
               <p className="text-md sm:text-lg text-gray-600 mb-6 text-justify">
-                Founded in 2014, Bharath Painters Services started as a small
-                family business with a simple mission: to provide homeowners
-                with reliable, professional, and affordable home improvement
-                services. What began as a one-person operation has grown into a
-                trusted team of skilled professionals.
+                Founded in 2017, Bharath Painters began with a simple vision –
+                to make professional painting and home improvement services
+                accessible, reliable, and affordable for families across
+                Bengaluru, Karnataka. What started as a local offline service
+                has now grown into a trusted name, proudly serving over 1,000
+                customers with an impressive 95% customer satisfaction rate.
+                From refreshing a single room to complete home transformations,
+                we bring the same dedication, craftsmanship, and attention to
+                detail to every project.
               </p>
               <p className="text-md sm:text-lg text-gray-600 mb-6 text-justify">
-                Over the years, we've had the privilege of working with hundreds
-                of families, helping them transform their houses into dream
-                homes. From small repairs to complete renovations, we approach
-                every project with the same level of dedication and attention to
-                detail.
+                After years of delivering quality services offline, we are now stepping online to make it even easier for customers to connect with us, explore our services, and transform their spaces with confidence.
               </p>
               <p className="text-md sm:text-lg text-gray-600 text-justify">
-                Today, we're proud to be one of the most trusted home service
-                providers in the area, known for our quality workmanship, fair
-                pricing, and exceptional customer service.
+                At Bharath Painters, we’re more than just painters – we’re partners in creating homes you’ll love to live in.
               </p>
             </div>
             <div>
@@ -206,6 +204,7 @@ export default function About() {
       </section>
 
       {/* Meet Our Team */}
+      {/*
       <section className="py-4 sm:py-6 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
@@ -246,6 +245,7 @@ export default function About() {
           </div>
         </div>
       </section>
+      */}
 
       {/* Why Choose Us */}
       <section className="py-8 bg-blue-600 text-white">
@@ -268,7 +268,6 @@ export default function About() {
               "Clean, professional job site practices",
               "Flexible scheduling to fit your needs",
               "Transparent pricing with no surprises",
-              "Emergency services available 24/7",
               "Eco-friendly options available",
             ].map((item, index) => (
               <div key={index} className="flex items-start space-x-3">

@@ -10,13 +10,16 @@ import {
 } from "lucide-react";
 
 export default function Footer() {
+  let currentYear = new Date().getFullYear();
   const services = [
-    { name: "House Painting", href: "/services/house-painting" },
+    { name: "Interior Painting", href: "/services/interior-painting" },
+    { name: "Exterior Painting", href: "/services/exterior-painting" },
+    { name: "Water Proofing", href: "/services/water-proofing" },
+    { name: "Grouting", href: "/services/grouting" },
+    { name: "Texture", href: "/services/texture" },
+    { name: "Wallpapers", href: "/services/wallpapers" },
     { name: "Deep Cleaning", href: "/services/deep-cleaning" },
-    { name: "Plumbing", href: "/services/plumbing" },
-    { name: "Electrical Work", href: "/services/electrical-work" },
-    { name: "Furniture Work", href: "/services/furniture-work" },
-    { name: "False Ceiling", href: "/services/false-ceiling" },
+    { name: "Wood Finishes", href: "/services/wood-finishes" },
   ];
 
   const quickLinks = [
@@ -104,7 +107,7 @@ export default function Footer() {
           {/* Contact Info */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
-            <div className="space-y-4">
+            <div className="space-y-3">
               <div className="flex items-start space-x-3">
                 <MapPin
                   className="text-blue-400 flex-shrink-0 mt-1"
@@ -120,10 +123,10 @@ export default function Footer() {
               <div className="flex items-center space-x-3">
                 <Phone className="text-blue-400 flex-shrink-0" size={20} />
                 <a
-                  href="tel:+917978114096"
+                  href="tel:+918884563601"
                   className="text-gray-300 hover:text-white transition-colors duration-200"
                 >
-                  +91 7978114096
+                  +91 8884563601
                 </a>
               </div>
 
@@ -150,7 +153,7 @@ export default function Footer() {
         </div>
 
         {/* Emergency Banner */}
-        <div className="mt-12 bg-red-600 rounded-lg p-6 text-center">
+        {/* <div className="mt-12 bg-red-600 rounded-lg p-6 text-center">
           <h4 className="text-xl font-bold mb-2">
             24/7 Emergency Services Available
           </h4>
@@ -158,18 +161,18 @@ export default function Footer() {
             Plumbing or electrical emergency? We're here to help anytime!
           </p>
           <a
-            href="tel:+91 7978114096"
+            href="tel:+91 8884563601"
             className="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center space-x-2"
           >
             <Phone size={20} />
             <span>Call Emergency Line</span>
           </a>
-        </div>
+        </div> */}
 
         {/* Bottom Bar */}
         <div className="mt-6 pt-2 border-t border-gray-800">
           <p className="text-gray-400 text-sm text-center ">
-            © 2025 Bharath Painters Services. All rights reserved.
+            © {currentYear} Bharath Painters Services. All rights reserved.
           </p>
         </div>
       </div>

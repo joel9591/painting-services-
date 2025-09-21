@@ -169,9 +169,9 @@ export default function Testimonials() {
           </p>
           <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 lg:gap-16 opacity-70 text-xs sm:text-sm lg:text-lg">
             <div className="text-white font-bold">★ Google Reviews</div>
-            <div className="text-white font-bold">★ Better Business Bureau</div>
+            {/* <div className="text-white font-bold">★ Better Business Bureau</div>
             <div className="text-white font-bold">★ HomeAdvisor</div>
-            <div className="text-white font-bold">★ Angie's List</div>
+            <div className="text-white font-bold">★ Angie's List</div> */}
           </div>
         </div>
       </div>

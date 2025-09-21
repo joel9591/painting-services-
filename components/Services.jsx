@@ -43,7 +43,7 @@ function ServiceCard({ service }) {
         {/* Icon */}
         <div className="absolute top-2 left-2">{service.icon}</div>
         {/* Price text */}
-        <div className="absolute bottom-2 left-2 text-xs font-semibold bg-white/80 px-2 py-1 rounded">
+        <div className="absolute bottom-2 left-2 text-xs font-semibold bg-white/50 px-2 py-1 rounded">
           Starting ₹{service.price}/sq.ft
         </div>
       </div>
@@ -53,7 +53,9 @@ function ServiceCard({ service }) {
         <h3 className="text-lg font-bold text-gray-900 mb-1">
           {service.title}
         </h3>
-        <p className="text-sm text-gray-600 mb-2 overflow-hidden h-10">{service.description}</p>
+        <p className="text-sm text-gray-600 mb-2 overflow-hidden h-10">
+          {service.description}
+        </p>
         <div className="flex justify-between items-center">
           <Link
             href={service.href}
@@ -82,11 +84,17 @@ function ServiceCard({ service }) {
 function MobileServiceCard({ service }) {
   return (
     <div className="flex flex-col items-center text-center pb-2 bg-white rounded-lg shadow-lg">
-      <img
-        src={service.images[0]}
-        alt={service.title}
-        className="w-fit h-20 object-cover rounded-t-lg mb-2 "
-      />
+      <div className="relative w-full">
+        <img
+          src={service.images[0]}
+          alt={service.title}
+          className="w-full h-20 object-cover rounded-t-lg"
+        />
+        {/* Price overlay */}
+        <div className="absolute bottom-0.5 left-1 text-[10px] font-semibold bg-white/40 px-1.5 py-0.5 rounded">
+          ₹{service.price}/sq.ft
+        </div>
+      </div>
       <h3 className="text-xs font-semibold text-gray-900 mb-1 h-6 overflow-hidden">
         {service.title}
       </h3>
@@ -117,7 +125,7 @@ export default function Services() {
       icon: <Paintbrush className="text-blue-600" size={32} />,
       title: "Interior Painting",
       description: "Transform your indoor spaces with premium finishes.",
-      price: 12,
+      price: 5.5,
       href: "/services/interior-painting",
       images: [
         "https://images.pexels.com/photos/5691693/pexels-photo-5691693.jpeg",
@@ -129,7 +137,7 @@ export default function Services() {
       icon: <Paintbrush className="text-green-600" size={32} />,
       title: "Exterior Painting",
       description: "Enhance curb appeal with weather-resistant finishes.",
-      price: 15,
+      price: 9,
       href: "/services/exterior-painting",
       images: [
         "https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg",
@@ -140,8 +148,9 @@ export default function Services() {
     {
       icon: <Wrench className="text-blue-600" size={32} />,
       title: "Water Proofing",
-      description: "Effective solutions for moisture & water damage prevention.",
-      price: 18,
+      description:
+        "Effective solutions for moisture & water damage prevention.",
+      price: 28,
       href: "/services/water-proofing",
       images: [
         "https://images.pexels.com/photos/5691693/pexels-photo-5691693.jpeg",
@@ -153,7 +162,7 @@ export default function Services() {
       icon: <Wrench className="text-yellow-600" size={32} />,
       title: "Grouting",
       description: "Professional tile grouting & restoration services.",
-      price: 14,
+      price: 45,
       href: "/services/grouting",
       images: [
         "https://images.pexels.com/photos/5691693/pexels-photo-5691693.jpeg",
@@ -165,7 +174,7 @@ export default function Services() {
       icon: <Paintbrush className="text-purple-600" size={32} />,
       title: "Texture",
       description: "Custom wall textures & decorative finishes.",
-      price: 16,
+      price: 60,
       href: "/services/texture",
       images: [
         "https://images.pexels.com/photos/5691693/pexels-photo-5691693.jpeg",
@@ -177,7 +186,7 @@ export default function Services() {
       icon: <Home className="text-teal-600" size={32} />,
       title: "Wallpapers",
       description: "Premium wallpaper installation & removal services.",
-      price: 20,
+      price: 3500,
       href: "/services/wallpapers",
       images: [
         "https://images.pexels.com/photos/259962/pexels-photo-259962.jpeg",
@@ -189,7 +198,7 @@ export default function Services() {
       icon: <Sparkles className="text-purple-600" size={32} />,
       title: "Deep Cleaning",
       description: "Comprehensive deep cleaning for homes & offices.",
-      price: 10,
+      price: 5,
       href: "/services/deep-cleaning",
       images: [
         "https://images.pexels.com/photos/4239130/pexels-photo-4239130.jpeg",
@@ -201,7 +210,7 @@ export default function Services() {
       icon: <Sofa className="text-red-600" size={32} />,
       title: "Wood Finishes",
       description: "Expert wood finishing & restoration services.",
-      price: 22,
+      price: 35,
       href: "/services/wood-finishes",
       images: [
         "https://images.pexels.com/photos/313776/pexels-photo-313776.jpeg",
@@ -209,7 +218,7 @@ export default function Services() {
         "https://images.pexels.com/photos/3814513/pexels-photo-3814513.jpeg",
       ],
     },
-    
+
     /* Old Services - Commented Out for Reference
     {
       icon: <Paintbrush className="text-blue-600" size={32} />,

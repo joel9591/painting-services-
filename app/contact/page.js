@@ -50,7 +50,7 @@ export default function ContactPage() {
                     <Phone className="text-blue-600 mt-1 mr-4" size={24} />
                     <div>
                       <h3 className="font-semibold text-gray-900">Phone</h3>
-                      <p className="text-gray-700">+91 7978114096</p>
+                      <p className="text-gray-700">+91 8884563601</p>
                       <p className="text-gray-700">+91 9078637633</p>
                     </div>
                   </div>
@@ -107,14 +107,14 @@ export default function ContactPage() {
               the following areas:
             </p>
             <ul className="grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 gap-2 md:gap-3 lg:gap-4 text-gray-700 list-disc list-inside text-sm lg:text-md md:text-base">
-              <li>Downtown</li>
-              <li>Uptown</li>
-              <li>West Side</li>
-              <li>East Side</li>
-              <li>North County</li>
-              <li>South County</li>
-              <li>Suburbs</li>
-              <li>Metropolitan Area</li>
+              <li>HSR Layout</li>
+              <li>Sarjapura</li>
+              <li>Bellandur</li>
+              <li>Electronic City</li>
+              <li>JP Nagar</li>
+              <li>BTM Layout</li>
+              <li>Koramangala</li>
+              <li>Jayanagar</li>
             </ul>
           </div>
         </div>

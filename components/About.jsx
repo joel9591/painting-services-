@@ -33,19 +33,19 @@ export default function About() {
   const stats = [
     {
       icon: <Users size={28} />,
-      number: 500,
+      number: 2000,
       label: "Happy Customers",
       suffix: "+",
     },
     {
       icon: <Award size={28} />,
-      number: 10,
+      number: 8,
       label: "Years Experience",
       suffix: "+",
     },
     {
       icon: <CheckCircle size={28} />,
-      number: 1000,
+      number: 2000,
       label: "Projects Completed",
       suffix: "+",
     },
@@ -86,7 +86,7 @@ export default function About() {
               About Bharath Painters
             </h2>
             <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-1.5 lg:mb-2 text-justify">
-              With over 10 years of expertise in transforming homes across
+              With over 8 years of expertise in transforming homes across
               Bangalore, Bharath Painters has earned a reputation for
               exceptional quality, timely service, and customer-first approach.
             </p>

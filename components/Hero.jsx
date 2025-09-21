@@ -99,9 +99,9 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative w-full bg-gray-100">
+    <section className="relative w-full bg-gray-100 pt-20 sm:pt-0">
       {/* Carousel */}
-      <div className="relative h-[35vh] sm:h-[70vh] lg:h-screen overflow-hidden rounded-lg mx-1.5 sm:mx-0 sm:rounded-none">
+      <div className="relative h-[28vh] sm:h-[70vh] lg:h-screen overflow-hidden rounded-lg mx-1.5 sm:mx-0 sm:rounded-none">
         <Image
           src={slides[currentSlide].src}
           alt={slides[currentSlide].alt}

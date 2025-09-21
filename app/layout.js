@@ -78,7 +78,7 @@ export default function RootLayout({ children }) {
               name: "Professional Home Services",
               // image: "./logo.jpg",
               image: "https://bharathpainters.com/logo.jpg",
-              telephone: "+91 7978114096",
+              telephone: "+91 8884563601",
               email: "info@bharathpainters.com",
               address: {
                 "@type": "PostalAddress",

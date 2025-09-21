@@ -83,8 +83,8 @@ export default function ContactForm() {
     {
       icon: <Phone size={22} />,
       title: "Call Us",
-      info: "+91 7978114096",
-      link: "tel:+917978114096",
+      info: "+91 8884563601",
+      link: "tel:+918884563601",
     },
     {
       icon: <Mail size={22} />,
@@ -121,7 +121,7 @@ export default function ContactForm() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-24 sm:-mt-6">
           {/* Contact Information */}
-          <div className="-mt-4 sm:-mt-2 lg:-mt-0">
+          <div className="-mt-4 sm:-mt-2 lg:-mt-0 lg:pt-20 sm:pt-10">
             <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-1 sm:mb-1">
               Get In Touch
             </h3>
@@ -156,7 +156,7 @@ export default function ContactForm() {
             </div>
 
             {/* Emergency Contact */}
-            <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-lg">
+            {/* <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-lg">
               <h4 className="font-semibold text-red-800 text-sm sm:text-base mb-2">
                 Emergency Services
               </h4>
@@ -165,12 +165,12 @@ export default function ContactForm() {
                 plumbing and electrical issues.
               </p>
               <a
-                href="tel:+917978114096"
+                href="tel:+918884563601"
                 className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm sm:text-base font-medium transition-colors duration-200 inline-block"
               >
                 Call Emergency Line
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Contact Form */}

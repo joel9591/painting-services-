@@ -5,11 +5,14 @@ import { CheckCircle, Paintbrush, Shield, Clock, Star } from "lucide-react";
 
 export const metadata = {
   title: "Professional House Painting Services | Interior & Exterior Painting",
-  description: "Expert house painting services including interior and exterior painting, color consultation, wall preparation, and specialty finishes. Licensed painters with quality guarantee.",
-  keywords: "house painting services, interior painting, exterior painting, residential painters, professional painting contractors, color consultation, wall painting, home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services, renovation, house renovate, house renovation, bharath, painters, paintings, bharath painters",
+  description:
+    "Expert house painting services including interior and exterior painting, color consultation, wall preparation, and specialty finishes. Licensed painters with quality guarantee.",
+  keywords:
+    "house painting services, interior painting, exterior painting, residential painters, professional painting contractors, color consultation, wall painting, home services, house painting, plumbing, electrical work, deep cleaning, furniture work, false ceiling, home improvement, professional services, renovation, house renovate, house renovation, bharath, painters, paintings, bharath painters",
   openGraph: {
     title: "Professional House Painting Services - Transform Your Home",
-    description: "Transform your home with our expert painting services. Interior, exterior, and specialty finishes with quality guarantee.",
+    description:
+      "Transform your home with our expert painting services. Interior, exterior, and specialty finishes with quality guarantee.",
   },
 };
 
@@ -17,92 +20,100 @@ export default function HousePainting() {
   const paintingServices = [
     {
       title: "Interior Painting",
-      description: "Transform your indoor spaces with professional interior painting services.",
+      description:
+        "Transform your indoor spaces with professional interior painting services.",
       features: [
         "Living rooms & bedrooms",
         "Kitchens & bathrooms",
         "Hallways & stairwells",
         "Ceiling painting",
         "Trim & baseboard painting",
-        "Color matching & consultation"
-      ]
+        "Color matching & consultation",
+      ],
     },
     {
       title: "Exterior Painting",
-      description: "Boost your home's curb appeal with weather-resistant exterior painting.",
+      description:
+        "Boost your home's curb appeal with weather-resistant exterior painting.",
       features: [
         "Siding & trim painting",
         "Deck & fence staining",
         "Garage door painting",
         "Window & shutter painting",
         "Power washing prep",
-        "Weather protection coatings"
-      ]
+        "Weather protection coatings",
+      ],
     },
     {
       title: "Specialty Services",
-      description: "Expert techniques for unique painting projects and finishes.",
+      description:
+        "Expert techniques for unique painting projects and finishes.",
       features: [
         "Texture & faux finishes",
         "Cabinet refinishing",
         "Wallpaper removal",
         "Drywall repair",
         "Lead-safe painting",
-        "Commercial painting"
-      ]
-    }
+        "Commercial painting",
+      ],
+    },
   ];
 
   const process = [
     {
       step: "1",
       title: "Free Consultation",
-      description: "We assess your project, discuss color options, and provide a detailed estimate."
+      description:
+        "We assess your project, discuss color options, and provide a detailed estimate.",
     },
     {
-      step: "2", 
+      step: "2",
       title: "Surface Preparation",
-      description: "Thorough cleaning, sanding, priming, and repair work for the best results."
+      description:
+        "Thorough cleaning, sanding, priming, and repair work for the best results.",
     },
     {
       step: "3",
       title: "Professional Painting",
-      description: "Expert application using premium paints and proven techniques."
+      description:
+        "Expert application using premium paints and proven techniques.",
     },
     {
       step: "4",
       title: "Final Inspection",
-      description: "Quality check and cleanup to ensure your complete satisfaction."
-    }
+      description:
+        "Quality check and cleanup to ensure your complete satisfaction.",
+    },
   ];
 
   const benefits = [
     {
       icon: <Shield size={32} />,
       title: "Quality Materials",
-      description: "We use only premium paints and materials for lasting results."
+      description:
+        "We use only premium paints and materials for lasting results.",
     },
     {
       icon: <Clock size={32} />,
       title: "Timely Completion",
-      description: "Projects completed on schedule with minimal disruption."
+      description: "Projects completed on schedule with minimal disruption.",
     },
     {
       icon: <CheckCircle size={32} />,
       title: "Clean Work Area",
-      description: "Professional job site management and thorough cleanup."
+      description: "Professional job site management and thorough cleanup.",
     },
     {
       icon: <Star size={32} />,
       title: "Satisfaction Guarantee",
-      description: "100% satisfaction guarantee on all painting projects."
-    }
+      description: "100% satisfaction guarantee on all painting projects.",
+    },
   ];
 
   return (
     <>
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -112,8 +123,9 @@ export default function HousePainting() {
                 Professional House Painting Services
               </h1>
               <p className="text-xl text-blue-100 mb-8">
-                Transform your home with our expert interior and exterior painting services. 
-                From color consultation to final touches, we deliver exceptional results that last.
+                Transform your home with our expert interior and exterior
+                painting services. From color consultation to final touches, we
+                deliver exceptional results that last.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -123,10 +135,10 @@ export default function HousePainting() {
                   Get Free Estimate
                 </Link>
                 <a
-                  href="tel:+91 7978114096"
+                  href="tel:+91 8884563601"
                   className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200 text-center"
                 >
-                  Call +91 7978114096
+                  Call +91 8884563601
                 </a>
               </div>
             </div>
@@ -149,7 +161,8 @@ export default function HousePainting() {
               Complete Painting Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From single room touch-ups to complete home makeovers, we provide comprehensive painting services for every need.
+              From single room touch-ups to complete home makeovers, we provide
+              comprehensive painting services for every need.
             </p>
           </div>
 
@@ -162,13 +175,14 @@ export default function HousePainting() {
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 mb-6">
-                  {service.description}
-                </p>
+                <p className="text-gray-600 mb-6">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-700">
-                      <CheckCircle className="text-green-500 flex-shrink-0 mr-3" size={16} />
+                      <CheckCircle
+                        className="text-green-500 flex-shrink-0 mr-3"
+                        size={16}
+                      />
                       {feature}
                     </li>
                   ))}
@@ -187,7 +201,8 @@ export default function HousePainting() {
               Our Painting Process
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We follow a proven process to ensure exceptional results on every project.
+              We follow a proven process to ensure exceptional results on every
+              project.
             </p>
           </div>
 
@@ -200,9 +215,7 @@ export default function HousePainting() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   {step.title}
                 </h3>
-                <p className="text-gray-600">
-                  {step.description}
-                </p>
+                <p className="text-gray-600">{step.description}</p>
               </div>
             ))}
           </div>
@@ -217,7 +230,8 @@ export default function HousePainting() {
               Why Choose Our Painting Services?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're committed to delivering exceptional painting results with professional service.
+              We're committed to delivering exceptional painting results with
+              professional service.
             </p>
           </div>
 
@@ -230,9 +244,7 @@ export default function HousePainting() {
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
                   {benefit.title}
                 </h3>
-                <p className="text-gray-600">
-                  {benefit.description}
-                </p>
+                <p className="text-gray-600">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -247,7 +259,8 @@ export default function HousePainting() {
               See Our Work
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Browse through our recent painting projects and see the transformation.
+              Browse through our recent painting projects and see the
+              transformation.
             </p>
           </div>
 
@@ -258,16 +271,21 @@ export default function HousePainting() {
               "https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2",
               "https://images.pexels.com/photos/6312274/pexels-photo-6312274.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2",
               "https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2",
-              "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2"
+              "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2",
             ].map((image, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div
+                key={index}
+                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              >
                 <img
                   src={image}
                   alt={`Painting project ${index + 1}`}
                   className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
                 />
                 <div className="p-4">
-                  <p className="text-sm text-gray-600">Interior/Exterior Painting Project</p>
+                  <p className="text-sm text-gray-600">
+                    Interior/Exterior Painting Project
+                  </p>
                 </div>
               </div>
             ))}
@@ -293,7 +311,8 @@ export default function HousePainting() {
                 Ready to Transform Your Home?
               </h2>
               <p className="text-xl text-blue-100 mb-8">
-                Get started with a free consultation and estimate. Our experienced painters are ready to bring your vision to life.
+                Get started with a free consultation and estimate. Our
+                experienced painters are ready to bring your vision to life.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
@@ -315,7 +334,9 @@ export default function HousePainting() {
               </div>
             </div>
             <div className="bg-white text-gray-900 p-8 rounded-xl">
-              <h3 className="text-2xl font-bold mb-6 text-center">Starting Prices</h3>
+              <h3 className="text-2xl font-bold mb-6 text-center">
+                Starting Prices
+              </h3>
               <div className="space-y-4">
                 <div className="flex justify-between items-center border-b pb-2">
                   <span>Interior Room (12x12)</span>
@@ -338,10 +359,10 @@ export default function HousePainting() {
                   Get Free Estimate
                 </Link>
                 <a
-                  href="tel:+91 7978114096"
+                  href="tel:+91 8884563601"
                   className="w-full bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-4 rounded-lg font-semibold transition-colors duration-200 block text-center"
                 >
-                  Call Now: +91 7978114096
+                  Call Now: +91 8884563601
                 </a>
               </div>
             </div>

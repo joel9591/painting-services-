@@ -72,7 +72,7 @@ export default function Navigation() {
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-2 lg:space-x-3 ml-auto">
             <a
-              href="tel:+91 7978114096"
+              href="tel:+91 8884563601"
               className="flex items-center justify-center bg-green-500 hover:bg-green-600 text-white 
                          h-8 md:h-9 lg:h-10 
                          px-2 md:px-3 lg:px-4 
@@ -128,7 +128,7 @@ export default function Navigation() {
               ))}
               <div className="flex flex-col space-y-2 px-3 pt-4">
                 <a
-                  href="tel:+91 7978114096"
+                  href="tel:+91 8884563601"
                   className="flex items-center justify-center bg-green-500 hover:bg-green-600 text-white w-full h-12 rounded-lg font-semibold transition-colors duration-200"
                 >
                   <Phone size={18} className="mr-1" />
@@ -168,7 +168,7 @@ export default function Navigation() {
 
       {/* Mobile Floating Call Button */}
       <a
-        href="tel:+91 7978114096"
+        href="tel:+91 8884563601"
         className="md:hidden fixed bottom-6 left-6 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-xl transition-all duration-300 hover:scale-110 z-40"
         aria-label="Call Now"
       >
