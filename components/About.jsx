@@ -85,24 +85,24 @@ export default function About() {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 lg:mb-6 text-center md:text-left lg:text-left">
               About Bharath Painters
             </h2>
-            <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-1.5 lg:mb-2 text-justify">
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-1.5 lg:mb-2 text-justify ">
               With over 8 years of expertise in transforming homes across
               Bangalore, Bharath Painters has earned a reputation for
               exceptional quality, timely service, and customer-first approach.
             </p>
-            <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-1.5 lg:mb-2 text-justify">
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-1.5 lg:mb-2 text-justify ">
               Our team of licensed and insured professionals ensures that every
               project-whether it's a quick touch-up, a stylish texture finish,
               or a complete home makeover-is handled with care, precision, and
               affordability.
             </p>
-            <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-3 lg:mb-4 text-justify">
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-3 lg:mb-4 text-justify ">
               We believe in using eco-friendly, durable materials and the latest
               painting techniques, ensuring that your walls not only look
               stunning today but stay beautiful for years to come.
             </p>
 
-            <div className="space-y-3 lg:space-y-4">
+            <div className="space-y-3 lg:space-y-4 font-bold">
               {[
                 "Licensed & Insured Professionals",
                 "Free Estimates & Expert Consultations",

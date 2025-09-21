@@ -58,7 +58,7 @@ export default function MultiSelectDropdown({ options, selected, onChange }) {
 
       {/* Dropdown */}
       {open && (
-        <div className="absolute z-10 mt-1 w-full bg-white border rounded-md shadow-lg max-h-60 overflow-auto">
+        <div className="absolute z-10 mt-1 w-full bg-white border rounded-md shadow-lg max-h-fit overflow-none">
           {/* Select All */}
           <label className="flex items-center px-3 py-2 hover:bg-gray-50 cursor-pointer text-sm">
             <input

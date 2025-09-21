@@ -114,9 +114,9 @@ export default function Footer() {
                   size={20}
                 />
                 <div>
-                  <p className="text-gray-300">123 Main Street, Suite 200</p>
-                  <p className="text-gray-300">New town, Yelahanka 560064</p>
-                  <p className="text-gray-300">Karnataka</p>
+                  <p className="text-gray-300">Kudlu Gate, AECS Layout - </p>
+                  <p className="text-gray-300">A Block, Hal Layout, Singasandra, Bengaluru,</p>
+                  <p className="text-gray-300">Karnataka 560068</p>
                 </div>
               </div>
 

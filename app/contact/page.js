@@ -34,7 +34,7 @@ export default function ContactPage() {
 
       {/* Contact Section */}
       <section className="py-2 bg-gray-50">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 m-4 lg:m-6 sm:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 m-4 lg:m-6 sm:px-12 ">
           {/* Client Contact Form */}
           <ContactForm />
 
@@ -68,11 +68,11 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold text-gray-900">Address</h3>
                       <p className="text-gray-700">
-                        123 Main Street, Suite 200
+                        Kudlu Gate, AECS Layout - A Block,
                         <br />
-                        New town, yelahanka 560064
+                        Hal Layout, Singasandra, Bengaluru,
                         <br />
-                        Karnataka
+                        Karnataka 560068
                       </p>
                     </div>
                   </div>

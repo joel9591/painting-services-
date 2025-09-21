@@ -82,11 +82,11 @@ export default function RootLayout({ children }) {
               email: "info@bharathpainters.com",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "123 Main Street",
-                addressLocality: "Your City",
-                addressRegion: "Your State",
-                postalCode: "12345",
-                addressCountry: "US",
+                streetAddress: "Kudlu Gate, AECS Layout - A Block, Hal Layout, Singasandra",
+                addressLocality: "Bengaluru",
+                addressRegion: "Karnataka",
+                postalCode: "560068",
+                addressCountry: "IN",
               },
               geo: {
                 "@type": "GeoCoordinates",

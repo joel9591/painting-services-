@@ -81,7 +81,7 @@ export default function ContactForm() {
 
   return (
     <div className="space-y-2 min-w-full shadow-xl rounded-lg">
-      <div className="p-3 sm:p-4 rounded-xl shadow-3xl overflow-hidden border border-gray-100 bg-white w-full">
+      <div className="p-3 sm:p-4 rounded-xl shadow-3xl overflow-none border border-gray-100 bg-white w-full">
         <h2 className="text-lg lg:text-3xl font-bold text-blue-700 mb-2 pl-2">
           Request a Service
         </h2>

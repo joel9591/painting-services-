@@ -95,8 +95,8 @@ export default function ContactForm() {
     {
       icon: <MapPin size={22} />,
       title: "Visit Us",
-      info: "123 Main Street, Your City, State 12345",
-      link: "https://maps.google.com",
+      info: "Kudlu Gate, AECS Layout - A Block, Hal Layout, Singasandra, Bengaluru, Karnataka 560068",
+      link: "https://maps.app.goo.gl/RomWdvGzWs2GwkY87",
     },
     {
       icon: <Clock size={22} />,
