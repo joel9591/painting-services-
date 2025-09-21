@@ -3,7 +3,6 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Clock, FileText, Paintbrush, ArrowRight } from "lucide-react";
-import emailjs from "@emailjs/browser";
 import ServiceForm from "./ServiceForm";
 
 export default function Hero() {
@@ -65,12 +64,25 @@ export default function Hero() {
     setSubmitStatus("");
 
     try {
-      await emailjs.sendForm(
-        process.env.NEXT_PUBLIC_EmailJS_service_ID,
-        process.env.NEXT_PUBLIC_EmailJS_template_ID,
-        formRef.current,
-        process.env.NEXT_PUBLIC_EmailJS_public_key
-      );
+      const formData = new FormData(formRef.current);
+      const data = {
+        from_name: formData.get('name'),
+        from_email: formData.get('email'),
+        phone: formData.get('phone'),
+        services: Array.from(formData.getAll('services')).join(', ')
+      };
+
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send email');
+      }
 
       setSubmitStatus("success");
       setFormData({

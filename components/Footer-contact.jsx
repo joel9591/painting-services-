@@ -2,7 +2,6 @@
 
 import { useState, useRef } from "react";
 import { Send } from "lucide-react";
-import emailjs from "@emailjs/browser";
 import MultiSelectDropdown from "./MultiSelectDropdown";
 import ServiceForm from "./ServiceForm";
 
@@ -39,44 +38,39 @@ export default function ContactForm() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const EmailJS_service_ID = process.env.NEXT_PUBLIC_EmailJS_service_ID;
-    const EmailJS_template_ID = process.env.NEXT_PUBLIC_EmailJS_template_ID;
-    const EmailJS_public_key = process.env.NEXT_PUBLIC_EmailJS_public_key;
-
-    const templateParams = {
-      name: formData.name,
-      email: formData.email,
-      phone: formData.phone,
-      service: formData.service.join(", "),
-      message: formData.message,
-    };
-
-    emailjs
-      .send(
-        EmailJS_service_ID,
-        EmailJS_template_ID,
-        templateParams,
-        EmailJS_public_key
-      )
-      .then(
-        () => {
-          alert("Message sent successfully!");
-          setFormData({
-            name: "",
-            email: "",
-            phone: "",
-            service: [],
-            message: "",
-          });
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-        (error) => {
-          alert("Failed to send message. Please try again.");
-          console.error(error);
-        }
-      );
+        body: JSON.stringify({
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          services: formData.service.join(", "),
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send email');
+      }
+
+      alert("Message sent successfully!");
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        service: [],
+        message: "",
+      });
+    } catch (error) {
+      alert("Failed to send message. Please try again.");
+      console.error(error);
+    }
   };
 
   return (

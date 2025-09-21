@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { Send } from "lucide-react";
-import emailjs from "@emailjs/browser";
 import MultiSelectDropdown from "./MultiSelectDropdown";
 
 export default function ServiceForm() {
@@ -37,18 +36,22 @@ export default function ServiceForm() {
     setIsSubmitting(true);
 
     try {
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_EmailJS_service_ID,
-        process.env.NEXT_PUBLIC_EmailJS_template_ID,
-        {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
           from_name: formData.name,
           from_email: formData.email,
           phone: formData.phone,
           services: formData.services.join(", "),
-          // message: formData.message,
-        },
-        process.env.NEXT_PUBLIC_EmailJS_public_key
-      );
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send email');
+      }
 
       setSubmitStatus("success");
       setFormData({
