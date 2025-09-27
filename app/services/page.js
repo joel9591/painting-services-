@@ -42,7 +42,7 @@ export default function Services() {
       ],
       href: "/services/interior-painting",
       image:
-        "https://images.pexels.com/photos/1669799/pexels-photo-1669799.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+        "images/services/interior_painting/5.jpeg",
       startingPrice: "₹5.5",
     },
     {
@@ -60,7 +60,7 @@ export default function Services() {
       ],
       href: "/services/exterior-painting",
       image:
-        "https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+        "images/services/exterior_painting/4.jpeg",
       startingPrice: "₹9",
     },
     {
@@ -78,7 +78,7 @@ export default function Services() {
       ],
       href: "/services/water-proofing",
       image:
-        "https://images.pexels.com/photos/5691693/pexels-photo-5691693.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+        "images/services/water_proofing/3.jpeg",
       startingPrice: "₹28",
     },
     {
@@ -96,7 +96,7 @@ export default function Services() {
       ],
       href: "/services/grouting",
       image:
-        "https://images.pexels.com/photos/5691693/pexels-photo-5691693.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+        "images/services/grouting/2.jpeg",
       startingPrice: "₹45",
     },
     {
@@ -114,7 +114,7 @@ export default function Services() {
       ],
       href: "/services/texture",
       image:
-        "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+        "images/services/texture/2.jpeg",
       startingPrice: "₹60",
     },
     {
@@ -132,7 +132,7 @@ export default function Services() {
       ],
       href: "/services/wallpapers",
       image:
-        "https://images.pexels.com/photos/259962/pexels-photo-259962.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+        "images/services/wallpaper/3.jpg",
       startingPrice: "₹3500",
     },
     {
@@ -150,7 +150,7 @@ export default function Services() {
       ],
       href: "/services/deep-cleaning",
       image:
-        "https://images.pexels.com/photos/4239091/pexels-photo-4239091.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+        "images/services/deep_cleaning/3.jpeg",
       startingPrice: "₹5",
     },
     {

@@ -4,28 +4,34 @@ import Link from "next/link";
 import Image from "next/image";
 import { Clock, FileText, Paintbrush, ArrowRight } from "lucide-react";
 import ServiceForm from "./ServiceForm";
+import Services from "./Services";
 
 export default function Hero() {
   const slides = [
     {
       id: 1,
-      src: "https://images.pexels.com/photos/1669799/pexels-photo-1669799.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1",
-      alt: "Painting Service",
+      src: "images/carousel/1.jpg",
+      alt: "Interior Painting",
     },
     {
       id: 2,
-      src: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1",
-      alt: "Cleaning Service",
+      src: "images/carousel/2.jpg",
+      alt: "exterior painting",
     },
     {
       id: 3,
-      src: "https://images.pexels.com/photos/8092/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1",
-      alt: "Electrical Service",
+      src: "images/carousel/3.jpg",
+      alt: "grouting",
     },
     {
       id: 4,
-      src: "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1",
-      alt: "Furniture Service",
+      src: "images/carousel/4.jpg",
+      alt: "waterproofing Service",
+    },
+    {
+      id: 4,
+      src: "images/carousel/5.jpg",
+      alt: "deep cleaning Service",
     },
   ];
 
@@ -175,6 +181,8 @@ export default function Hero() {
           ))}
         </div>
       </div>
+
+      <Services/>
 
       {/* Steps + Form */}
       <div className="max-w-6xl mx-auto px-4 py-4 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 ">

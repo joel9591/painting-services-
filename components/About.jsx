@@ -129,7 +129,7 @@ export default function About() {
           {/* Image */}
           <div className="relative">
             <img
-              src="https://images.unsplash.com/photo-1564078516393-cf04bd966897?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="images/about.jpg"
               alt="Professional team at work"
               className="rounded-lg shadow-lg lg:shadow-xl max-h-fit object-cover sm:ml-24"
             />
